@@ -1,445 +1,404 @@
-<<<<<<< HEAD
-# Scraper UNA-SUS - Coleta de Dados de Cursos e Ofertas
+# 🏥 Scraper UNA-SUS - Coleta Inteligente de Dados Educacionais
 
-Um scraper robusto e eficiente para coletar dados detalhados de cursos e ofertas da Universidade Aberta do SUS (UNA-SUS), incluindo informações sobre vagas, público-alvo, formato, e análise de descritores DEIA.
+> **📚 Projeto Educacional para Pesquisa em Saúde Pública**  
+> Um sistema inteligente e didático para coletar e analisar dados de cursos da Universidade Aberta do SUS (UNA-SUS), com foco especial em **Diversidade, Equidade, Inclusão e Acessibilidade (DEIA)**.
 
-## 🚀 Funcionalidades Principais
+## 🎯 Sobre Este Projeto
 
-### ✅ **Extração Completa de Dados**
-- **Cursos**: Informações básicas, descrições, carga horária, órgãos responsáveis
-- **Ofertas**: Dados detalhados de cada oferta de curso
-- **Vagas**: Número de vagas disponíveis (extraído via API REST)
-- **Público-alvo**: Perfil dos participantes
-- **Formato**: Modalidade de ensino (EAD, presencial, etc.)
-- **Programas de governo**: Iniciativas associadas
-- **Temas e DeCs**: Classificações temáticas
-- **Palavras-chave**: Termos de indexação
-=======
-# Scraper UNA-SUS - Cursos e Ofertas
+### 💡 **O que é?**
+Este é um **scraper** (coletor automático de dados) que extrai informações detalhadas de cursos da plataforma UNA-SUS. Ele foi desenvolvido para facilitar pesquisas acadêmicas e análises sobre educação em saúde pública.
 
-Um scraper robusto e eficiente para coletar dados de cursos e ofertas da plataforma UNA-SUS (Universidade Aberta do SUS), com foco especial na identificação de conteúdos relacionados a DEIA (Diversidade, Equidade, Inclusão e Acessibilidade).
->>>>>>> a2555d3 (feat: implementação completa com clean code e melhorias robustas)
+### 🎓 **Para quem é?**
+- **Pesquisadores** em saúde pública e educação
+- **Estudantes** de graduação e pós-graduação
+- **Desenvolvedores** interessados em web scraping
+- **Analistas de dados** em saúde
+- **Qualquer pessoa** interessada em dados educacionais
 
-### ✅ **Análise DEIA (Diversidade, Equidade, Inclusão e Acessibilidade)**
-- Detecção automática de descritores DEIA nos cursos
-- Análise de título e descrição para identificar iniciativas inclusivas
-- Mapeamento de cursos com foco em diversidade e equidade
+### 🚀 **Por que usar?**
+- ✅ **Automatiza** a coleta de dados que seria manual
+- ✅ **Identifica** cursos com foco em DEIA automaticamente
+- ✅ **Organiza** dados em formato estruturado (CSV)
+- ✅ **Facilita** análises estatísticas e qualitativas
+- ✅ **Economiza tempo** para pesquisas acadêmicas
 
-<<<<<<< HEAD
-### ✅ **Extração Inteligente de Ofertas**
-- **Ofertas ativas**: Busca automática de ofertas em andamento
-- **Ofertas encerradas**: Detecção e extração de ofertas finalizadas
-- **API REST**: Uso de API oficial para dados precisos
-- **Fallback HTML**: Extração alternativa via parsing de páginas
-
-### ✅ **Sistema Robusto de Coleta**
-- **Salvamento incremental**: Dados salvos a cada lote processado
-- **Checkpoint automático**: Retoma de onde parou em caso de interrupção
-- **Logs detalhados**: Monitoramento em tempo real do progresso
-- **Tratamento de erros**: Recuperação automática de falhas
+---
 
 ## 📊 Dados Coletados
 
-### Colunas do Dataset Final
-
-| Coluna | Descrição | Exemplo |
-|--------|-----------|---------|
+### 🎓 **Informações dos Cursos**
+| Campo | Descrição | Exemplo |
+|-------|-----------|---------|
 | `co_seq_curso` | ID único do curso | `44538` |
-| `no_curso` | Nome do curso | `"1º Formação de Preceptores para o SUS"` |
-| `qt_carga_horaria_total` | Carga horária total | `195` |
-| `co_seq_orgao` | ID do órgão responsável | `13` |
-| `sg_orgao` | Sigla do órgão | `"UNIFESP"` |
-| `no_orgao` | Nome completo do órgão | `"Universidade Federal de São Paulo"` |
-| `no_formato` | Formato do curso | `"Ensino a Distância"` |
-| `no_nivel` | Nível educacional | `"Extensão"` |
-| `no_modalidade` | Modalidade | `"Aperfeiçoamento"` |
-| `ds_imagem` | URL da imagem do curso | `"https://..."` |
-| `status` | Status atual | `"Oferta encerrada"` |
-| `status_ordem` | Ordem do status | `3` |
-| `tem_deia` | Possui descritores DEIA | `"Sim"` / `"Não"` |
-| `deia_encontrado` | Descritor DEIA específico | `"Diversidade, Equidade e Inclusão"` |
-| `id_oferta` | ID único da oferta | `416264` |
-| `codigo_oferta` | Código da oferta | `416264` |
-| **`vagas`** | **Número de vagas disponíveis** | **`195`** |
-| `publico_alvo` | Público-alvo da oferta | `"Profissionais da saúde..."` |
-| `local_oferta` | Local da oferta | `"EAD"` |
-| `formato` | Formato da oferta | `"Ensino a Distância"` |
-| `programas_governo` | Programas de governo associados | `"UNA-SUS, Especialização"` |
-| `temas` | Temas abordados | `"Saúde Pública"` |
-| `decs` | Classificação DeCs | `"Medicina"` |
-| `descricao_oferta` | Descrição detalhada da oferta | `"1ª Oferta - Formação..."` |
-| `palavras_chave` | Palavras-chave da oferta | `"Formação de Preceptores"` |
-| `url_oferta` | URL da página da oferta | `"https://..."` |
-| `erro` | Erro durante coleta (se houver) | `"Sem ofertas encontradas"` |
-=======
-### ✨ Principais Recursos
-- **Scraping Inteligente**: Coleta dados de cursos e ofertas da UNA-SUS
-- **Análise DEIA**: Identifica automaticamente conteúdos relacionados a Diversidade, Equidade, Inclusão e Acessibilidade
-- **Processamento Incremental**: Salva dados progressivamente para evitar perda de informações
-- **Sistema de Checkpoint**: Permite retomar o scraping de onde parou
-- **Logging Detalhado**: Acompanhamento completo do progresso
-- **Validação de Dados**: Verifica integridade e qualidade dos dados coletados
-- **Extração de Descrições**: Busca descrições completas em páginas individuais dos cursos
-- **Busca por Ofertas Encerradas**: Inclui ofertas que podem estar ocultas
+| `no_curso` | Nome do curso | `"Atenção à Saúde da População Negra"` |
+| `qt_carga_horaria_total` | Carga horária | `60 horas` |
+| `ds_curso` | Descrição completa | `"Curso focado em..."` |
+| `palavras_chave_curso` | Palavras-chave | `"saúde, população negra, equidade"` |
 
-### 🔧 Ferramentas Auxiliares
-- **Monitor em Tempo Real**: Acompanhe o progresso do scraper
-- **Validador de Dados**: Analise e limpe os dados coletados
-- **Teste de Paginação**: Debug da API da UNA-SUS
+### 🎯 **Informações das Ofertas**
+| Campo | Descrição | Exemplo |
+|-------|-----------|---------|
+| `id_oferta` | ID da oferta | `416264` |
+| `vagas` | Número de vagas | `1000` |
+| `publico_alvo` | Público-alvo | `"Profissionais de saúde"` |
+| `local_oferta` | Local | `"EAD"` |
+| `formato` | Formato | `"Ensino a Distância"` |
 
-## 📊 Dados Coletados
+### 🌈 **Análise DEIA (Diversidade, Equidade, Inclusão e Acessibilidade)**
+| Campo | Descrição | Exemplo |
+|-------|-----------|---------|
+| `tem_deia` | Possui conteúdo DEIA | `"Sim"` ou `"Não"` |
+| `deia_encontrado` | Descritor específico | `"Saúde da População Negra"` |
+| `texto_analisado_deia` | Texto analisado | `"Título: Curso... + Descrição:..."` |
 
-### Informações dos Cursos
-- **Identificação**: `co_seq_curso`, `id_curso`, `co_curso`
-- **Dados Básicos**: `no_curso` (nome), `qt_carga_horaria_total`
-- **Organização**: `co_seq_orgao`, `sg_orgao`, `no_orgao`
-- **Características**: `no_formato`, `no_nivel`, `no_modalidade`
-- **Mídia**: `ds_imagem`
-- **Status**: `status`, `status_ordem`
-- **Descrição**: `ds_curso` (extraída da página do curso quando necessário)
-- **Qualidade**: `curso_incompleto` (marca cursos sem descrição)
+---
 
-### Informações das Ofertas
-- **Identificação**: `id_oferta`, `codigo_oferta`
-- **Detalhes**: `vagas`, `publico_alvo`, `local_oferta`
-- **Formato**: `formato`
-- **Programas**: `programas_governo`
-- **Classificação**: `temas`, `decs`, `palavras_chave`
-- **Descrição**: `descricao_oferta`
+## 🛠️ Como Usar (Guia Passo a Passo)
 
-### Análise DEIA
-- **Indicador**: `tem_deia` (Sim/Não)
-- **Descritor**: `deia_encontrado` (descritor específico encontrado)
+### 📋 **Pré-requisitos**
+Antes de começar, você precisa ter:
+- **Python 3.8 ou superior** instalado
+- **Conexão com a internet** estável
+- **Conhecimento básico** de linha de comando
 
-### Campos de Controle
-- **URL**: `url_oferta`
-- **Erros**: `erro` (quando aplicável)
+### 🔧 **Instalação**
 
-## 🎯 Descritores DEIA
+#### 1️⃣ **Clone o projeto**
+```bash
+git clone https://github.com/seu-usuario/una-sus.git
+cd una-sus
+```
 
-O sistema identifica automaticamente conteúdos relacionados a:
-- Diversidade, Equidade e Integração
-- Diversidade, Equidade, Inclusão e Pertencimento
-- Diversidade, Equidade, Inclusão, Acessibilidade
-- Diversidade, Equidade, Inclusão, Pertencimento
-- Diversidade, Igualdade e Inclusão
-- Diversidade, Igualdade, Inclusão e Acessibilidade
-- Diversidade, Igualdade, Inclusão, Pertencimento
-- Equidade, Diversidade e Inclusão
-- Inclusão, Diversidade, Equidade e Acessibilidade
-- Inclusão, Diversidade, Equidade, Acessibilidade
->>>>>>> a2555d3 (feat: implementação completa com clean code e melhorias robustas)
-
-## 🛠️ Instalação
-
-### Pré-requisitos
-- Python 3.8+
-- pip
-
-### Instalação das Dependências
+#### 2️⃣ **Instale as dependências**
 ```bash
 pip install -r requirements.txt
 ```
 
-## 🚀 Como Usar
-
-<<<<<<< HEAD
-### Execução Básica
+#### 3️⃣ **Verifique se tudo está funcionando**
 ```bash
-python scraper_unasus.py
+python --version
+pip list | grep -E "(requests|pandas|beautifulsoup)"
 ```
 
-### Monitoramento em Tempo Real
-O scraper exibe logs detalhados durante a execução:
-```
-Cursos já processados: 19
-Arquivo de saída: unasus_ofertas_detalhadas.csv
-Buscando ofertas do curso 44566...
-  ✅ Oferta encontrada: 416699
-  ✅ Oferta encontrada: 416329
-  📋 Encontrados 2 links de ofertas encerradas
-  ✅ Total de ofertas únicas encontradas: 2
-  🔍 Extraindo dados da oferta 416699...
-    ✅ Dados obtidos via API REST
-    ✅ Vagas extraídas: 10000
-```
+### 🚀 **Execução**
 
-### Verificação dos Resultados
+#### 🎯 **Opção 1: Coleta Completa (Recomendado)**
 ```bash
-python verificar_vagas.py
+python scraper_unasus_melhorado.py
 ```
 
-## 📈 Funcionalidades Avançadas
+**O que acontece:**
+- 🔍 **Busca** todos os cursos da UNA-SUS
+- 📊 **Coleta** dados detalhados de cada curso
+- 🌈 **Analisa** conteúdo DEIA automaticamente
+- 💾 **Salva** progresso a cada 10 cursos
+- 📈 **Mostra** estatísticas em tempo real
 
-### 🔍 **Extração de Ofertas Encerradas**
-O scraper automaticamente:
-- Detecta links para ofertas encerradas
-- Acessa páginas específicas de ofertas finalizadas
-- Extrai dados completos mesmo de ofertas não ativas
+#### 🔄 **Opção 2: Reanálise de Dados Existentes**
+Se você já tem dados coletados e quer apenas atualizar a análise DEIA:
+```bash
+python reanalisar_deia_existente.py
+```
 
-### 🎯 **API REST para Dados Precisos**
-- Utiliza a API oficial da UNA-SUS (`/rest/oferta/{id}`)
-- Extrai dados estruturados em JSON
-- Fallback para parsing HTML em caso de falha da API
-- Headers otimizados para simular navegador real
+#### 🧪 **Opção 3: Teste da Busca DEIA**
+Para validar se a busca DEIA está funcionando:
+```bash
+python testar_busca_deia.py
+```
 
-### 📊 **Análise DEIA Automática**
-Detecta automaticamente descritores como:
-- "Diversidade, Equidade e Integração"
-- "Diversidade, Equidade, Inclusão e Pertencimento"
-- "Inclusão, Diversidade, Equidade e Acessibilidade"
-- E outros 7 descritores relacionados
+---
 
-### 💾 **Sistema de Checkpoint**
-- Salva progresso a cada 10 cursos processados
-- Retoma automaticamente de onde parou
-- Evita reprocessamento de dados já coletados
+## 📈 Monitoramento e Logs
+
+### 👀 **Como Acompanhar o Progresso**
+
+Durante a execução, você verá mensagens como:
+```
+2025-07-26 15:30:15 - INFO - === PROCESSANDO PÁGINA 5 ===
+2025-07-26 15:30:16 - INFO - Processando curso 44538: Atenção à Saúde da População Negra
+2025-07-26 15:30:16 - INFO - 🌈 DEIA encontrado no curso 44538: População Negra
+2025-07-26 15:30:17 - INFO - Buscando ofertas do curso 44538...
+2025-07-26 15:30:17 - INFO -   ✅ Oferta encontrada: 416264
+2025-07-26 15:30:18 - INFO -   🔍 Extraindo dados da oferta 416264...
+2025-07-26 15:30:18 - INFO -     ✅ Dados obtidos via API REST
+2025-07-26 15:30:18 - INFO -     ✅ Vagas extraídas: 1000
+```
+
+### 🎨 **Significado dos Emojis nos Logs**
+
+| Emoji | Significado | Exemplo |
+|-------|-------------|---------|
+| 🌈 | **DEIA detectado** | `🌈 DEIA encontrado: População Negra` |
+| ✅ | **Sucesso** | `✅ Oferta encontrada: 416264` |
+| 🔍 | **Processando** | `🔍 Extraindo dados...` |
+| 📊 | **Estatísticas** | `📊 Total de registros: 1656` |
+| 💾 | **Salvando** | `💾 Progresso salvo` |
+| ⚠️ | **Aviso** | `⚠️ Curso sem ofertas` |
+| ❌ | **Erro** | `❌ Erro na conexão` |
+
+### 📊 **Estatísticas Finais**
+Ao final da execução, você verá:
+```
+=== RELATÓRIO FINAL ===
+📊 Total de registros: 1656
+🌈 Cursos com DEIA: 604 (36.5%)
+📚 Cursos sem DEIA: 1052 (63.5%)
+📁 Arquivo salvo: unasus_ofertas_melhoradas.csv
+```
+
+---
 
 ## 📁 Estrutura do Projeto
 
 ```
 una-sus/
-├── scraper_unasus.py                # Scraper principal
-├── requirements.txt                 # Dependências
-├── README.md                        # Documentação
-├── .gitignore                       # Arquivos ignorados
-└── unasus_ofertas_detalhadas.csv    # Dataset gerado
+├── 🐍 scraper_unasus_melhorado.py    # Scraper principal (MAIS RECENTE)
+├── 🐍 scraper_unasus.py              # Scraper original (referência)
+├── 🐍 reanalisar_deia_existente.py   # Reanálise DEIA
+├── 🐍 testar_busca_deia.py           # Testes DEIA
+├── 📊 unasus_ofertas_melhoradas.csv  # Dados coletados
+├── 📚 README.md                      # Esta documentação
+├── 📚 README_MELHORIAS_DEIA.md       # Detalhes das melhorias
+├── 📋 requirements.txt               # Dependências
+├── ⚙️ pyproject.toml                 # Configuração do projeto
+├── 🐳 Dockerfile                     # Containerização
+├── 🐳 docker-compose.yml             # Orquestração
+└── 📄 LICENSE                        # Licença MIT
 ```
 
-## 🔧 Configurações
+---
 
-### Variáveis Principais
-```python
-# Configurações de coleta
-lote = 10                    # Salva a cada 10 cursos
-timeout = 30                 # Timeout das requisições
-delay = 1                    # Delay entre requisições
+## 🌈 Análise DEIA - Explicação Detalhada
 
-# Headers para API REST
-api_headers = {
-    "Accept": "application/json, text/javascript, */*; q=0.01",
-    "X-Requested-With": "XMLHttpRequest",
-    "Referer": url_oferta
-}
-=======
-### 1. Scraper Principal
+### 🎯 **O que é DEIA?**
+**DEIA** significa **Diversidade, Equidade, Inclusão e Acessibilidade**. É um conceito fundamental para:
+- 🏥 **Saúde pública** inclusiva
+- 🎓 **Educação** acessível a todos
+- 🤝 **Sociedade** mais justa e equitativa
+
+### 🔍 **Como Funciona a Detecção?**
+
+O sistema analisa **todos os campos** coletados:
+1. **Título do curso** (`no_curso`)
+2. **Descrição do curso** (`ds_curso`)
+3. **Descrição da oferta** (`descricao_oferta`)
+4. **Palavras-chave** (`palavras_chave`)
+5. **Público-alvo** (`publico_alvo`)
+6. **Temas** (`temas`)
+7. **DeCs** (`decs`)
+8. **Programas de governo** (`programas_governo`)
+9. **Texto da página inicial** (`texto_pagina_inicial`)
+
+### 📝 **Exemplos de Descritores DEIA**
+
+#### 👥 **Populações Específicas**
+- População Negra, População Indígena
+- População LGBTQI+, Trans, Transgênero
+- População em Situação de Rua
+- População Privada de Liberdade
+
+#### 🏥 **Saúde Específica**
+- Saúde Mental, Saúde da Mulher
+- Saúde da Criança, Saúde do Idoso
+- Saúde da População Negra
+- Saúde Indígena
+
+#### 🌍 **Conceitos DEIA**
+- Diversidade, Equidade, Inclusão
+- Acessibilidade, Pertencimento
+- Direitos Humanos, Cidadania
+- Vulnerabilidade, Discriminação
+
+---
+
+## 🚨 Solução de Problemas
+
+### ❓ **Perguntas Frequentes**
+
+#### **Q: O scraper parou no meio. O que fazer?**
+**A:** Não se preocupe! O sistema tem **checkpoint automático**. Basta executar novamente:
 ```bash
-python scraper_unasus_incremental.py
+python scraper_unasus_melhorado.py
 ```
+Ele continuará de onde parou.
 
-**Características:**
-- Processamento incremental (salva a cada 10 registros)
-- Sistema de checkpoint automático
-- Logging detalhado em `logs/scraper_YYYYMMDD_HHMMSS.log`
-- Arquivo de saída: `unasus_ofertas_detalhadas.csv`
-
-### 2. Monitor em Tempo Real
+#### **Q: Não encontrou nenhum curso com DEIA. É normal?**
+**A:** Se você está usando o scraper original (`scraper_unasus.py`), sim. Use o **melhorado**:
 ```bash
-python monitor_scraper.py
+python scraper_unasus_melhorado.py
 ```
 
-**Funcionalidades:**
-- Status atual do scraper
-- Estatísticas do arquivo CSV
-- Últimas entradas do log
-- Informações do checkpoint
+#### **Q: O arquivo CSV está muito grande. É normal?**
+**A:** Sim! O arquivo pode ter **8+ MB** porque contém:
+- 1.656 registros de ofertas
+- 30 colunas de dados
+- Textos completos dos cursos
 
-### 3. Validador de Dados
+#### **Q: Como saber se está funcionando?**
+**A:** Observe os logs:
+- ✅ **Verde** = funcionando
+- ⚠️ **Amarelo** = aviso (normal)
+- ❌ **Vermelho** = erro (raro)
+
+### 🔧 **Problemas Técnicos**
+
+#### **Erro de Conexão**
 ```bash
-python validar_dados.py
+# Tente novamente em alguns minutos
+python scraper_unasus_melhorado.py
 ```
 
-**Análises:**
-- Estrutura dos dados
-- Validação de cursos e ofertas
-- Estatísticas DEIA
-- Remoção de duplicatas
-- Limpeza de registros vazios
-- Análise de cursos incompletos
-
-### 4. Teste de Paginação
+#### **Erro de Dependências**
 ```bash
-python teste_paginacao.py
+# Reinstale as dependências
+pip install -r requirements.txt --force-reinstall
 ```
 
-**Debug:**
-- Testa diferentes tokens de paginação
-- Compara resultados entre páginas
-- Identifica problemas de paginação
-
-## 📁 Estrutura do Projeto
-
-```
-unsa-sus/
-├── scraper_unasus_incremental.py  # Scraper principal
-├── monitor_scraper.py             # Monitor em tempo real
-├── validar_dados.py               # Validador de dados
-├── teste_paginacao.py             # Teste de paginação
-├── requirements.txt               # Dependências Python
-├── README.md                      # Documentação
-├── LICENSE                        # Licença MIT
-├── setup.py                       # Configuração do pacote
-├── pyproject.toml                 # Configuração moderna
-├── .gitignore                     # Arquivos ignorados pelo Git
-├── logs/                          # Logs do scraper
-├── .github/workflows/             # CI/CD GitHub Actions
-├── .vscode/                       # Configurações VS Code
-├── Dockerfile                     # Containerização
-├── docker-compose.yml             # Orquestração Docker
-└── .dockerignore                  # Arquivos ignorados no Docker
-```
-
-## 🔧 Configurações
-
-### Variáveis de Ambiente (Opcional)
+#### **Erro de Permissão**
 ```bash
-# Configurações de logging
-LOG_LEVEL=INFO
-LOG_DIR=logs
-
-# Configurações do scraper
-BATCH_SIZE=10
-REQUEST_TIMEOUT=30
-RETRY_DELAY=30
+# No Windows, execute como administrador
+# No Linux/Mac, use sudo se necessário
 ```
 
-### Arquivos de Configuração
-- **checkpoint.json**: Progresso do scraper
-- **unasus_ofertas_detalhadas.csv**: Dados coletados
-- **logs/**: Arquivos de log com timestamp
+---
 
-## 🚀 Execução com Docker
+## 📊 Análise dos Resultados
 
-### Usando Docker Compose
+### 📈 **Estatísticas Típicas**
+- **Total de cursos**: ~550 cursos únicos
+- **Total de ofertas**: ~1.650 ofertas
+- **Cursos com DEIA**: ~600 (36%)
+- **Cursos sem DEIA**: ~1.050 (64%)
+
+### 🔍 **Como Analisar os Dados**
+
+#### **1. Abrir no Excel/LibreOffice**
 ```bash
-docker-compose up scraper
+# O arquivo é compatível com Excel
+unasus_ofertas_melhoradas.csv
 ```
 
-### Usando Docker diretamente
-```bash
-docker build -t unasus-scraper .
-docker run -v $(pwd):/app unasus-scraper
->>>>>>> a2555d3 (feat: implementação completa com clean code e melhorias robustas)
-```
+#### **2. Filtrar por DEIA**
+- Coluna `tem_deia` = "Sim"
+- Ver coluna `deia_encontrado` para detalhes
 
-## 📊 Exemplo de Saída
+#### **3. Análise por Tema**
+- Coluna `temas` para categorização
+- Coluna `decs` para classificação médica
 
-<<<<<<< HEAD
-```csv
-co_seq_curso,no_curso,qt_carga_horaria_total,vagas,publico_alvo,local_oferta,formato,programas_governo
-44538,"1º Formação de Preceptores para o SUS",195,195,"Profissionais da saúde...",EAD,"Ensino a Distância","UNA-SUS, Especialização"
-44540,"2º Formação de Preceptores para o SUS",195,195,"Profissionais da saúde...",EAD,"Ensino a Distância","UNA-SUS, Especialização"
-```
+#### **4. Análise Geográfica**
+- Coluna `local_oferta` para distribuição
+- Coluna `no_orgao` para instituições
 
-## 🚨 Tratamento de Erros
-
-O scraper inclui tratamento robusto de erros:
-- **Timeout de conexão**: Retry automático após 30 segundos
-- **Falha na API**: Fallback para parsing HTML
-- **Dados ausentes**: Campos preenchidos com string vazia
-- **Ofertas sem vagas**: Log de aviso mantido
-
-## 📈 Estatísticas de Coleta
-
-### Métricas Finais (Execução Completa)
-- **Cursos processados**: 552 cursos únicos (99.6% dos 554 disponíveis)
-- **Ofertas encontradas**: 1,656 ofertas
-- **Taxa de sucesso vagas**: 100% (1,656/1,656)
-- **Tempo de execução**: ~2 horas
-- **Arquivo final**: 1.28 MB com dados completos
-
-### Logs de Progresso
-```
-Página 1 processada.
-Página 2 processada.
-...
-Progresso salvo após 20 cursos em unasus_ofertas_detalhadas.csv
-```
-=======
-### Logs
-- **Arquivo**: `logs/scraper_YYYYMMDD_HHMMSS.log`
-- **Níveis**: INFO, WARNING, ERROR, DEBUG
-- **Formato**: Timestamp - Nível - Mensagem
-
-### Checkpoint
-- **Arquivo**: `checkpoint.json`
-- **Dados**: Página atual, cursos processados, ofertas processadas, último token
-
-### Estatísticas
-- Total de cursos processados
-- Total de ofertas encontradas
-- Cursos com/sem DEIA
-- Cursos incompletos (sem descrição)
-
-## 🔍 Exemplo de Dados
-
-```csv
-co_seq_curso,no_curso,qt_carga_horaria_total,ds_curso,tem_deia,deia_encontrado,id_oferta,vagas,publico_alvo,curso_incompleto
-12345,Curso de Atenção à Diversidade,60,"Curso focado em atenção à diversidade...",Sim,"Diversidade, Equidade e Inclusão",67890,100,"Profissionais de saúde",Não
-```
-
-## 🛡️ Tratamento de Erros
-
-### Recuperação Automática
-- **Timeout de requisições**: 30 segundos
-- **Retry automático**: 30 segundos de espera
-- **Checkpoint**: Salva progresso a cada lote
-- **Validação**: Verifica dados antes de salvar
-
-### Logs de Erro
-- **Erros de conexão**: Registrados com retry automático
-- **Dados inválidos**: Marcados como "erro" no CSV
-- **Cursos sem ofertas**: Registrados com flag específico
->>>>>>> a2555d3 (feat: implementação completa com clean code e melhorias robustas)
+---
 
 ## 🤝 Contribuição
 
-1. Fork o projeto
-2. Crie uma branch para sua feature (`git checkout -b feature/AmazingFeature`)
-3. Commit suas mudanças (`git commit -m 'Add some AmazingFeature'`)
-4. Push para a branch (`git push origin feature/AmazingFeature`)
-5. Abra um Pull Request
+### 💡 **Como Contribuir**
+
+1. **🔍 Encontrou um bug?**
+   - Abra uma **Issue** no GitHub
+   - Descreva o problema detalhadamente
+
+2. **✨ Tem uma ideia?**
+   - Sugira melhorias via **Issue**
+   - Proponha novos descritores DEIA
+
+3. **💻 Quer programar?**
+   - Faça um **Fork** do projeto
+   - Crie uma **Pull Request**
+
+### 📝 **Padrões do Projeto**
+
+#### **Emojis Educativos**
+Use emojis para facilitar a compreensão:
+- 🎓 = Educação/Academia
+- 🏥 = Saúde
+- 🌈 = DEIA/Diversidade
+- 📊 = Dados/Estatísticas
+- 🔍 = Busca/Análise
+- ✅ = Sucesso
+- ❌ = Erro
+
+#### **Comentários no Código**
+```python
+# 🌈 Busca por descritores DEIA no texto
+def encontrar_descritor_deia_melhorado(texto_completo):
+    """
+    📝 Analisa texto completo em busca de descritores DEIA
+    
+    Args:
+        texto_completo (str): Texto combinado de todos os campos
+        
+    Returns:
+        str: Descritor DEIA encontrado ou None
+    """
+```
+
+---
+
+## 📚 Recursos Educativos
+
+### 🎓 **Para Estudantes**
+- **Web Scraping**: Aprenda a coletar dados da web
+- **Análise de Dados**: Trabalhe com datasets reais
+- **Python**: Pratique programação em Python
+- **Saúde Pública**: Entenda dados educacionais em saúde
+
+### 🔬 **Para Pesquisadores**
+- **Metodologia**: Exemplo de coleta sistemática de dados
+- **DEIA**: Framework para análise de diversidade
+- **Estatísticas**: Dados quantitativos para pesquisas
+- **Qualidade**: Dados validados e estruturados
+
+### 💻 **Para Desenvolvedores**
+- **Clean Code**: Código bem estruturado e documentado
+- **Error Handling**: Tratamento robusto de erros
+- **Logging**: Sistema de logs detalhado
+- **Modularização**: Funções bem separadas
+
+---
 
 ## 📄 Licença
 
-<<<<<<< HEAD
-Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+Este projeto está sob a **Licença MIT** - veja o arquivo [LICENSE](LICENSE) para detalhes.
+
+**O que isso significa?**
+- ✅ **Pode usar** livremente
+- ✅ **Pode modificar** o código
+- ✅ **Pode distribuir** o projeto
+- ✅ **Pode usar comercialmente**
+- ❌ **Não precisa** dar crédito (mas é apreciado!)
+
+---
 
 ## 🙏 Agradecimentos
 
-- UNA-SUS pela disponibilização dos dados
-- Comunidade Python pelos recursos utilizados
-- Contribuidores do projeto
-=======
-Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](LICENSE) para detalhes.
+- 🏥 **UNA-SUS** pela disponibilização dos dados
+- 🐍 **Comunidade Python** pelos recursos utilizados
+- 🌈 **Comunidade DEIA** pela inspiração
+- 👥 **Contribuidores** do projeto
 
-## 🆘 Suporte
+---
 
-### Problemas Comuns
-1. **Erro de paginação**: Use `teste_paginacao.py` para debug
-2. **Dados incompletos**: Execute `validar_dados.py` para análise
-3. **Scraper travado**: Verifique logs e checkpoint
+## 📞 Suporte
 
-### Logs Importantes
-- **"Nenhum item encontrado"**: Fim dos dados
-- **"Curso sem descrição"**: Curso marcado como incompleto
-- **"Sem ofertas encontradas"**: Curso sem ofertas ativas/encerradas
+### 🆘 **Precisa de Ajuda?**
 
-## 🔄 Atualizações
->>>>>>> a2555d3 (feat: implementação completa com clean code e melhorias robustas)
+1. **📖 Leia** esta documentação completa
+2. **🔍 Verifique** as seções de solução de problemas
+3. **💬 Abra** uma Issue no GitHub
+4. **📧 Entre em contato** com os mantenedores
 
-### Versão Atual
-- **Clean Code**: Código refatorado seguindo boas práticas
-- **Funções Modulares**: Separação clara de responsabilidades
-- **Tratamento Robusto**: Melhor gestão de erros e exceções
-- **Documentação Completa**: README atualizado com todas as funcionalidades
+### 📚 **Recursos Adicionais**
 
-<<<<<<< HEAD
-**Desenvolvido com ❤️ para facilitar a análise de dados educacionais em saúde pública.** 
-=======
-### Próximas Melhorias
-- Interface web para monitoramento
-- API REST para consulta dos dados
-- Dashboard com visualizações
-- Integração com bases de dados 
->>>>>>> a2555d3 (feat: implementação completa com clean code e melhorias robustas)
+- 📖 **Documentação Python**: https://docs.python.org/
+- 🐍 **Tutorial Requests**: https://requests.readthedocs.io/
+- 🍲 **BeautifulSoup**: https://www.crummy.com/software/BeautifulSoup/
+- 📊 **Pandas**: https://pandas.pydata.org/
+
+---
+
+**🎯 Desenvolvido com ❤️ para facilitar pesquisas em saúde pública e promover educação inclusiva!**
+
+*Última atualização: Julho 2025*
