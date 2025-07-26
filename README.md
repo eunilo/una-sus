@@ -24,6 +24,523 @@ Este é um **scraper** (coletor automático de dados) que extrai informações d
 
 ---
 
+## 🏗️ Como o Código Funciona (Arquitetura Detalhada)
+
+### 🧠 **Visão Geral da Arquitetura**
+
+O sistema é composto por **módulos especializados** que trabalham em conjunto para coletar, processar e analisar dados:
+
+```
+🌐 UNA-SUS Website
+    ↓
+🔍 Scraper Principal (scraper_unasus_melhorado.py)
+    ↓
+📊 Processadores Especializados
+    ↓
+💾 Sistema de Persistência
+    ↓
+📈 Análise DEIA
+    ↓
+📁 Arquivo CSV Final
+```
+
+### 🔧 **Componentes Principais**
+
+#### 1️⃣ **Módulo de Conexão e Autenticação**
+```python
+# 🌐 Configurações de rede
+HEADERS = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+    "Accept-Language": "pt-BR,pt;q=0.9,en;q=0.8",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Connection": "keep-alive",
+    "Upgrade-Insecure-Requests": "1"
+}
+
+COOKIES = {
+    "JSESSIONID": "sessão_ativa",
+    "BIGipServer": "balanceamento_de_carga"
+}
+
+# 📋 Payload para requisições POST
+PAYLOAD_INICIAL = {
+    "draw": "1",
+    "columns[0][data]": "0",
+    "columns[0][name]": "",
+    "columns[0][searchable]": "true",
+    "columns[0][orderable]": "true",
+    "start": "0",
+    "length": "10",
+    "search[value]": "",
+    "search[regex]": "false"
+}
+```
+
+**🎯 Função**: Estabelece conexão segura com o servidor UNA-SUS, simulando um navegador real.
+
+#### 2️⃣ **Módulo de Paginação Inteligente**
+```python
+def processar_pagina(pagina, logger):
+    """
+    📄 Processa uma página de resultados da UNA-SUS
+    
+    🔄 Fluxo:
+    1. Faz requisição POST com parâmetros de paginação
+    2. Extrai dados JSON da resposta
+    3. Processa cada curso encontrado
+    4. Retorna dados estruturados
+    """
+    # 📊 Parâmetros de paginação
+    payload = PAYLOAD_INICIAL.copy()
+    payload["start"] = str(pagina * 10)
+    
+    # 🌐 Requisição HTTP
+    response = requests.post(URL, data=payload, headers=HEADERS, cookies=COOKIES)
+    
+    # 📋 Extração de dados JSON
+    dados = response.json()
+    cursos = dados.get("data", [])
+    
+    return cursos
+```
+
+**🎯 Função**: Navega pelas páginas de resultados, extraindo dados de forma sistemática.
+
+#### 3️⃣ **Módulo de Extração de Dados de Cursos**
+```python
+def extrair_dados_curso(curso, logger):
+    """
+    🎓 Extrai dados completos de um curso individual
+    
+    📊 Campos extraídos:
+    - Informações básicas (ID, nome, carga horária)
+    - Dados organizacionais (órgão responsável)
+    - Características (formato, nível, modalidade)
+    - Descrição completa e palavras-chave
+    - Análise DEIA inicial
+    """
+    # 🆔 Dados básicos
+    co_seq_curso = curso[0]
+    no_curso = curso[1]
+    qt_carga_horaria_total = curso[2]
+    
+    # 🏢 Dados organizacionais
+    co_seq_orgao = curso[3]
+    sg_orgao = curso[4]
+    no_orgao = curso[5]
+    
+    # 📝 Descrição completa (nova funcionalidade)
+    ds_curso = extrair_descricao_curso(co_seq_curso, logger)
+    
+    # 🌈 Análise DEIA inicial
+    tem_deia, deia_encontrado = analisar_deia_inicial(no_curso, ds_curso)
+    
+    return {
+        "co_seq_curso": co_seq_curso,
+        "no_curso": no_curso,
+        "ds_curso": ds_curso,
+        "tem_deia": tem_deia,
+        "deia_encontrado": deia_encontrado,
+        # ... outros campos
+    }
+```
+
+**🎯 Função**: Extrai e estrutura todos os dados de um curso individual.
+
+#### 4️⃣ **Módulo de Extração de Descrição Completa**
+```python
+def extrair_descricao_curso(id_curso, logger):
+    """
+    📄 Extrai descrição completa da página individual do curso
+    
+    🔍 Estratégias de extração:
+    1. Busca por seletores CSS específicos
+    2. Fallback para busca por texto
+    3. Limpeza e formatação do conteúdo
+    """
+    url_curso = f"https://unasus.gov.br/cursos/{id_curso}"
+    
+    try:
+        # 🌐 Requisição à página do curso
+        response = requests.get(url_curso, headers=HEADERS, timeout=30)
+        soup = BeautifulSoup(response.content, 'html.parser')
+        
+        # 🔍 Busca por descrição
+        descricao = None
+        
+        # Estratégia 1: Seletor CSS específico
+        desc_element = soup.select_one('.curso-descricao, .descricao-curso, .content-description')
+        if desc_element:
+            descricao = desc_element.get_text(strip=True)
+        
+        # Estratégia 2: Busca por texto
+        if not descricao:
+            for element in soup.find_all(['p', 'div']):
+                text = element.get_text(strip=True)
+                if len(text) > 100 and 'curso' in text.lower():
+                    descricao = text
+                    break
+        
+        return descricao or ""
+        
+    except Exception as e:
+        logger.warning(f"❌ Erro ao extrair descrição do curso {id_curso}: {e}")
+        return ""
+```
+
+**🎯 Função**: Acessa páginas individuais dos cursos para extrair descrições completas.
+
+#### 5️⃣ **Módulo de Busca de Ofertas**
+```python
+def extrair_ofertas_do_curso(id_curso, logger):
+    """
+    🎯 Extrai todas as ofertas de um curso (ativas e encerradas)
+    
+    🔍 Estratégias:
+    1. Busca ofertas ativas na página principal
+    2. Identifica links para ofertas encerradas
+    3. Extrai dados de cada oferta individual
+    """
+    url_curso = f"https://unasus.gov.br/cursos/{id_curso}"
+    
+    try:
+        response = requests.get(url_curso, headers=HEADERS, timeout=30)
+        soup = BeautifulSoup(response.content, 'html.parser')
+        
+        ofertas_encontradas = []
+        
+        # 🔍 Busca ofertas ativas
+        links_ofertas = soup.find_all('a', href=re.compile(r'/oferta/\d+'))
+        for link in links_ofertas:
+            id_oferta = re.search(r'/oferta/(\d+)', link['href']).group(1)
+            ofertas_encontradas.append(id_oferta)
+        
+        # 📋 Busca ofertas encerradas
+        ofertas_encerradas = buscar_ofertas_encerradas(soup, url_curso, logger)
+        ofertas_encontradas.extend(ofertas_encerradas)
+        
+        return list(set(ofertas_encontradas))  # Remove duplicatas
+        
+    except Exception as e:
+        logger.error(f"❌ Erro ao buscar ofertas do curso {id_curso}: {e}")
+        return []
+```
+
+**🎯 Função**: Identifica e coleta todas as ofertas disponíveis para um curso.
+
+#### 6️⃣ **Módulo de Extração de Dados de Ofertas**
+```python
+def extrair_dados_oferta(id_oferta, logger):
+    """
+    📊 Extrai dados detalhados de uma oferta específica
+    
+    🎯 Estratégia híbrida:
+    1. Tenta API REST primeiro (mais rápido e preciso)
+    2. Fallback para parsing HTML se API falhar
+    3. Extração robusta de todos os campos
+    """
+    url_oferta = f"https://unasus.gov.br/oferta/{id_oferta}"
+    url_api = f"https://unasus.gov.br/cursos/rest/oferta/{id_oferta}"
+    
+    dados_oferta = {}
+    
+    # 🚀 Tentativa 1: API REST
+    try:
+        api_headers = HEADERS.copy()
+        api_headers.update({
+            "Accept": "application/json, text/javascript, */*; q=0.01",
+            "X-Requested-With": "XMLHttpRequest",
+            "Referer": url_oferta
+        })
+        
+        response = requests.get(url_api, headers=api_headers, timeout=30)
+        if response.status_code == 200:
+            dados_json = response.json()
+            
+            # 📊 Extração de dados da API
+            dados_oferta = {
+                "vagas": dados_json.get("vagas", ""),
+                "publico_alvo": dados_json.get("publico_alvo", ""),
+                "local_oferta": dados_json.get("local_oferta", ""),
+                "formato": dados_json.get("formato", ""),
+                "programas_governo": dados_json.get("programas_governo", ""),
+                "temas": dados_json.get("temas", ""),
+                "decs": dados_json.get("decs", ""),
+                "descricao_oferta": dados_json.get("descricao_oferta", ""),
+                "palavras_chave": dados_json.get("palavras_chave", "")
+            }
+            
+            logger.info("    ✅ Dados obtidos via API REST")
+            return dados_oferta
+            
+    except Exception as e:
+        logger.warning(f"    ⚠️ API falhou, tentando HTML: {e}")
+    
+    # 🌐 Tentativa 2: Parsing HTML
+    try:
+        response = requests.get(url_oferta, headers=HEADERS, timeout=30)
+        soup = BeautifulSoup(response.content, 'html.parser')
+        
+        # 🔍 Extração via HTML
+        dados_oferta = extrair_dados_html_oferta(soup, logger)
+        logger.info("    ✅ Dados obtidos via HTML")
+        
+    except Exception as e:
+        logger.error(f"    ❌ Erro na extração HTML: {e}")
+    
+    return dados_oferta
+```
+
+**🎯 Função**: Extrai dados detalhados de ofertas usando API REST e fallback HTML.
+
+#### 7️⃣ **Módulo de Análise DEIA Avançada**
+```python
+def encontrar_descritor_deia_melhorado(texto_completo):
+    """
+    🌈 Análise avançada de conteúdo DEIA
+    
+    🧠 Lógica:
+    1. Combina todos os campos relevantes
+    2. Busca por 150+ descritores diferentes
+    3. Retorna o descritor mais específico encontrado
+    4. Prioriza descritores mais longos (mais específicos)
+    """
+    # 🌈 Lista expandida de descritores DEIA (150+ termos)
+    DESCRITORES_DEIA = [
+        # 👥 Populações específicas
+        "Saúde da População Negra",
+        "Saúde da População Indígena",
+        "População LGBTQI+",
+        "População Trans",
+        "População em Situação de Rua",
+        
+        # 🏥 Saúde específica
+        "Saúde Mental",
+        "Saúde da Mulher",
+        "Saúde da Criança",
+        "Saúde do Idoso",
+        
+        # 🌍 Conceitos DEIA
+        "Diversidade, Equidade e Inclusão",
+        "Diversidade, Equidade, Inclusão e Acessibilidade",
+        "Inclusão, Diversidade, Equidade",
+        
+        # 🎓 Educação inclusiva
+        "Educação Inclusiva",
+        "Educação Popular",
+        "Formação Continuada",
+        
+        # ... 150+ descritores
+    ]
+    
+    # 🔍 Busca pelo descritor mais específico
+    descritor_encontrado = None
+    for descritor in sorted(DESCRITORES_DEIA, key=len, reverse=True):
+        if descritor.lower() in texto_completo.lower():
+            descritor_encontrado = descritor
+            break
+    
+    return descritor_encontrado
+```
+
+**🎯 Função**: Analisa texto completo em busca de conteúdo relacionado a DEIA.
+
+#### 8️⃣ **Módulo de Sistema de Checkpoint**
+```python
+def salvar_checkpoint(pagina_atual, cursos_processados, logger):
+    """
+    💾 Sistema de checkpoint para recuperação automática
+    
+    📊 Salva:
+    - Página atual sendo processada
+    - Número de cursos processados
+    - Timestamp da última execução
+    - Dados parciais coletados
+    """
+    checkpoint = {
+        "pagina_atual": pagina_atual,
+        "cursos_processados": cursos_processados,
+        "timestamp": datetime.now().isoformat(),
+        "status": "em_andamento"
+    }
+    
+    with open("checkpoint.json", "w", encoding="utf-8") as f:
+        json.dump(checkpoint, f, ensure_ascii=False, indent=2)
+    
+    logger.info(f"💾 Progresso salvo: {cursos_processados} cursos processados")
+
+def carregar_checkpoint():
+    """
+    🔄 Carrega checkpoint para retomar execução
+    """
+    try:
+        with open("checkpoint.json", "r", encoding="utf-8") as f:
+            return json.load(f)
+    except FileNotFoundError:
+        return {"pagina_atual": 0, "cursos_processados": 0}
+```
+
+**🎯 Função**: Permite retomar a execução de onde parou em caso de interrupção.
+
+### 🔄 **Fluxo de Execução Detalhado**
+
+#### 📋 **Fase 1: Inicialização**
+```python
+def main():
+    """
+    🚀 Função principal - orquestra todo o processo
+    """
+    # 🔧 Configuração inicial
+    logger = setup_logging()
+    logger.info("🚀 Iniciando scraper UNA-SUS melhorado")
+    
+    # 🔄 Carrega checkpoint se existir
+    checkpoint = carregar_checkpoint()
+    pagina_atual = checkpoint["pagina_atual"]
+    cursos_processados = checkpoint["cursos_processados"]
+    
+    # 📊 Inicializa estrutura de dados
+    todos_dados = []
+```
+
+#### 📄 **Fase 2: Processamento de Páginas**
+```python
+    # 🔄 Loop principal de páginas
+    while True:
+        logger.info(f"=== PROCESSANDO PÁGINA {pagina_atual + 1} ===")
+        
+        # 📄 Extrai cursos da página atual
+        cursos_pagina = processar_pagina(pagina_atual, logger)
+        
+        if not cursos_pagina:
+            logger.info("📋 Nenhum curso encontrado - fim dos dados")
+            break
+        
+        # 🎓 Processa cada curso da página
+        for curso in cursos_pagina:
+            dados_curso = extrair_dados_curso(curso, logger)
+            ofertas = extrair_ofertas_do_curso(dados_curso["co_seq_curso"], logger)
+            
+            # 🎯 Processa cada oferta
+            for oferta in ofertas:
+                dados_oferta = extrair_dados_oferta(oferta, logger)
+                
+                # 🔗 Combina dados do curso e da oferta
+                registro_completo = {**dados_curso, **dados_oferta}
+                todos_dados.append(registro_completo)
+            
+            cursos_processados += 1
+```
+
+#### 💾 **Fase 3: Persistência e Checkpoint**
+```python
+        # 💾 Salva progresso a cada lote
+        if cursos_processados % 10 == 0:
+            salvar_dados_parciais(todos_dados, logger)
+            salvar_checkpoint(pagina_atual, cursos_processados, logger)
+        
+        pagina_atual += 1
+```
+
+#### 📊 **Fase 4: Finalização e Relatório**
+```python
+    # 📊 Salva dados finais
+    salvar_dados_finais(todos_dados, logger)
+    
+    # 📈 Gera relatório final
+    gerar_relatorio_final(todos_dados, logger)
+    
+    logger.info("🎉 Scraper finalizado com sucesso!")
+```
+
+### 🛡️ **Sistema de Tratamento de Erros**
+
+#### 🔄 **Recuperação Automática**
+```python
+def executar_com_retry(funcao, max_tentativas=3, delay=30):
+    """
+    🔄 Executa função com retry automático em caso de erro
+    
+    🎯 Estratégias:
+    1. Tentativa imediata
+    2. Retry com delay crescente
+    3. Log detalhado de erros
+    4. Fallback para métodos alternativos
+    """
+    for tentativa in range(max_tentativas):
+        try:
+            return funcao()
+        except requests.exceptions.RequestException as e:
+            if tentativa < max_tentativas - 1:
+                logger.warning(f"⚠️ Tentativa {tentativa + 1} falhou: {e}")
+                time.sleep(delay * (tentativa + 1))
+            else:
+                logger.error(f"❌ Todas as tentativas falharam: {e}")
+                raise
+```
+
+#### 📊 **Validação de Dados**
+```python
+def validar_dados_curso(dados):
+    """
+    ✅ Valida integridade dos dados coletados
+    
+    🔍 Verificações:
+    - Campos obrigatórios presentes
+    - Tipos de dados corretos
+    - Valores dentro de ranges esperados
+    - Consistência entre campos relacionados
+    """
+    campos_obrigatorios = ["co_seq_curso", "no_curso", "id_oferta"]
+    
+    for campo in campos_obrigatorios:
+        if campo not in dados or not dados[campo]:
+            return False, f"Campo obrigatório ausente: {campo}"
+    
+    # Validações específicas
+    if dados.get("vagas") and not str(dados["vagas"]).isdigit():
+        return False, "Vagas deve ser um número"
+    
+    return True, "Dados válidos"
+```
+
+### 🎯 **Otimizações de Performance**
+
+#### ⚡ **Concorrência Controlada**
+```python
+# 🚦 Controle de taxa de requisições
+time.sleep(1)  # Delay entre requisições para não sobrecarregar servidor
+
+# 📊 Processamento em lotes
+if len(todos_dados) % 10 == 0:
+    salvar_dados_parciais(todos_dados, logger)
+```
+
+#### 💾 **Gerenciamento de Memória**
+```python
+# 🧹 Limpeza periódica de dados em memória
+if len(todos_dados) > 1000:
+    salvar_dados_parciais(todos_dados, logger)
+    todos_dados = []  # Libera memória
+```
+
+#### 🔍 **Cache Inteligente**
+```python
+# 📋 Cache de requisições para evitar duplicatas
+cache_requisicoes = {}
+
+def fazer_requisicao_cachead(url):
+    if url in cache_requisicoes:
+        return cache_requisicoes[url]
+    
+    response = requests.get(url, headers=HEADERS, timeout=30)
+    cache_requisicoes[url] = response
+    return response
+```
+
+---
+
 ## 📊 Dados Coletados
 
 ### 🎓 **Informações dos Cursos**
