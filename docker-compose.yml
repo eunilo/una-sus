@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  unsa-sus-scraper:
+    build: .
+    container_name: unsa-sus-scraper
+    volumes:
+      - ./data:/app/data
+      - ./logs:/app/logs
+    environment:
+      - PYTHONPATH=/app
+      - PYTHONUNBUFFERED=1
+    restart: unless-stopped
+    command: python scraper_unasus_incremental.py
+
+  unsa-sus-test:
+    build: .
+    container_name: unsa-sus-test
+    volumes:
+      - ./data:/app/data
+    environment:
+      - PYTHONPATH=/app
+      - PYTHONUNBUFFERED=1
+    command: python teste_scraper.py 
