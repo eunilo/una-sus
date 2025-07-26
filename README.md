@@ -132,7 +132,7 @@ Detecta automaticamente descritores como:
 ## 📁 Estrutura do Projeto
 
 ```
-unsa-sus/
+una-sus/
 ├── scraper_unasus.py                # Scraper principal
 ├── requirements.txt                 # Dependências
 ├── README.md                        # Documentação

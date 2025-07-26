@@ -3,7 +3,7 @@ requires = ["setuptools>=45", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "unsa-sus-scraper"
+name = "una-sus-scraper"
 version = "1.0.0"
 description = "Web scraper para coletar dados de cursos e ofertas da UNA-SUS"
 readme = "README.md"
@@ -39,13 +39,13 @@ dependencies = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/eunilo/unsa-sus"
-Documentation = "https://github.com/eunilo/unsa-sus#readme"
-Repository = "https://github.com/eunilo/unsa-sus"
-"Bug Tracker" = "https://github.com/eunilo/unsa-sus/issues"
+Homepage = "https://github.com/eunilo/una-sus"
+Documentation = "https://github.com/eunilo/una-sus#readme"
+Repository = "https://github.com/eunilo/una-sus"
+"Bug Tracker" = "https://github.com/eunilo/una-sus/issues"
 
 [project.scripts]
-unsa-sus-scraper = "scraper_unasus_incremental:main"
+una-sus-scraper = "scraper_unasus:main"
 
 [tool.setuptools]
 packages = ["unsa_sus_scraper"]
