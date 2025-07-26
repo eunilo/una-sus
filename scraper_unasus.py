@@ -6,8 +6,31 @@ import pandas as pd
 import requests
 from bs4 import BeautifulSoup
 
+# Configurações da API (CORRIGIDAS)
 url = "https://www.unasus.gov.br/cursos/rest/busca"
-headers = {"User-Agent": "Mozilla/5.0", "Content-Type": "application/json"}
+headers = {
+    "User-Agent": (
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+        "AppleWebKit/537.36 (KHTML, like Gecko) "
+        "Chrome/138.0.0.0 Safari/537.36"
+    ),
+    "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",  # CORRIGIDO!
+    "Accept": "application/json, text/javascript, */*; q=0.01",
+    "X-Requested-With": "XMLHttpRequest",
+    "Origin": "https://www.unasus.gov.br",
+    "Referer": (
+        "https://www.unasus.gov.br/cursos/busca?status=todos&busca="
+        "&ordenacao=Relev%C3%A2ncia%20na%20busca"
+    ),
+}
+
+cookies = {
+    "PORTAL_UNASUS": "4ru34cs848mfbopb6vseqluni4",
+    "UNASUSAnonID": "ID1ef7d6246158f7cf31c06b928bc56f8e",
+    "_shibsession_64656661756c7468747470733a2f2f7777772e756e617375732e676f762e6272": (
+        "_329a72cffc11d2904ae393c82d0cfb72"
+    ),
+}
 
 payload = {"busca": "", "ordenacao": "Por nome", "status": "Todos", "proximo": 0}
 
@@ -449,7 +472,14 @@ print(f"Arquivo de saída: {csv_path}")
 
 while True:
     try:
-        resp = requests.post(url, json=payload, headers=headers, timeout=30)
+        # CORREÇÃO: usar data=payload em vez de json=payload
+        resp = requests.post(
+            url,
+            data=payload,  # CORRIGIDO!
+            headers=headers,
+            cookies=cookies,  # CORRIGIDO!
+            timeout=30,
+        )
         data = resp.json()
         itens = data.get("results", {}).get("itens", [])
         if not itens:

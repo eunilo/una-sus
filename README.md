@@ -80,7 +80,7 @@ pip install -r requirements.txt
 
 ### Execução Básica
 ```bash
-python scraper_unasus_incremental.py
+python scraper_unasus.py
 ```
 
 ### Monitoramento em Tempo Real
@@ -133,8 +133,7 @@ Detecta automaticamente descritores como:
 
 ```
 unsa-sus/
-├── scraper_unasus_incremental.py    # Scraper principal
-├── verificar_vagas.py               # Script de verificação
+├── scraper_unasus.py                # Scraper principal
 ├── requirements.txt                 # Dependências
 ├── README.md                        # Documentação
 ├── .gitignore                       # Arquivos ignorados
@@ -176,11 +175,12 @@ O scraper inclui tratamento robusto de erros:
 
 ## 📈 Estatísticas de Coleta
 
-### Métricas Típicas
-- **Cursos processados**: ~500+ cursos únicos
-- **Ofertas encontradas**: ~1000+ ofertas
-- **Taxa de sucesso vagas**: ~100%
-- **Tempo de execução**: 2-4 horas (dependendo da conexão)
+### Métricas Finais (Execução Completa)
+- **Cursos processados**: 552 cursos únicos (99.6% dos 554 disponíveis)
+- **Ofertas encontradas**: 1,656 ofertas
+- **Taxa de sucesso vagas**: 100% (1,656/1,656)
+- **Tempo de execução**: ~2 horas
+- **Arquivo final**: 1.28 MB com dados completos
 
 ### Logs de Progresso
 ```
