@@ -1,0 +1,3 @@
+# Esta pasta contém os dados coletados pelos scrapers
+# Arquivos CSV grandes são ignorados pelo .gitignore
+# Para compartilhar dados, use links externos ou repositórios específicos 
