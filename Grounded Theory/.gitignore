@@ -1,0 +1,44 @@
+# 🚫 .gitignore - Grounded Theory
+
+# Cache Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Logs (manter apenas os mais recentes)
+logs/*.log
+
+# Relatórios antigos (manter apenas os mais recentes)
+relatorios/*.json
+relatorios/*.md
+relatorios/*.csv
+
+# Dados temporários de teste
+dados/teste_*.json
+
+# Checkpoints antigos
+checkpoints/*.json
+
+# Resultados temporários
+resultados/*.json
+resultados/*.md
+
+# Arquivos de sistema
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Ambiente virtual
+venv/
+env/
+.env
+
+# Arquivos temporários
+*.tmp
+*.temp 

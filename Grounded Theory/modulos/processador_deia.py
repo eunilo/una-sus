@@ -575,6 +575,7 @@ class ProcessadorDEIA:
             json.dump(self.resultados_deia, f, ensure_ascii=False, indent=2)
 
         # Salvar CSV dos cursos DEIA
+        caminho_csv = None
         if self.resultados_deia.get("cursos_deia_identificados"):
             df_cursos = pd.DataFrame(self.resultados_deia["cursos_deia_identificados"])
             caminho_csv = f"resultados/cursos_deia_{timestamp}.csv"
@@ -589,7 +590,8 @@ class ProcessadorDEIA:
 
         self.logger.info(f"💾 Resultados salvos:")
         self.logger.info(f"   📄 JSON: {caminho_json}")
-        self.logger.info(f"   📊 CSV: {caminho_csv}")
+        if caminho_csv:
+            self.logger.info(f"   📊 CSV: {caminho_csv}")
         self.logger.info(f"   📋 Markdown: {caminho_md}")
 
     def _gerar_relatorio_markdown(self) -> str:

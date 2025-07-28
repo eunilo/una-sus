@@ -50,6 +50,18 @@ class CodificacaoAxial:
         self.consequencias = {}
         self.estrategias = {}
 
+    def executar_codificacao(self, dados_preparados: Dict) -> Dict:
+        """
+        🔗 Executa codificação axial dos dados.
+
+        Args:
+            dados_preparados: Dados preparados para codificação
+
+        Returns:
+            Dicionário com resultados da codificação axial
+        """
+        return self.codificar_axial(dados_preparados.get("dados_aberta", {}))
+
     def codificar_axial(self, dados_codificacao_aberta: Dict) -> Dict:
         """
         🔗 Realiza codificação axial dos dados.

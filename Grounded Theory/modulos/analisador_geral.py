@@ -29,7 +29,7 @@ import logging
 import os
 import re
 from datetime import datetime
-from typing import Any, Dict, List, Optional, Tuple
+from typing import Dict
 
 import pandas as pd
 
@@ -356,7 +356,7 @@ class AnalisadorGeral:
                     "periodo_dias": (df[campo].max() - df[campo].min()).days,
                     "distribuicao_anual": df[campo].dt.year.value_counts().to_dict(),
                 }
-            except:
+            except Exception:
                 analise_temporal["analise_por_campo"][campo] = {
                     "erro": "Não foi possível converter para data"
                 }
@@ -548,7 +548,7 @@ class AnalisadorGeral:
                     )
                     if not pd.isna(correlacao):
                         correlacoes[campo_num] = correlacao
-                except:
+                except Exception:
                     continue
 
         return correlacoes

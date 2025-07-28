@@ -49,6 +49,27 @@ class CodificacaoSeletiva:
         self.relacoes_principais = {}
         self.teoria_final = {}
 
+    def executar_codificacao(self, dados_preparados: Dict) -> Dict:
+        """
+        🎯 Executa codificação seletiva dos dados.
+
+        Args:
+            dados_preparados: Dados preparados para codificação
+
+        Returns:
+            Dicionário com resultados da codificação seletiva
+        """
+        # Verificar se dados_preparados é um dicionário
+        if isinstance(dados_preparados, dict):
+            dados_aberta = dados_preparados.get("dados_aberta", {})
+            dados_axial = dados_preparados.get("dados_axial", {})
+        else:
+            # Se não for dicionário, usar dados_preparados diretamente
+            dados_aberta = dados_preparados if dados_preparados else {}
+            dados_axial = {}
+
+        return self.codificar_seletiva(dados_aberta, dados_axial)
+
     def codificar_seletiva(self, dados_aberta: Dict, dados_axial: Dict) -> Dict:
         """
         🎯 Realiza codificação seletiva dos dados.

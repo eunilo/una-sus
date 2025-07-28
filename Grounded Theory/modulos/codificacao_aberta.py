@@ -100,6 +100,22 @@ class CodificacaoAberta:
         self.logger.info("✅ CODIFICAÇÃO ABERTA CONCLUÍDA")
         return resultados
 
+    def executar_codificacao(self, dados: List[Dict] = None) -> Dict:
+        """
+        🔍 Executa codificação aberta (método principal).
+
+        Args:
+            dados: Dados coletados para codificação
+
+        Returns:
+            Dicionário com resultados da codificação
+        """
+        if dados is None:
+            self.logger.error("❌ Nenhum dado fornecido para codificação")
+            return {}
+
+        return self.codificar_dados(dados)
+
     def _codificar_texto(self, registro: Dict) -> Dict[str, str]:
         """
         🔍 Codifica o texto de um registro.
@@ -132,12 +148,31 @@ class CodificacaoAberta:
         Returns:
             Texto completo para análise
         """
-        campos_texto = ["titulo", "descricao", "palavras_chave", "publico_alvo"]
+        # Campos disponíveis nos dados da UNA-SUS
+        campos_texto = [
+            "no_curso",  # Nome do curso
+            "no_orgao",  # Nome da organização
+            "sg_orgao",  # Sigla da organização
+            "no_formato",  # Formato do curso
+            "no_nivel",  # Nível do curso
+            "no_modalidade",  # Modalidade do curso
+            "status",  # Status do curso
+            "titulo",  # Título (se disponível)
+            "descricao",  # Descrição (se disponível)
+            "palavras_chave",  # Palavras-chave (se disponível)
+            "publico_alvo",  # Público-alvo (se disponível)
+            "area_tematica",  # Área temática (se disponível)
+            "objetivos",  # Objetivos (se disponível)
+            "metodologia",  # Metodologia (se disponível)
+        ]
+
         texto_completo = ""
 
         for campo in campos_texto:
             if campo in registro and registro[campo]:
-                texto_completo += f" {registro[campo]}"
+                valor = str(registro[campo]).strip()
+                if valor and valor.lower() != "null":
+                    texto_completo += f" {valor}"
 
         return texto_completo.lower().strip()
 
@@ -153,19 +188,82 @@ class CodificacaoAberta:
         """
         conceitos = {}
 
-        # Palavras-chave relacionadas a DEIA
+        # Palavras-chave relacionadas a DEIA e saúde
         palavras_chave_deia = [
+            # DEIA básico
             "diversidade",
             "equidade",
             "inclusão",
             "acessibilidade",
-            "saúde mental",
+            "inclusivo",
+            "inclusiva",
+            "acessível",
+            "equitativo",
+            # Populações específicas
             "população negra",
             "indígena",
             "lgbtqi+",
+            "lgbt",
             "pessoa com deficiência",
+            "deficiência",
+            "idoso",
+            "idosos",
+            "criança",
+            "crianças",
+            "adolescente",
+            "adolescentes",
+            "mulher",
+            "mulheres",
+            "gestante",
+            "gestantes",
+            "trabalhador",
+            "trabalhadores",
+            "rural",
+            "urbano",
+            # Saúde específica
+            "saúde mental",
+            "saúde da mulher",
+            "saúde da criança",
+            "saúde do idoso",
+            "saúde indígena",
+            "saúde negra",
+            "saúde lgbt",
+            "saúde mental",
+            "psicologia",
+            "psiquiatria",
+            "terapia",
+            "reabilitação",
+            # Vulnerabilidade
             "vulnerabilidade",
+            "vulnerável",
+            "vulneráveis",
             "discriminação",
+            "preconceito",
+            "estigma",
+            "marginalização",
+            "exclusão",
+            "desigualdade",
+            # Educação e formação
+            "formação",
+            "capacitação",
+            "treinamento",
+            "educação",
+            "ensino",
+            "aprendizagem",
+            "preceptor",
+            "preceptores",
+            "tutor",
+            "tutores",
+            # SUS e políticas públicas
+            "sus",
+            "sistema único de saúde",
+            "política pública",
+            "atenção básica",
+            "atenção primária",
+            "promoção da saúde",
+            "prevenção",
+            "cuidado",
+            "assistência",
         ]
 
         for palavra in palavras_chave_deia:
