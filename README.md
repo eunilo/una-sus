@@ -33,7 +33,10 @@ O sistema é composto por **módulos especializados** que trabalham em conjunto 
 ```
 🌐 UNA-SUS Website
     ↓
-🔍 Scraper Principal (scraper_unasus_melhorado.py)
+🔍 Scrapers Disponíveis:
+    ├── scraper_unasus.py (Versão Original Robusta)
+    ├── scraper_unasus_melhorado.py (Versão Melhorada)
+    └── coletor_database_geral.py (Database Geral)
     ↓
 📊 Processadores Especializados
     ↓
@@ -46,7 +49,31 @@ O sistema é composto por **módulos especializados** que trabalham em conjunto 
 
 ### 🔧 **Componentes Principais**
 
-#### 1️⃣ **Módulo de Conexão e Autenticação**
+#### 1️⃣ **Scrapers Disponíveis**
+
+##### **📊 scraper_unasus.py (Versão Original Robusta)**
+- ✅ Coleta básica de dados UNA-SUS
+- ✅ Análise DEIA integrada durante coleta
+- ✅ Extração de ofertas detalhadas
+- ✅ Salvamento incremental em CSV
+- ✅ Controle de duplicatas por ID
+
+##### **📊 scraper_unasus_melhorado.py (Versão Melhorada)**
+- ✅ Coleta completa com campos expandidos
+- ✅ Análise DEIA avançada
+- ✅ Sistema robusto de logging
+- ✅ Checkpointing avançado
+- ✅ Descritores DEIA expandidos
+
+##### **📊 coletor_database_geral.py (Database Geral)**
+- ✅ Coleta completa sem filtros
+- ✅ Database fiel preservado
+- ✅ Separação entre coleta e análise
+- ✅ Sistema robusto de logging
+- ✅ Checkpointing avançado
+- ✅ Múltiplos formatos de saída (JSON, CSV, Excel)
+
+#### 2️⃣ **Módulo de Conexão e Autenticação**
 ```python
 # 🌐 Configurações de rede
 HEADERS = {
@@ -599,7 +626,31 @@ pip list | grep -E "(requests|pandas|beautifulsoup)"
 
 ### 🚀 **Execução**
 
-#### 🎯 **Opção 1: Coleta Completa (Recomendado)**
+#### 🎯 **Opção 1: Database Geral (Recomendado)**
+```bash
+python coletor_database_geral.py
+```
+
+**O que acontece:**
+- 🔍 **Busca** todos os cursos da UNA-SUS
+- 📊 **Coleta** dados completos sem filtros
+- 💾 **Salva** em múltiplos formatos (JSON, CSV, Excel)
+- 📈 **Preserva** integridade dos dados originais
+- 🔄 **Checkpointing** robusto
+
+#### 🎯 **Opção 2: Análise DEIA Integrada**
+```bash
+python scraper_unasus.py
+```
+
+**O que acontece:**
+- 🔍 **Busca** todos os cursos da UNA-SUS
+- 📊 **Coleta** dados básicos
+- 🌈 **Analisa** conteúdo DEIA durante coleta
+- 🔍 **Extrai** ofertas detalhadas
+- 💾 **Salva** progresso incremental
+
+#### 🎯 **Opção 3: Funcionalidades Avançadas**
 ```bash
 python scraper_unasus_melhorado.py
 ```

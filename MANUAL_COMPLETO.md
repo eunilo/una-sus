@@ -36,7 +36,7 @@ una-sus/
 ├── 📊 SCRAPERS PRINCIPAIS
 │   ├── scraper_unasus.py (Versão Original Robusta)
 │   ├── scraper_unasus_melhorado.py (Versão Melhorada)
-│   └── [outros scrapers]
+│   └── coletor_database_geral.py (Database Geral)
 │
 ├── 🧠 GROUNDED THEORY/
 │   ├── 📦 Módulos Modulares
@@ -101,6 +101,7 @@ Grounded Theory/
 - ✅ Logging integrado
 - ✅ Checkpointing básico
 - ✅ Descritores DEIA limitados
+- ✅ Extração de ofertas detalhadas
 ```
 
 **🎯 Uso**: Versão estável para coleta básica com análise DEIA simples.
@@ -117,6 +118,21 @@ Grounded Theory/
 ```
 
 **🎯 Uso**: Versão completa com todas as melhorias implementadas.
+
+##### **📊 coletor_database_geral.py (Database Geral)**
+```python
+# Características:
+- ✅ Coleta completa sem filtros
+- ✅ Database fiel preservado
+- ✅ Separação entre coleta e análise
+- ✅ Sistema robusto de logging
+- ✅ Checkpointing avançado
+- ✅ Múltiplos formatos de saída (JSON, CSV, Excel)
+- ✅ Metadados de coleta
+- ✅ Relatórios detalhados
+```
+
+**🎯 Uso**: Versão para criação de database geral sem análises integradas.
 
 #### **B. Sistema Modular de Coleta (Grounded Theory)**
 
@@ -392,11 +408,20 @@ class CodificacaoSeletiva:
 1. 🌐 Conexão com UNA-SUS
 2. 📄 Paginação automática
 3. 🔍 Extração de dados
-4. 📊 Análise DEIA
+4. 📊 Análise DEIA (quando aplicável)
 5. 💾 Salvamento em CSV
 ```
 
-### **2. Fluxo Modular (Grounded Theory)**
+### **2. Fluxo Database Geral**
+```
+1. 🌐 Conexão com UNA-SUS
+2. 📄 Paginação automática
+3. 🔍 Coleta completa (sem filtros)
+4. 💾 Salvamento múltiplos formatos
+5. 📊 Relatórios de coleta
+```
+
+### **3. Fluxo Modular (Grounded Theory)**
 ```
 1. 📊 Coleta Completa → Database Fiel
 2. 🔍 Processamento DEIA → Análise DEIA
@@ -404,7 +429,7 @@ class CodificacaoSeletiva:
 4. 📚 Relatórios → Documentação
 ```
 
-### **3. Fluxo Grounded Theory**
+### **4. Fluxo Grounded Theory**
 ```
 1. 📊 Coleta Iterativa de Dados
 2. 🔍 Codificação Aberta
@@ -538,16 +563,22 @@ class CodificacaoSeletiva:
 
 ### **1. Uso Básico (Scrapers Principais)**
 
-#### **A. Scraper Original Robusto**
+#### **A. Database Geral (Recomendado)**
 ```bash
 # Navegar para o diretório raiz
 cd una-sus
 
+# Executar coletor de database geral
+python coletor_database_geral.py
+```
+
+#### **B. Scraper Original Robusto**
+```bash
 # Executar scraper original
 python scraper_unasus.py
 ```
 
-#### **B. Scraper Melhorado**
+#### **C. Scraper Melhorado**
 ```bash
 # Executar scraper melhorado
 python scraper_unasus_melhorado.py
@@ -596,7 +627,15 @@ python coleta_e_processamento_separados.py
 
 ### **3. Uso Programático**
 
-#### **A. Coleta Completa**
+#### **A. Database Geral**
+```python
+from coletor_database_geral import ColetorDatabaseGeral
+
+coletor = ColetorDatabaseGeral()
+dados = coletor.coletar_dados_completos()
+```
+
+#### **B. Coleta Completa (Grounded Theory)**
 ```python
 from modulos.coletor_unasus_completo import ColetorUnasusCompleto
 
