@@ -1,0 +1,281 @@
+{
+  "resumo_coleta": {
+    "total_cursos": 554,
+    "total_paginas": 0,
+    "timestamp_inicio": "2025-07-28T09:19:38.133098",
+    "timestamp_fim": "2025-07-28T09:19:38.133105",
+    "tipo_coleta": "completa_sem_filtros"
+  },
+  "estatisticas": {
+    "cursos_por_status": {
+      "com oferta encerrada": 438,
+      "com oferta aberta": 103,
+      "com oferta em andamento": 13
+    },
+    "cursos_por_categoria": {},
+    "carga_horaria_media": NaN,
+    "vagas_estatisticas": {},
+    "campos_preenchidos": {
+      "co_seq_curso": {
+        "preenchidos": 554,
+        "vazios": 0,
+        "percentual": 100.0
+      },
+      "no_curso": {
+        "preenchidos": 554,
+        "vazios": 0,
+        "percentual": 100.0
+      },
+      "qt_carga_horaria_total": {
+        "preenchidos": 554,
+        "vazios": 0,
+        "percentual": 100.0
+      },
+      "co_seq_orgao": {
+        "preenchidos": 554,
+        "vazios": 0,
+        "percentual": 100.0
+      },
+      "sg_orgao": {
+        "preenchidos": 554,
+        "vazios": 0,
+        "percentual": 100.0
+      },
+      "no_orgao": {
+        "preenchidos": 554,
+        "vazios": 0,
+        "percentual": 100.0
+      },
+      "no_formato": {
+        "preenchidos": 554,
+        "vazios": 0,
+        "percentual": 100.0
+      },
+      "no_nivel": {
+        "preenchidos": 554,
+        "vazios": 0,
+        "percentual": 100.0
+      },
+      "no_modalidade": {
+        "preenchidos": 554,
+        "vazios": 0,
+        "percentual": 100.0
+      },
+      "ds_imagem": {
+        "preenchidos": 554,
+        "vazios": 0,
+        "percentual": 100.0
+      },
+      "status": {
+        "preenchidos": 554,
+        "vazios": 0,
+        "percentual": 100.0
+      },
+      "status_ordem": {
+        "preenchidos": 554,
+        "vazios": 0,
+        "percentual": 100.0
+      },
+      "rank": {
+        "preenchidos": 554,
+        "vazios": 0,
+        "percentual": 100.0
+      },
+      "metadata_coleta": {
+        "preenchidos": 554,
+        "vazios": 0,
+        "percentual": 100.0
+      },
+      "id": {
+        "preenchidos": 0,
+        "vazios": 554,
+        "percentual": 0.0
+      },
+      "titulo": {
+        "preenchidos": 0,
+        "vazios": 554,
+        "percentual": 0.0
+      },
+      "descricao": {
+        "preenchidos": 0,
+        "vazios": 554,
+        "percentual": 0.0
+      },
+      "carga_horaria": {
+        "preenchidos": 0,
+        "vazios": 554,
+        "percentual": 0.0
+      },
+      "categoria": {
+        "preenchidos": 0,
+        "vazios": 554,
+        "percentual": 0.0
+      },
+      "publico_alvo": {
+        "preenchidos": 0,
+        "vazios": 554,
+        "percentual": 0.0
+      },
+      "palavras_chave": {
+        "preenchidos": 0,
+        "vazios": 554,
+        "percentual": 0.0
+      },
+      "link": {
+        "preenchidos": 0,
+        "vazios": 554,
+        "percentual": 0.0
+      },
+      "vagas": {
+        "preenchidos": 0,
+        "vazios": 554,
+        "percentual": 0.0
+      },
+      "numero_vagas": {
+        "preenchidos": 0,
+        "vazios": 554,
+        "percentual": 0.0
+      },
+      "qt_vagas": {
+        "preenchidos": 0,
+        "vazios": 554,
+        "percentual": 0.0
+      },
+      "vagas_disponiveis": {
+        "preenchidos": 0,
+        "vazios": 554,
+        "percentual": 0.0
+      },
+      "inicio_inscricao": {
+        "preenchidos": 0,
+        "vazios": 554,
+        "percentual": 0.0
+      },
+      "fim_inscricao": {
+        "preenchidos": 0,
+        "vazios": 554,
+        "percentual": 0.0
+      },
+      "data_inicio": {
+        "preenchidos": 0,
+        "vazios": 554,
+        "percentual": 0.0
+      },
+      "data_fim": {
+        "preenchidos": 0,
+        "vazios": 554,
+        "percentual": 0.0
+      },
+      "modalidade": {
+        "preenchidos": 0,
+        "vazios": 554,
+        "percentual": 0.0
+      },
+      "tipo_curso": {
+        "preenchidos": 0,
+        "vazios": 554,
+        "percentual": 0.0
+      },
+      "nivel": {
+        "preenchidos": 0,
+        "vazios": 554,
+        "percentual": 0.0
+      },
+      "area_tematica": {
+        "preenchidos": 0,
+        "vazios": 554,
+        "percentual": 0.0
+      },
+      "instituicao": {
+        "preenchidos": 0,
+        "vazios": 554,
+        "percentual": 0.0
+      },
+      "coordenador": {
+        "preenchidos": 0,
+        "vazios": 554,
+        "percentual": 0.0
+      },
+      "tutores": {
+        "preenchidos": 0,
+        "vazios": 554,
+        "percentual": 0.0
+      },
+      "certificacao": {
+        "preenchidos": 0,
+        "vazios": 554,
+        "percentual": 0.0
+      },
+      "pre_requisitos": {
+        "preenchidos": 0,
+        "vazios": 554,
+        "percentual": 0.0
+      },
+      "objetivos": {
+        "preenchidos": 0,
+        "vazios": 554,
+        "percentual": 0.0
+      },
+      "metodologia": {
+        "preenchidos": 0,
+        "vazios": 554,
+        "percentual": 0.0
+      },
+      "avaliacao": {
+        "preenchidos": 0,
+        "vazios": 554,
+        "percentual": 0.0
+      },
+      "bibliografia": {
+        "preenchidos": 0,
+        "vazios": 554,
+        "percentual": 0.0
+      }
+    }
+  },
+  "campos_coletados": [
+    "co_seq_curso",
+    "no_curso",
+    "qt_carga_horaria_total",
+    "co_seq_orgao",
+    "sg_orgao",
+    "no_orgao",
+    "no_formato",
+    "no_nivel",
+    "no_modalidade",
+    "ds_imagem",
+    "status",
+    "status_ordem",
+    "rank",
+    "metadata_coleta",
+    "id",
+    "titulo",
+    "descricao",
+    "carga_horaria",
+    "categoria",
+    "publico_alvo",
+    "palavras_chave",
+    "link",
+    "vagas",
+    "numero_vagas",
+    "qt_vagas",
+    "vagas_disponiveis",
+    "inicio_inscricao",
+    "fim_inscricao",
+    "data_inicio",
+    "data_fim",
+    "modalidade",
+    "tipo_curso",
+    "nivel",
+    "area_tematica",
+    "instituicao",
+    "coordenador",
+    "tutores",
+    "certificacao",
+    "pre_requisitos",
+    "objetivos",
+    "metodologia",
+    "avaliacao",
+    "bibliografia"
+  ]
+}

@@ -30,6 +30,16 @@ A **Grounded Theory** é uma metodologia qualitativa desenvolvida por Glaser e S
 Grounded Theory/
 ├── 🐍 scraper_unasus_grounded.py     # Versão modificável para pesquisa
 ├── 🐍 scraper_unasus_backup_original.py # Backup fiel do código original
+├── 🧠 grounded_theory_runner.py      # Orquestrador principal do processo
+├── 🔄 coleta_e_processamento_separados.py # Coleta + Processamento separados
+├── 📦 modulos/                       # Módulos modulares da metodologia
+│   ├── 📋 __init__.py               # Configuração do pacote
+│   ├── 📊 coleta_dados.py           # Módulo de coleta de dados
+│   ├── 📊 coletor_unasus_completo.py # Coletor completo sem filtros
+│   ├── 🔍 processador_deia.py       # Processador DEIA não-destrutivo
+│   ├── 🔍 codificacao_aberta.py     # Módulo de codificação aberta
+│   ├── 🔗 codificacao_axial.py      # Módulo de codificação axial
+│   └── 🎯 codificacao_seletiva.py   # Módulo de codificação seletiva
 └── 📋 README_Grounded_Theory.md      # Esta documentação
 ```
 
@@ -47,9 +57,105 @@ Grounded Theory/
 - 🔄 **Ponto de retorno** se necessário
 - 📋 **Referência** para comparações
 
+#### **`grounded_theory_runner.py`**
+- 🧠 **Orquestrador principal** do processo completo
+- 🔄 **Gerenciamento automático** de iterações
+- 🎯 **Controle de saturação** teórica
+- 📊 **Geração automática** de relatórios
+- 🔗 **Integração** de todos os módulos
+
+#### **📦 Pasta `modulos/`**
+- 📊 **`coleta_dados.py`**: Coleta sistemática e iterativa
+- 📊 **`coletor_unasus_completo.py`**: Coleta completa sem filtros
+- 🔍 **`processador_deia.py`**: Processamento DEIA não-destrutivo
+- 🔍 **`codificacao_aberta.py`**: Identificação de conceitos básicos
+- 🔗 **`codificacao_axial.py`**: Relacionamento entre categorias
+- 🎯 **`codificacao_seletiva.py`**: Integração em teoria unificada
+
+#### **🔄 `coleta_e_processamento_separados.py`**
+- 🔄 **Orquestrador principal** de coleta e processamento
+- 📊 **Coleta completa** sem filtros ou processamentos
+- 💾 **Database fiel** e preservado
+- 🔍 **Processamento DEIA** não-destrutivo
+- 📈 **Relatórios separados** para cada etapa
+
 ---
 
 ## 🔬 **Como Usar para Pesquisa Grounded Theory**
+
+### **🔄 Opção 1: Coleta e Processamento Separados (RECOMENDADO)**
+
+#### **Arquitetura Segura - Database Fiel:**
+```bash
+# Execute o orquestrador principal
+cd "Grounded Theory"
+python coleta_e_processamento_separados.py
+```
+
+#### **Vantagens da Nova Arquitetura:**
+- ✅ **Coleta Completa**: Todos os dados UNA-SUS sem filtros
+- ✅ **Database Intacto**: Dados originais preservados
+- ✅ **Processamento Não-Destrutivo**: Análises sem modificar fonte
+- ✅ **Separação Clara**: Coleta e processamento independentes
+- ✅ **Relatórios Separados**: Resultados organizados por etapa
+
+#### **Fluxo de Trabalho:**
+1. **📊 Coleta Completa** → Database fiel e atualizado
+2. **💾 Preservação** → Dados originais mantidos
+3. **🔍 Processamento DEIA** → Análise não-destrutiva
+4. **📈 Relatórios** → Resultados separados e organizados
+
+### **🚀 Opção 2: Processo Automatizado Grounded Theory**
+
+#### **Usando o Grounded Theory Runner:**
+```bash
+# Execute o processo completo automatizado
+cd "Grounded Theory"
+python grounded_theory_runner.py
+```
+
+#### **Configuração Personalizada:**
+```python
+# Em grounded_theory_runner.py, modifique a configuração
+config = {
+    'criterios_iniciais': {
+        'descritores': ['diversidade', 'equidade', 'inclusão', 'acessibilidade', 'saúde mental'],
+        'filtros': {},
+        'max_iteracoes': 5
+    },
+    'configuracoes_analise': {
+        'min_frequencia_conceito': 3,
+        'min_categorias': 3,
+        'criterio_saturacao': 0.1
+    }
+}
+```
+
+### **🔧 Opção 2: Processo Manual**
+
+#### **Usando Módulos Individualmente:**
+```python
+from modulos.coleta_dados import ColetorDadosGroundedTheory
+from modulos.codificacao_aberta import CodificacaoAberta
+from modulos.codificacao_axial import CodificacaoAxial
+from modulos.codificacao_seletiva import CodificacaoSeletiva
+
+# 1. Coleta de dados
+coletor = ColetorDadosGroundedTheory(config, logger)
+dados = coletor.coleta_inicial()
+
+# 2. Codificação aberta
+cod_aberta = CodificacaoAberta(logger)
+resultados_aberta = cod_aberta.codificar_dados(dados)
+
+# 3. Codificação axial
+cod_axial = CodificacaoAxial(logger)
+resultados_axial = cod_axial.codificar_axial(resultados_aberta)
+
+# 4. Codificação seletiva
+cod_seletiva = CodificacaoSeletiva(logger)
+teoria_final = cod_seletiva.codificar_seletiva(resultados_aberta, resultados_axial)
+```
 
 ### **📝 Passo 1: Modificação do Código**
 
