@@ -19,10 +19,13 @@ a metodologia de Grounded Theory de forma modular e extensível.
 - Saturação teórica
 """
 
+from .analisador_geral import AnalisadorGeral
 from .codificacao_aberta import CodificacaoAberta
 from .codificacao_axial import CodificacaoAxial
 from .codificacao_seletiva import CodificacaoSeletiva
 from .coleta_dados import ColetorDadosGroundedTheory
+from .coletor_unasus_completo import ColetorUnasusCompleto
+from .processador_deia import ProcessadorDEIA
 
 __version__ = "1.0.0"
 __author__ = "UNA-SUS Scraper Team"
@@ -33,4 +36,7 @@ __all__ = [
     "CodificacaoAberta",
     "CodificacaoAxial",
     "CodificacaoSeletiva",
+    "ColetorUnasusCompleto",
+    "ProcessadorDEIA",
+    "AnalisadorGeral",
 ]

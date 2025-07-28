@@ -25,6 +25,8 @@ import sys
 from datetime import datetime
 from typing import Dict, List
 
+from modulos.analisador_geral import AnalisadorGeral
+
 # Importar módulos
 from modulos.coletor_unasus_completo import ColetorUnasusCompleto
 from modulos.processador_deia import ProcessadorDEIA
@@ -44,8 +46,10 @@ class OrquestradorColetaProcessamento:
         self.logger = self._configurar_logger()
         self.coletor = ColetorUnasusCompleto(self.logger)
         self.processador = ProcessadorDEIA(self.logger)
+        self.analisador = AnalisadorGeral(self.logger)
         self.dados_coletados = []
         self.resultados_processamento = {}
+        self.resultados_analise_geral = {}
 
     def _configurar_logger(self) -> logging.Logger:
         """
@@ -165,6 +169,46 @@ class OrquestradorColetaProcessamento:
             self.logger.error(f"❌ ERRO NO PROCESSAMENTO: {str(e)}")
             return False
 
+    def executar_analise_geral(
+        self, tipo_analise: str = "estatistica", parametros: Dict = None
+    ) -> bool:
+        """
+        📊 Executa análise geral dos dados coletados.
+
+        Args:
+            tipo_analise: Tipo de análise ('estatistica', 'categoria', etc.)
+            parametros: Parâmetros específicos da análise
+
+        Returns:
+            True se bem-sucedido, False caso contrário
+        """
+        self.logger.info(f"📊 INICIANDO ANÁLISE GERAL: {tipo_analise}")
+        self.logger.info("📋 PRINCÍPIO: Análise flexível sem comprometer dados")
+
+        if not self.dados_coletados:
+            self.logger.error("❌ Nenhum dado disponível para análise")
+            return False
+
+        try:
+            # Carregar dados no analisador
+            self.analisador.dados_originais = self.dados_coletados
+
+            # Configurar análise
+            self.analisador.configurar_analise(tipo_analise, parametros)
+
+            # Executar análise
+            self.resultados_analise_geral = self.analisador.executar_analise()
+
+            # Salvar resultados
+            self.analisador.salvar_resultados()
+
+            self.logger.info("✅ ANÁLISE GERAL CONCLUÍDA")
+            return True
+
+        except Exception as e:
+            self.logger.error(f"❌ Erro na análise geral: {str(e)}")
+            return False
+
     def executar_workflow_completo(
         self, executar_coleta: bool = True, caminho_dados: str = None
     ) -> Dict:
@@ -209,9 +253,19 @@ class OrquestradorColetaProcessamento:
             self.logger.info("🔍 ETAPA 2: Processamento DEIA")
             if self.executar_processamento_deia():
                 resultados_workflow["etapas_executadas"].append("processamento_deia")
-                resultados_workflow["resultados"] = self.resultados_processamento
+                resultados_workflow["resultados_deia"] = self.resultados_processamento
             else:
                 raise Exception("Falha no processamento DEIA")
+
+            # ETAPA 3: Análise Geral
+            self.logger.info("📊 ETAPA 3: Análise Geral")
+            if self.executar_analise_geral("estatistica"):
+                resultados_workflow["etapas_executadas"].append("analise_geral")
+                resultados_workflow["resultados_analise_geral"] = (
+                    self.resultados_analise_geral
+                )
+            else:
+                raise Exception("Falha na análise geral")
 
             # Workflow concluído com sucesso
             resultados_workflow["status"] = "concluido"
@@ -266,6 +320,13 @@ class OrquestradorColetaProcessamento:
             print(f"🔍 Cursos com DEIA: {resumo.get('cursos_com_elementos_deia', 0)}")
             print(f"📈 Percentual DEIA: {resumo.get('percentual_deia', 0):.2f}%")
 
+        if self.resultados_analise_geral:
+            resumo_geral = self.resultados_analise_geral.get("resumo_geral", {})
+            print(f"📈 Total de Cursos: {resumo_geral.get('total_cursos', 0)}")
+            print(
+                f"📂 Campos Disponíveis: {len(resumo_geral.get('campos_disponiveis', []))}"
+            )
+
         print("=" * 60)
 
 
@@ -281,13 +342,15 @@ def main():
 
     # Configurar opções
     print("\n🎯 OPÇÕES DISPONÍVEIS:")
-    print("1. Executar coleta completa + processamento DEIA")
-    print("2. Usar dados existentes + processamento DEIA")
+    print("1. Executar coleta completa + processamento DEIA + análise geral")
+    print("2. Usar dados existentes + processamento DEIA + análise geral")
     print("3. Apenas coleta completa")
     print("4. Apenas processamento DEIA")
+    print("5. Apenas análise geral")
+    print("6. Análise geral customizada")
 
     try:
-        opcao = input("\nEscolha uma opção (1-4): ").strip()
+        opcao = input("\nEscolha uma opção (1-6): ").strip()
 
         if opcao == "1":
             print("\n🚀 Executando workflow completo...")
@@ -312,6 +375,30 @@ def main():
                 sucesso = orquestrador.executar_processamento_deia()
                 resultados = {
                     "status": "processamento_concluido" if sucesso else "erro"
+                }
+            else:
+                resultados = {"status": "erro_carregamento"}
+
+        elif opcao == "5":
+            caminho = input("Caminho para arquivo de dados: ").strip()
+            print(f"\n📊 Executando apenas análise geral...")
+            if orquestrador.carregar_dados_existentes(caminho):
+                sucesso = orquestrador.executar_analise_geral("estatistica")
+                resultados = {"status": "analise_concluida" if sucesso else "erro"}
+            else:
+                resultados = {"status": "erro_carregamento"}
+
+        elif opcao == "6":
+            caminho = input("Caminho para arquivo de dados: ").strip()
+            print(f"\n🔧 Análise geral customizada...")
+            print(
+                "Tipos disponíveis: estatistica, categoria, temporal, geografica, conteudo, comparativa"
+            )
+            tipo = input("Tipo de análise: ").strip()
+            if orquestrador.carregar_dados_existentes(caminho):
+                sucesso = orquestrador.executar_analise_geral(tipo)
+                resultados = {
+                    "status": "analise_customizada_concluida" if sucesso else "erro"
                 }
             else:
                 resultados = {"status": "erro_carregamento"}
