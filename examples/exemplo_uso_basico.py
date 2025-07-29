@@ -1,119 +1,126 @@
 #!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 """
-📚 Exemplo de Uso Básico - UNA-SUS Scraper
+📚 EXEMPLO DE USO BÁSICO - SISTEMA UNA-SUS
 ==========================================
 
-Este exemplo demonstra como usar o scraper de forma básica
-para coletar dados de cursos da UNA-SUS.
+Demonstra como usar os principais componentes do sistema.
 """
 
 import os
 import sys
 
-# Adicionar o diretório pai ao path para importar os módulos
+# Adicionar o diretório raiz ao path
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-
-from analisar_dados_coletados import main as analise_main
-from scraper_unasus_melhorado import main as scraper_main
 
 
 def exemplo_coleta_basica():
-    """
-    🚀 Exemplo de coleta básica de dados
-    """
-    print("🎯 EXEMPLO: Coleta Básica de Dados UNA-SUS")
+    """📊 Exemplo de coleta básica de dados"""
+    print("\n📊 EXEMPLO: Coleta Básica de Dados")
     print("=" * 50)
 
-    print("📋 Passos:")
-    print("1. Executar o scraper principal")
-    print("2. Analisar os dados coletados")
-    print("3. Verificar resultados DEIA")
+    try:
+        # Importar o scraper principal
+        from scraper_unasus import main as scraper_main
 
-    # Executar scraper (comentado para evitar execução automática)
-    # print("\n🚀 Executando scraper...")
-    # scraper_main()
+        print("🚀 Executando coleta básica...")
+        scraper_main()
 
-    # Analisar dados (comentado para evitar execução automática)
-    # print("\n📊 Analisando dados...")
-    # analise_main()
+        print("✅ Coleta concluída!")
+        print("📁 Arquivo gerado: unasus_ofertas_detalhadas.csv")
 
-    print("\n✅ Exemplo concluído!")
-    print("\n💡 Para executar realmente, descomente as linhas no código.")
+    except Exception as e:
+        print(f"❌ Erro na coleta: {e}")
 
 
-def exemplo_analise_deia():
-    """
-    🌈 Exemplo de análise DEIA específica
-    """
-    print("\n🌈 EXEMPLO: Análise DEIA Específica")
+def exemplo_coleta_melhorada():
+    """🔧 Exemplo de coleta com melhorias"""
+    print("\n🔧 EXEMPLO: Coleta Melhorada")
     print("=" * 50)
 
-    print("📋 O que você pode fazer:")
-    print("• Identificar cursos com foco em diversidade")
-    print("• Analisar distribuição de populações específicas")
-    print("• Verificar cobertura de temas inclusivos")
-    print("• Gerar relatórios estatísticos")
+    try:
+        # Importar o scraper melhorado
+        from scraper_unasus_melhorado import main as scraper_melhorado_main
 
-    print("\n🔍 Campos analisados:")
-    campos = [
-        "Título do curso",
-        "Descrição do curso",
-        "Descrição da oferta",
-        "Palavras-chave",
-        "Público-alvo",
-        "Temas",
-        "DeCs",
-        "Programas de governo",
-        "Texto da página inicial",
-    ]
+        print("🚀 Executando coleta melhorada...")
+        scraper_melhorado_main()
 
-    for i, campo in enumerate(campos, 1):
-        print(f"  {i}. {campo}")
+        print("✅ Coleta melhorada concluída!")
+        print("📁 Arquivos gerados:")
+        print("   • unasus_ofertas_detalhadas.csv")
+        print("   • Relatórios de análise")
+
+    except Exception as e:
+        print(f"❌ Erro na coleta melhorada: {e}")
 
 
-def exemplo_grounded_theory():
-    """
-    🧠 Exemplo de uso para pesquisa Grounded Theory
-    """
-    print("\n🧠 EXEMPLO: Pesquisa Grounded Theory")
+def exemplo_analise_dados():
+    """📈 Exemplo de análise de dados coletados"""
+    print("\n📈 EXEMPLO: Análise de Dados")
     print("=" * 50)
 
-    print("📋 Processo iterativo:")
-    print("1. Coleta inicial de dados")
-    print("2. Análise dos resultados")
-    print("3. Modificação dos critérios")
-    print("4. Nova coleta com refinamentos")
-    print("5. Repetição até saturação teórica")
+    try:
+        import pandas as pd
 
-    print("\n🎯 Como usar:")
-    print("• Modifique scraper_unasus_grounded.py")
-    print("• Adicione novos descritores DEIA")
-    print("• Ajuste campos coletados")
-    print("• Use o sistema de backup")
+        # Carregar dados coletados
+        df = pd.read_csv("unasus_ofertas_detalhadas.csv")
+
+        print(f"📊 Total de registros: {len(df)}")
+        print(f"📋 Colunas disponíveis: {list(df.columns)}")
+
+        # Análise básica
+        print("\n📈 ANÁLISE BÁSICA:")
+        print(f"   • Cursos únicos: {df['no_curso'].nunique()}")
+        print(f"   • Instituições: {df['no_orgao'].nunique()}")
+        print(f"   • Modalidades: {df['no_modalidade'].unique()}")
+
+    except Exception as e:
+        print(f"❌ Erro na análise: {e}")
+
+
+def exemplo_uso_coletor_database():
+    """🗄️ Exemplo de uso do coletor de database"""
+    print("\n🗄️ EXEMPLO: Coletor de Database")
+    print("=" * 50)
+
+    try:
+        from coletor_database_geral import main as coletor_main
+
+        print("🚀 Executando coletor de database...")
+        coletor_main()
+
+        print("✅ Coletor concluído!")
+        print("📁 Arquivos gerados:")
+        print("   • data/unasus_ofertas_detalhadas.csv")
+        print("   • data/unasus_ofertas_melhoradas.csv")
+
+    except Exception as e:
+        print(f"❌ Erro no coletor: {e}")
 
 
 def main():
-    """
-    🎯 Função principal do exemplo
-    """
-    print("🏥 UNA-SUS Scraper - Exemplos de Uso")
+    """🎯 Função principal com exemplos"""
+    print("📚 SISTEMA UNA-SUS - EXEMPLOS DE USO")
     print("=" * 60)
 
-    # Exemplo 1: Coleta básica
+    print("\n📁 ESTRUTURA DO PROJETO:")
+    print("• scraper_unasus.py - Coleta básica")
+    print("• scraper_unasus_melhorado.py - Coleta com melhorias")
+    print("• coletor_database_geral.py - Coletor de database")
+    print("• data/ - Dados coletados")
+    print("• examples/ - Exemplos de uso")
+
+    # Executar exemplos
     exemplo_coleta_basica()
+    exemplo_analise_dados()
+    exemplo_coleta_melhorada()
+    exemplo_uso_coletor_database()
 
-    # Exemplo 2: Análise DEIA
-    exemplo_analise_deia()
-
-    # Exemplo 3: Grounded Theory
-    exemplo_grounded_theory()
-
-    print("\n" + "=" * 60)
-    print("📚 Para mais informações, consulte:")
-    print("• README.md - Documentação principal")
-    print("• docs/ - Documentação detalhada")
-    print("• Grounded Theory/ - Metodologia qualitativa")
-    print("• config.py - Configurações do projeto")
+    print("\n🎉 TODOS OS EXEMPLOS CONCLUÍDOS!")
+    print("\n💡 PRÓXIMOS PASSOS:")
+    print("1. Execute os exemplos individualmente")
+    print("2. Analise os arquivos gerados")
+    print("3. Personalize conforme suas necessidades")
 
 
 if __name__ == "__main__":

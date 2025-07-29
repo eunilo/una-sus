@@ -1,12 +1,16 @@
-# Dependências principais para o scraper UNA-SUS
-requests>=2.31.0          # Para requisições HTTP
-pandas>=2.0.0             # Para manipulação de dados CSV
-beautifulsoup4>=4.12.0    # Para parsing HTML
-lxml>=4.9.0               # Parser XML/HTML (mais rápido que html.parser)
+# DEPENDÊNCIAS PRINCIPAIS - SISTEMA UNA-SUS
 
-# Dependências para o sistema de banco de dados estruturado
-PyYAML>=6.0.1             # Para exportação YAML
+# Dependências obrigatórias
+requests>=2.31.0
+pandas>=2.0.0
+beautifulsoup4>=4.12.0
+lxml>=4.9.0
 
-# Dependências opcionais para desenvolvimento
-# flake8>=6.0.0           # Para linting (descomente se necessário)
-# black>=23.0.0           # Para formatação de código (descomente se necessário) 
+# Dependências opcionais (desenvolvimento)
+pytest>=7.4.0
+black>=23.0.0
+flake8>=6.0.0
+
+# Dependências opcionais (visualização)
+matplotlib>=3.7.0
+seaborn>=0.12.0 
