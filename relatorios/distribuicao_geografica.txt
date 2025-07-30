@@ -1,0 +1,48 @@
+
+================================================================================
+🏥 UNA-SUS - SISTEMA DE ANÁLISE DE PROGRAMAS DE GOVERNO
+================================================================================
+📋 DISTRIBUIÇÃO GEOGRÁFICA DE PROGRAMAS
+📅 Gerado em: 30/07/2025 às 10:40:08
+================================================================================
+
+🗺️ RESUMO GEOGRÁFICO
+----------------------------------------
+📍 Estados com Dados: 7
+❓ Estados sem Identificação: 0
+🏆 Polos Educacionais: 1
+⚠️ Desertos Educacionais: 22
+
+🌍 DISTRIBUIÇÃO POR REGIÃO
+----------------------------------------------------------------------
+NORTE                [░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 0.3% 5 ofertas (2 cursos), 1 instituições, 2 programas
+NORDESTE             [████████████████████████████░░] 95.6% 1,584 ofertas (503 cursos), 26 instituições, 32 programas
+CENTRO-OESTE         [░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 0.0% 0 ofertas (0 cursos), 0 instituições, 0 programas
+SUDESTE              [░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 2.7% 45 ofertas (11 cursos), 2 instituições, 11 programas
+SUL                  [░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 1.4% 23 ofertas (9 cursos), 1 instituições, 6 programas
+
+🏆 POLOS EDUCACIONAIS (mais de 100 ofertas)
+------------------------------------------------------------
+AL    [███████████████████████████░░░] 93.1% 1,542 ofertas (496 cursos), 24 instituições, 31 programas
+
+⚠️ DESERTOS EDUCACIONAIS (menos de 10 ofertas)
+------------------------------------------------------------
+AC      0 ofertas (0 cursos),  0 instituições,  0 programas
+AP      0 ofertas (0 cursos),  0 instituições,  0 programas
+AM      5 ofertas (2 cursos),  1 instituições,  2 programas
+BA      2 ofertas (1 cursos),  1 instituições,  1 programas
+CE      0 ofertas (0 cursos),  0 instituições,  0 programas
+DF      0 ofertas (0 cursos),  0 instituições,  0 programas
+GO      0 ofertas (0 cursos),  0 instituições,  0 programas
+MT      0 ofertas (0 cursos),  0 instituições,  0 programas
+MS      0 ofertas (0 cursos),  0 instituições,  0 programas
+MG      0 ofertas (0 cursos),  0 instituições,  0 programas
+PA      0 ofertas (0 cursos),  0 instituições,  0 programas
+PB      0 ofertas (0 cursos),  0 instituições,  0 programas
+PR      0 ofertas (0 cursos),  0 instituições,  0 programas
+PE      0 ofertas (0 cursos),  0 instituições,  0 programas
+PI      0 ofertas (0 cursos),  0 instituições,  0 programas
+
+================================================================================
+📊 Sistema de Análise UNA-SUS - Relatório Gerado Automaticamente
+================================================================================

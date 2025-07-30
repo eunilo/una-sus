@@ -1,0 +1,54 @@
+
+================================================================================
+🏥 UNA-SUS - SISTEMA DE ANÁLISE DE PROGRAMAS DE GOVERNO
+================================================================================
+📋 RELATÓRIO EXECUTIVO - COBERTURA PROGRAMÁTICA
+📅 Gerado em: 30/07/2025 às 10:40:08
+================================================================================
+
+📈 RESUMO EXECUTIVO
+==================================================
+✅ Programas com Cobertura: 31
+❌ Programas sem Cobertura: 17
+📊 Total de Registros: 1,657
+
+🏆 TOP 10 PROGRAMAS POR CONCENTRAÇÃO
+==================================================
+ 1. UNA-SUS                                       [█████████████░░░░░░░░░░░░░░░░░] 45.9% 761
+ 2. UNA-SUS, SE/UNASUS                            [███░░░░░░░░░░░░░░░░░░░░░░░░░░░] 11.6% 193
+ 3. UNA-SUS, Módulos PROVAB                       [██░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 6.9% 115
+ 4. UNA-SUS, Marcador Mais Medicos - PROVAB, Mais [█░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 5.6% 93
+ 5. UNA-SUS, Atenção Domiciliar                   [█░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 4.7% 78
+ 6. UNA-SUS, Especialização em Saúde da Família,  [█░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 4.5% 74
+ 7. UNA-SUS, SAS                                  [░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 2.8% 46
+ 8. UNA-SUS, SE/UNASUS, SAS                       [░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 2.2% 37
+ 9. UNA-SUS, Especialização em Saúde da Família   [░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 1.5% 25
+10. UNA-SUS, SE/UNASUS, Módulos PROVAB            [░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 1.4% 23
+
+⚠️ PRINCIPAIS LACUNAS IDENTIFICADAS
+==================================================
+ 1. 🟡 UNA-SUS, SVS
+     📊 Apenas 7 registros
+ 2. 🔴 UNA-SUS, Especialização, Marcador Mais Medicos - PROVAB, PROVAB 2012
+     📊 Apenas 3 registros
+ 3. 🟡 UNA-SUS, PROVAB, Especialização em Saúde da Família, Marcador Mais Medicos - PROVAB
+     📊 Apenas 5 registros
+ 4. 🟡 UNA-SUS, Especialização em Saúde da Família, Especialização, Marcador Mais Medicos - PROVAB, Mais Médicos 2013
+     📊 Apenas 8 registros
+ 5. 🟡 UNA-SUS, Especialização em Saúde da Família, Especialização, Marcador Mais Medicos - PROVAB, PROVAB 2014
+     📊 Apenas 8 registros
+ 6. 🟡 UNA-SUS, Especialização em Saúde da Família, Especialização, Marcador Mais Medicos - PROVAB, PROVAB 2012
+     📊 Apenas 7 registros
+ 7. 🟡 UNA-SUS, Especialização em Saúde da Família, Especialização
+     📊 Apenas 9 registros
+ 8. 🟡 UNA-SUS, PROVAB, Marcador Mais Medicos - PROVAB
+     📊 Apenas 9 registros
+ 9. 🟡 UNA-SUS, Especialização, Marcador Mais Medicos - PROVAB, PROVAB 2014
+     📊 Apenas 5 registros
+10. 🟡 UNA-SUS, Especialização, Marcador Mais Medicos - PROVAB, Mais Médicos 2014
+     📊 Apenas 7 registros
+
+
+================================================================================
+📊 Sistema de Análise UNA-SUS - Relatório Gerado Automaticamente
+================================================================================

@@ -1,0 +1,43 @@
+================================================================================
+📊 RELATÓRIO DE ANÁLISE - SISTEMA UNA-SUS
+================================================================================
+📅 Data/Hora: 29/07/2025 23:10:54
+📁 Arquivo: data\unasus_database_geral_20250729_222308.csv
+
+📈 ESTATÍSTICAS BÁSICAS
+----------------------------------------
+Total de registros: 1,657
+Total de colunas: 29
+Uso de memória: 4,661,838 bytes
+
+📚 ANÁLISE DE CURSOS
+----------------------------------------
+Total de cursos: 1,657
+Cursos únicos: 522
+
+📊 NÍVEIS:
+  • Educação Profissional e Tecnológica: 831
+  • Pós-Graduação: 351
+  • Outros: 315
+  • Extensão: 159
+  • Técnico: 1
+
+🎯 ANÁLISE DE OFERTAS
+----------------------------------------
+Total de ofertas: 1,657
+Ofertas únicas: 1,652
+Vagas disponíveis: 36,218,927.0
+
+📍 LOCAIS DE OFERTA (Top 10):
+  • EAD: 1,654
+
+⚠️ COLUNAS COM PROBLEMAS
+----------------------------------------
+Colunas com muitos valores nulos (>50%):
+  • temas: 68.8% nulos
+  • decs: 78.0% nulos
+  • erro: 99.8% nulos
+
+================================================================================
+📋 Relatório gerado automaticamente pelo Sistema UNA-SUS
+================================================================================

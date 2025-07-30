@@ -173,6 +173,9 @@ def mostrar_menu():
     print("  3. 🧹 Limpar Dados Coletados")
     print("  4. 🚀 Executar Coletor (sem limpar)")
     print("  5. 📋 Verificar Dependências")
+    print("  6. 📈 Análise Completa dos Dados")
+    print("  7. 📊 Estatísticas Básicas")
+    print("  8. 📋 Gerar Relatórios")
     print("  0. ❌ Sair")
     print()
 
@@ -195,13 +198,156 @@ def verificar_dependencias():
     print("   pip install pandas requests beautifulsoup4")
 
 
+def executar_analise_completa():
+    """Executa análise completa dos dados."""
+    print("📈 Executando análise completa...")
+
+    try:
+        from analise.analisador_geral import AnalisadorGeral
+
+        analisador = AnalisadorGeral()
+
+        if analisador.carregar_dados():
+            relatorio = analisador.gerar_relatorio_completo()
+
+            # Mostrar resumo
+            from analise.relatorios import gerar_relatorio_resumido
+
+            resumo = gerar_relatorio_resumido(relatorio)
+            print("\n" + resumo)
+
+            # Análise de programas de governo
+            if "analise_programas" in relatorio and relatorio["analise_programas"]:
+                programas = relatorio["analise_programas"]
+                print("\n🏛️ ANÁLISE DE PROGRAMAS DE GOVERNO:")
+
+                if "mapeamento_programas" in programas:
+                    mapeamento = programas["mapeamento_programas"]
+                    print(
+                        f"  • Programas únicos: {mapeamento.get('programas_unicos', 0)}"
+                    )
+                    print(f"  • Total de cursos: {mapeamento.get('total_cursos', 0):,}")
+                    print(
+                        f"  • Total de ofertas: {mapeamento.get('total_ofertas', 0):,}"
+                    )
+
+                if "distribuicao_geografica" in programas:
+                    distribuicao = programas["distribuicao_geografica"]
+                    print(
+                        f"  • Estados com dados: {distribuicao.get('estados_identificados', 0)}"
+                    )
+                    print(
+                        f"  • Polos educacionais: {len(distribuicao.get('polos_educacionais', {}))}"
+                    )
+                    print(
+                        f"  • Desertos educacionais: {len(distribuicao.get('desertos_educacionais', []))}"
+                    )
+
+            # Salvar relatórios
+            from analise.relatorios import salvar_relatorio_json, salvar_relatorio_texto
+
+            salvar_relatorio_json(relatorio)
+            salvar_relatorio_texto(relatorio)
+
+        else:
+            print("❌ Não foi possível carregar os dados!")
+            print("💡 Execute primeiro a varredura completa")
+
+    except ImportError as e:
+        print(f"❌ Erro de importação: {e}")
+        print("💡 Verifique se o módulo de análise está disponível")
+    except Exception as e:
+        print(f"❌ Erro inesperado: {e}")
+
+
+def executar_estatisticas_basicas():
+    """Executa estatísticas básicas dos dados."""
+    print("📊 Executando estatísticas básicas...")
+
+    try:
+        from analise.analisador_geral import AnalisadorGeral
+
+        analisador = AnalisadorGeral()
+
+        if analisador.carregar_dados():
+            estatisticas = analisador.gerar_estatisticas_basicas()
+
+            print(f"\n📈 ESTATÍSTICAS BÁSICAS:")
+            print(f"Total de registros: {estatisticas.get('total_registros', 0):,}")
+            print(f"Total de colunas: {estatisticas.get('total_colunas', 0)}")
+            print(f"Uso de memória: {estatisticas.get('memoria_uso', 0):,} bytes")
+
+            # Mostrar colunas com problemas
+            if "colunas_info" in estatisticas:
+                print(f"\n⚠️ COLUNAS COM PROBLEMAS:")
+                for coluna, info in estatisticas["colunas_info"].items():
+                    if info.get("percentual_nulos", 0) > 50:
+                        print(f"  • {coluna}: {info['percentual_nulos']:.1f}% nulos")
+
+        else:
+            print("❌ Não foi possível carregar os dados!")
+            print("💡 Execute primeiro a varredura completa")
+
+    except ImportError as e:
+        print(f"❌ Erro de importação: {e}")
+        print("💡 Verifique se o módulo de análise está disponível")
+    except Exception as e:
+        print(f"❌ Erro inesperado: {e}")
+
+
+def gerar_relatorios():
+    """Gera relatórios dos dados."""
+    print("📋 Gerando relatórios...")
+
+    try:
+        from analise.analisador_geral import AnalisadorGeral
+
+        analisador = AnalisadorGeral()
+
+        if analisador.carregar_dados():
+            relatorio = analisador.gerar_relatorio_completo()
+
+            # Salvar relatórios básicos
+            from analise.relatorios import salvar_relatorio_json, salvar_relatorio_texto
+
+            arquivo_json = salvar_relatorio_json(relatorio)
+            arquivo_txt = salvar_relatorio_texto(relatorio)
+
+            print(f"\n✅ Relatórios básicos gerados:")
+            print(f"  📄 JSON: {arquivo_json}")
+            print(f"  📄 TXT: {arquivo_txt}")
+
+            # Gerar relatórios visuais
+            from analise.relatorios import gerar_relatorios_visuais
+
+            print("\n🎨 Gerando relatórios visuais...")
+            arquivos_visuais = gerar_relatorios_visuais(relatorio, analisador.dados)
+
+            if arquivos_visuais:
+                print("✅ Relatórios visuais gerados:")
+                for arquivo in arquivos_visuais:
+                    print(f"  📊 {os.path.basename(arquivo)}")
+            else:
+                print("⚠️ Não foi possível gerar relatórios visuais")
+
+        else:
+            print("❌ Não foi possível carregar os dados!")
+            print("💡 Execute primeiro a varredura completa")
+
+    except ImportError as e:
+        print(f"❌ Erro de importação: {e}")
+        print("💡 Verifique se o módulo de análise está disponível")
+    except Exception as e:
+        print(f"❌ Erro inesperado: {e}")
+
+
 def main():
     """Função principal com menu interativo."""
     while True:
         try:
             mostrar_menu()
 
-            opcao = input("📝 Escolha uma opção (0-5): ").strip()
+            opcao = input("📝 Escolha uma opção (0-8): ").strip()
 
             if opcao == "0":
                 print("👋 Até logo!")
@@ -233,8 +379,20 @@ def main():
                 print("\n" + "=" * 50)
                 verificar_dependencias()
                 input("\n⏸️ Pressione ENTER para continuar...")
+            elif opcao == "6":
+                print("\n" + "=" * 50)
+                executar_analise_completa()
+                input("\n⏸️ Pressione ENTER para continuar...")
+            elif opcao == "7":
+                print("\n" + "=" * 50)
+                executar_estatisticas_basicas()
+                input("\n⏸️ Pressione ENTER para continuar...")
+            elif opcao == "8":
+                print("\n" + "=" * 50)
+                gerar_relatorios()
+                input("\n⏸️ Pressione ENTER para continuar...")
             else:
-                print("❌ Opção inválida! Digite um número de 0 a 5.")
+                print("❌ Opção inválida! Digite um número de 0 a 8.")
                 input("\n⏸️ Pressione ENTER para continuar...")
 
         except KeyboardInterrupt:

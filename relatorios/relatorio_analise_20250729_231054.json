@@ -1,0 +1,2802 @@
+{
+  "metadata": {
+    "timestamp": "2025-07-29T23:10:54.819342",
+    "arquivo_dados": "data\\unasus_database_geral_20250729_222308.csv",
+    "versao_analisador": "1.0.0"
+  },
+  "estatisticas_basicas": {
+    "total_registros": 1657,
+    "total_colunas": 29,
+    "colunas": [
+      "co_seq_curso",
+      "no_curso",
+      "qt_carga_horaria_total",
+      "co_seq_orgao",
+      "sg_orgao",
+      "no_orgao",
+      "no_formato",
+      "no_nivel",
+      "no_modalidade",
+      "ds_imagem",
+      "status",
+      "status_ordem",
+      "rank",
+      "metadata_coleta",
+      "id_oferta",
+      "url_oferta",
+      "codigo_oferta",
+      "vagas",
+      "publico_alvo",
+      "local_oferta",
+      "formato",
+      "programas_governo",
+      "temas",
+      "decs",
+      "descricao_oferta",
+      "palavras_chave",
+      "id_curso",
+      "campos_processados",
+      "erro"
+    ],
+    "tipos_dados": {
+      "co_seq_curso": "int64",
+      "no_curso": "object",
+      "qt_carga_horaria_total": "int64",
+      "co_seq_orgao": "int64",
+      "sg_orgao": "object",
+      "no_orgao": "object",
+      "no_formato": "object",
+      "no_nivel": "object",
+      "no_modalidade": "object",
+      "ds_imagem": "object",
+      "status": "object",
+      "status_ordem": "int64",
+      "rank": "int64",
+      "metadata_coleta": "object",
+      "id_oferta": "float64",
+      "url_oferta": "object",
+      "codigo_oferta": "float64",
+      "vagas": "float64",
+      "publico_alvo": "object",
+      "local_oferta": "object",
+      "formato": "object",
+      "programas_governo": "object",
+      "temas": "object",
+      "decs": "object",
+      "descricao_oferta": "object",
+      "palavras_chave": "object",
+      "id_curso": "float64",
+      "campos_processados": "object",
+      "erro": "object"
+    },
+    "valores_nulos": {
+      "co_seq_curso": 0,
+      "no_curso": 0,
+      "qt_carga_horaria_total": 0,
+      "co_seq_orgao": 0,
+      "sg_orgao": 0,
+      "no_orgao": 0,
+      "no_formato": 0,
+      "no_nivel": 0,
+      "no_modalidade": 0,
+      "ds_imagem": 0,
+      "status": 0,
+      "status_ordem": 0,
+      "rank": 0,
+      "metadata_coleta": 0,
+      "id_oferta": 3,
+      "url_oferta": 3,
+      "codigo_oferta": 3,
+      "vagas": 3,
+      "publico_alvo": 3,
+      "local_oferta": 3,
+      "formato": 3,
+      "programas_governo": 26,
+      "temas": 1140,
+      "decs": 1293,
+      "descricao_oferta": 229,
+      "palavras_chave": 244,
+      "id_curso": 3,
+      "campos_processados": 0,
+      "erro": 1654
+    },
+    "memoria_uso": "4661838",
+    "timestamp_analise": "2025-07-29T23:10:54.826848",
+    "colunas_info": {
+      "co_seq_curso": {
+        "tipo": "int64",
+        "valores_unicos": 552,
+        "valores_nulos": "0",
+        "percentual_nulos": 0.0,
+        "min": "63",
+        "max": "47071",
+        "media": 35915.960168980084,
+        "mediana": 45006.0
+      },
+      "no_curso": {
+        "tipo": "object",
+        "valores_unicos": 522,
+        "valores_nulos": "0",
+        "percentual_nulos": 0.0,
+        "valores_mais_comuns": {
+          "Curso de Especialização em Saúde da Família": 44,
+          "Curso de Especialização Estratégia Saúde da Família": 34,
+          "Gestão do Cuidado em Saúde da Família": 27,
+          "Curso de Pós-Graduação em Atenção Básica em Saúde da Família": 22,
+          "Cuidadores e a Atenção Domiciliar": 18
+        }
+      },
+      "qt_carga_horaria_total": {
+        "tipo": "int64",
+        "valores_unicos": 62,
+        "valores_nulos": "0",
+        "percentual_nulos": 0.0,
+        "min": "2",
+        "max": "1440",
+        "media": 125.49969824984913,
+        "mediana": 45.0
+      },
+      "co_seq_orgao": {
+        "tipo": "int64",
+        "valores_unicos": 30,
+        "valores_nulos": "0",
+        "percentual_nulos": 0.0,
+        "min": "1",
+        "max": "4511741",
+        "media": 1215162.5835847917,
+        "mediana": 12.0
+      },
+      "sg_orgao": {
+        "tipo": "object",
+        "valores_unicos": 30,
+        "valores_nulos": "0",
+        "percentual_nulos": 0.0,
+        "valores_mais_comuns": {
+          "FIOCRUZ - BRASÍLIA": 311,
+          "UFMG": 232,
+          "UFMA": 175,
+          "UFSC": 173,
+          "UFPEL": 145
+        }
+      },
+      "no_orgao": {
+        "tipo": "object",
+        "valores_unicos": 30,
+        "valores_nulos": "0",
+        "percentual_nulos": 0.0,
+        "valores_mais_comuns": {
+          "Fundação Oswaldo Cruz - Brasília": 311,
+          "Universidade Federal de Minas Gerais": 232,
+          "Universidade Federal do Maranhão": 175,
+          "Universidade Federal de Santa Catarina": 173,
+          "Universidade Federal de Pelotas": 145
+        }
+      },
+      "no_formato": {
+        "tipo": "object",
+        "valores_unicos": 1,
+        "valores_nulos": "0",
+        "percentual_nulos": 0.0,
+        "valores_mais_comuns": {
+          "Ensino a Distância": 1657
+        }
+      },
+      "no_nivel": {
+        "tipo": "object",
+        "valores_unicos": 5,
+        "valores_nulos": "0",
+        "percentual_nulos": 0.0,
+        "valores_mais_comuns": {
+          "Educação Profissional e Tecnológica": 831,
+          "Pós-Graduação": 351,
+          "Outros": 315,
+          "Extensão": 159,
+          "Técnico": 1
+        }
+      },
+      "no_modalidade": {
+        "tipo": "object",
+        "valores_unicos": 8,
+        "valores_nulos": "0",
+        "percentual_nulos": 0.0,
+        "valores_mais_comuns": {
+          "Qualificação Profissional": 831,
+          "Especialização": 351,
+          "Qualificação": 315,
+          "Atualização": 128,
+          "Aperfeiçoamento": 29
+        }
+      },
+      "ds_imagem": {
+        "tipo": "object",
+        "valores_unicos": 552,
+        "valores_nulos": "0",
+        "percentual_nulos": 0.0,
+        "valores_mais_comuns": {
+          "https://ppuview.unasus.gov.br/arouca_imagens/6419_180.jpg": 34,
+          "https://ppuview.unasus.gov.br/arouca_imagens/44562_180.jpg": 27,
+          "https://ppuview.unasus.gov.br/arouca_imagens/83_180.jpg": 22,
+          "https://ppuview.unasus.gov.br/arouca_imagens/6379_180.jpg": 18,
+          "https://ppuview.unasus.gov.br/arouca_imagens/85_180.jpg": 17
+        }
+      },
+      "status": {
+        "tipo": "object",
+        "valores_unicos": 3,
+        "valores_nulos": "0",
+        "percentual_nulos": 0.0,
+        "valores_mais_comuns": {
+          "com oferta encerrada": 1285,
+          "com oferta aberta": 351,
+          "com oferta em andamento": 21
+        }
+      },
+      "status_ordem": {
+        "tipo": "int64",
+        "valores_unicos": 3,
+        "valores_nulos": "0",
+        "percentual_nulos": 0.0,
+        "min": "1",
+        "max": "4",
+        "media": 3.3391671695835847,
+        "mediana": 4.0
+      },
+      "rank": {
+        "tipo": "int64",
+        "valores_unicos": 1,
+        "valores_nulos": "0",
+        "percentual_nulos": 0.0,
+        "min": "1",
+        "max": "1",
+        "media": 1.0,
+        "mediana": 1.0
+      },
+      "metadata_coleta": {
+        "tipo": "object",
+        "valores_unicos": 554,
+        "valores_nulos": "0",
+        "percentual_nulos": 0.0,
+        "valores_mais_comuns": {
+          "{'timestamp_coleta': '2025-07-29T21:55:20.105119', 'pagina_coleta': 1, 'versao_coletor': '1.0.0', 'tipo_coleta': 'database_geral_sem_filtros', 'localizacao': 'diretorio_raiz'}": 34,
+          "{'timestamp_coleta': '2025-07-29T22:01:58.180835', 'pagina_coleta': 1, 'versao_coletor': '1.0.0', 'tipo_coleta': 'database_geral_sem_filtros', 'localizacao': 'diretorio_raiz'}": 27,
+          "{'timestamp_coleta': '2025-07-29T21:54:26.259599', 'pagina_coleta': 1, 'versao_coletor': '1.0.0', 'tipo_coleta': 'database_geral_sem_filtros', 'localizacao': 'diretorio_raiz'}": 22,
+          "{'timestamp_coleta': '2025-07-29T21:52:44.553782', 'pagina_coleta': 1, 'versao_coletor': '1.0.0', 'tipo_coleta': 'database_geral_sem_filtros', 'localizacao': 'diretorio_raiz'}": 18,
+          "{'timestamp_coleta': '2025-07-29T21:56:25.961275', 'pagina_coleta': 1, 'versao_coletor': '1.0.0', 'tipo_coleta': 'database_geral_sem_filtros', 'localizacao': 'diretorio_raiz'}": 17
+        }
+      },
+      "id_oferta": {
+        "tipo": "float64",
+        "valores_unicos": 1652,
+        "valores_nulos": "3",
+        "percentual_nulos": 0.18105009052504525,
+        "min": 222.0,
+        "max": 420123.0,
+        "media": 373466.10278113664,
+        "mediana": 417668.5
+      },
+      "url_oferta": {
+        "tipo": "object",
+        "valores_unicos": 1652,
+        "valores_nulos": "3",
+        "percentual_nulos": 0.18105009052504525
+      },
+      "codigo_oferta": {
+        "tipo": "float64",
+        "valores_unicos": 1652,
+        "valores_nulos": "3",
+        "percentual_nulos": 0.18105009052504525,
+        "min": 222.0,
+        "max": 420123.0,
+        "media": 373466.10278113664,
+        "mediana": 417668.5
+      },
+      "vagas": {
+        "tipo": "float64",
+        "valores_unicos": 234,
+        "valores_nulos": "3",
+        "percentual_nulos": 0.18105009052504525,
+        "min": 1.0,
+        "max": 999999.0,
+        "media": 21897.779322853687,
+        "mediana": 10000.0
+      },
+      "publico_alvo": {
+        "tipo": "object",
+        "valores_unicos": 308,
+        "valores_nulos": "3",
+        "percentual_nulos": 0.18105009052504525
+      },
+      "local_oferta": {
+        "tipo": "object",
+        "valores_unicos": 1,
+        "valores_nulos": "3",
+        "percentual_nulos": 0.18105009052504525
+      },
+      "formato": {
+        "tipo": "object",
+        "valores_unicos": 1,
+        "valores_nulos": "3",
+        "percentual_nulos": 0.18105009052504525
+      },
+      "programas_governo": {
+        "tipo": "object",
+        "valores_unicos": 31,
+        "valores_nulos": "26",
+        "percentual_nulos": 1.5691007845503924
+      },
+      "temas": {
+        "tipo": "object",
+        "valores_unicos": 65,
+        "valores_nulos": "1140",
+        "percentual_nulos": 68.7990343995172
+      },
+      "decs": {
+        "tipo": "object",
+        "valores_unicos": 86,
+        "valores_nulos": "1293",
+        "percentual_nulos": 78.03258901629451
+      },
+      "descricao_oferta": {
+        "tipo": "object",
+        "valores_unicos": 721,
+        "valores_nulos": "229",
+        "percentual_nulos": 13.820156910078454
+      },
+      "palavras_chave": {
+        "tipo": "object",
+        "valores_unicos": 378,
+        "valores_nulos": "244",
+        "percentual_nulos": 14.725407362703683
+      },
+      "id_curso": {
+        "tipo": "float64",
+        "valores_unicos": 549,
+        "valores_nulos": "3",
+        "percentual_nulos": 0.18105009052504525,
+        "min": 63.0,
+        "max": 47071.0,
+        "media": 35897.23821039903,
+        "mediana": 45006.0
+      },
+      "campos_processados": {
+        "tipo": "object",
+        "valores_unicos": 954,
+        "valores_nulos": "0",
+        "percentual_nulos": 0.0,
+        "valores_mais_comuns": {
+          "{'id': 45387, 'titulo': 'Situações Clínicas Comuns na Atenção Primária à Saúde - Medicina', 'descricao': '', 'carga_horaria': 45, 'categoria': 'Ensino a Distância', 'publico_alvo': 'Profissionais de saúde com ênfase em profissionais da medicina e enfermagem que atuam em atenção primária à saúde.', 'palavras_chave': 'Atenção Primária à Saúde, Autoaprendizagem, Ações Programáticas, Casos Clínicos, Hanseníase, Infecções Sexualmente Transmissíveis, Prática Clínica, Tuberculose', 'link': 'https://www.unasus.gov.br/cursos/curso/45387', 'vagas': '10000', 'numero_vagas': 0, 'qt_vagas': 0, 'nivel': 'Educação Profissional e Tecnológica', 'area_tematica': '', 'instituicao': 'Universidade Federal de Pelotas', 'coordenador': '', 'tutores': '', 'certificacao': '', 'pre_requisitos': '', 'objetivos': '', 'metodologia': '', 'avaliacao': '', 'bibliografia': ''}": 11,
+          "{'id': 44644, 'titulo': 'Situações Odontológicas Comuns em Atenção Primária à Saúde', 'descricao': '', 'carga_horaria': 45, 'categoria': 'Ensino a Distância', 'publico_alvo': 'Profissionais de saúde com ênfase em profissionais da odontologia que atuam em atenção primária à saúde.', 'palavras_chave': 'Atenção Primária à Saúde, Autoaprendizagem., Casos Clínicos, Câncer bucal, Doença periodontal, Doenças Crônicas, Doenças sistêmicas com acometimento bucal, Prevenção e controle de cárie, Saúde bucal de crianças, adultos, gestantes e idosos, Saúde da Criança, Saúde da Mulher, Saúde do Idoso, Urgências odontológicas', 'link': 'https://www.unasus.gov.br/cursos/curso/44644', 'vagas': '10000', 'numero_vagas': 0, 'qt_vagas': 0, 'nivel': 'Educação Profissional e Tecnológica', 'area_tematica': '', 'instituicao': 'Universidade Federal de Pelotas', 'coordenador': '', 'tutores': '', 'certificacao': '', 'pre_requisitos': '', 'objetivos': '', 'metodologia': '', 'avaliacao': '', 'bibliografia': ''}": 11,
+          "{'id': 45383, 'titulo': 'Abordagem dos Problemas Respiratórios no Adulto Comuns na Atenção Básica - Enfermagem', 'descricao': '', 'carga_horaria': 45, 'categoria': 'Ensino a Distância', 'publico_alvo': 'Profissionais de saúde com ênfase em profissionais da medicina e enfermagem que atuam em atenção domiciliar e atenção primária à saúde.', 'palavras_chave': 'Asma, Atenção Primária à Saúde, Autoaprendizagem, Casos Clínicos, Doença Pulmonar Obstrutiva Crônica, Pneumonia, Rinite, Rinossinusite, Tabagismo', 'link': 'https://www.unasus.gov.br/cursos/curso/45383', 'vagas': '10000', 'numero_vagas': 0, 'qt_vagas': 0, 'nivel': 'Educação Profissional e Tecnológica', 'area_tematica': '', 'instituicao': 'Universidade Federal de Pelotas', 'coordenador': '', 'tutores': '', 'certificacao': '', 'pre_requisitos': '', 'objetivos': '', 'metodologia': '', 'avaliacao': '', 'bibliografia': ''}": 11,
+          "{'id': 45388, 'titulo': 'Situações Clínicas Comuns na Atenção Primária à Saúde - Enfermagem', 'descricao': '', 'carga_horaria': 45, 'categoria': 'Ensino a Distância', 'publico_alvo': 'Profissionais de saúde com ênfase em profissionais da medicina e enfermagem que atuam em atenção primária à saúde.', 'palavras_chave': 'Atenção Primária à Saúde, Autoaprendizagem, Ações Programáticas, Casos Clínicos, Hanseníase, Infecções Sexualmente Transmissíveis, Prática Clínica, Tuberculose', 'link': 'https://www.unasus.gov.br/cursos/curso/45388', 'vagas': '10000', 'numero_vagas': 0, 'qt_vagas': 0, 'nivel': 'Educação Profissional e Tecnológica', 'area_tematica': '', 'instituicao': 'Universidade Federal de Pelotas', 'coordenador': '', 'tutores': '', 'certificacao': '', 'pre_requisitos': '', 'objetivos': '', 'metodologia': '', 'avaliacao': '', 'bibliografia': ''}": 11,
+          "{'id': 45389, 'titulo': 'Abordagem Domiciliar de Pacientes em Cuidados Paliativos', 'descricao': '', 'carga_horaria': 45, 'categoria': 'Ensino a Distância', 'publico_alvo': 'Profissionais de saúde com ênfase em profissionais da medicina e enfermagem que atuam em atenção domiciliar e atenção primária à saúde', 'palavras_chave': 'Atenção domiciliar, Autoaprendizagem, Casos clínicos, Controle dos sintomas mais prevalentes nos cuidados paliativos, Cuidados paliativos, Hipodermóclise, Punção de cateter venoso central, Sedação paliativa domiciliar, Óbito', 'link': 'https://www.unasus.gov.br/cursos/curso/45389', 'vagas': '10000', 'numero_vagas': 0, 'qt_vagas': 0, 'nivel': 'Educação Profissional e Tecnológica', 'area_tematica': '', 'instituicao': 'Universidade Federal de Pelotas', 'coordenador': '', 'tutores': '', 'certificacao': '', 'pre_requisitos': '', 'objetivos': '', 'metodologia': '', 'avaliacao': '', 'bibliografia': ''}": 11
+        }
+      },
+      "erro": {
+        "tipo": "object",
+        "valores_unicos": 1,
+        "valores_nulos": "1654",
+        "percentual_nulos": 99.81894990947495
+      }
+    }
+  },
+  "analise_cursos": {
+    "total_cursos": 1657,
+    "cursos_unicos": 522,
+    "areas_tematicas": {},
+    "niveis": {
+      "Educação Profissional e Tecnológica": 831,
+      "Pós-Graduação": 351,
+      "Outros": 315,
+      "Extensão": 159,
+      "Técnico": 1
+    },
+    "instituicoes": {
+      "Fundação Oswaldo Cruz - Brasília": 311,
+      "Universidade Federal de Minas Gerais": 232,
+      "Universidade Federal do Maranhão": 175,
+      "Universidade Federal de Santa Catarina": 173,
+      "Universidade Federal de Pelotas": 145,
+      "Universidade Federal de Ciências da Saúde de Porto Alegre": 115,
+      "Universidade Federal de Pernambuco": 80,
+      "Universidade Federal de São Paulo": 79,
+      "Universidade Federal de Goiás": 55,
+      "Fundação Oswaldo Cruz - Mato Grosso do Sul": 41,
+      "Secretaria Executiva da Universidade Aberta do Sistema Único de Saúde": 40,
+      "Universidade Federal do Ceará": 36,
+      "Universidade do Estado do Rio de Janeiro": 35,
+      "Universidade Federal do Mato Grosso do Sul": 23,
+      "Universidade de Brasília": 23,
+      "FIOCRUZ Pernambuco - Instituto Aggeu Magalhães": 16,
+      "Universidade Federal do Piauí": 14,
+      "Universidade Federal do Rio de Janeiro - Instituto de Estudos em Saúde Coletiva": 11,
+      "FIOCRUZ RJ - ICICT": 10,
+      "Universidade Federal de Alagoas": 9,
+      "Universidade Federal da Bahia": 8,
+      "Universidade Federal do Rio Grande do Norte": 5,
+      "Universidade do Estado do Amazonas": 5,
+      "Universidade Federal de Ouro Preto": 4,
+      "Universidade Federal do Pará": 4,
+      "Secretaria de Estado da Saúde - BA": 2,
+      "Universidade Federal do Paraná": 2,
+      "Universidade Federal do Estado do Rio de Janeiro": 2,
+      "Universidade Federal do Rio Grande do Sul": 1,
+      "Consórcio Intermunicipal de Saúde da Baixada Fluminense": 1
+    },
+    "categorias": {
+      "Ensino a Distância": 1657
+    }
+  },
+  "analise_ofertas": {
+    "total_ofertas": 1657,
+    "ofertas_unicas": 1652,
+    "vagas_disponiveis": 36218927.0,
+    "locais_oferta": {
+      "EAD": 1654
+    },
+    "formatos_oferta": {
+      "Ensino a Distância": 1654
+    },
+    "publicos_alvo": {
+      "Profissionais de saúde com ênfase em profissionais da medicina e enfermagem que atuam em atenção domiciliar e atenção primária à saúde.": 51,
+      "Fisioterapeuta; Fonoaudiólogo; Médico;  Terapeuta ocupacional;\r\n*Acesso ao público em geral": 48,
+      "Profissionais e estudantes da área da saúde": 48,
+      "Prioritariamente Profissionais credenciados: Profissionais de saúde (nível superior e médio) e gestores do SUS, com registro no Cadastro Nacional de Saúde (CNES).\r\n\r\nPúblico em geral\r\n\r\nTodos recebem a declaração de conclusão 3 dias após o término do curso.": 46,
+      "Profissionais de Saúde": 44,
+      "Profissionais de saúde da Atenção Primária à Saúde": 42,
+      "Preceptores da rede pública de saúde.": 38,
+      "Profissionais de saúde integrados a equipes Saúde da Família": 34,
+      "Curso de livre demanda": 28,
+      "Profissionais de saúde com ênfase em profissionais da medicina e enfermagem que atuam em atenção primária à saúde.": 28
+    },
+    "media_vagas": 21897.779322853687
+  },
+  "analise_programas": {
+    "mapeamento_programas": {
+      "total_cursos": 1657,
+      "total_ofertas": 1657,
+      "coluna_programas": "programas_governo",
+      "programas_unicos": 31,
+      "programas_encontrados": {
+        "UNA-SUS, Especialização": {
+          "quantidade_cursos": 17,
+          "quantidade_ofertas": 17,
+          "cursos_unicos": 13,
+          "ofertas_unicas": 17,
+          "instituicoes": 7,
+          "areas_tematicas": 0,
+          "niveis": 2,
+          "modalidades": 1,
+          "total_vagas": 6764.0,
+          "media_vagas_por_oferta": 397.88235294117646
+        },
+        "UNA-SUS": {
+          "quantidade_cursos": 761,
+          "quantidade_ofertas": 761,
+          "cursos_unicos": 297,
+          "ofertas_unicas": 761,
+          "instituicoes": 24,
+          "areas_tematicas": 0,
+          "niveis": 5,
+          "modalidades": 1,
+          "total_vagas": 14700528.0,
+          "media_vagas_por_oferta": 19317.382391590014
+        },
+        "UNA-SUS, SE/UNASUS": {
+          "quantidade_cursos": 193,
+          "quantidade_ofertas": 193,
+          "cursos_unicos": 73,
+          "ofertas_unicas": 193,
+          "instituicoes": 2,
+          "areas_tematicas": 0,
+          "niveis": 2,
+          "modalidades": 1,
+          "total_vagas": 9655318.0,
+          "media_vagas_por_oferta": 50027.55440414508
+        },
+        "UNA-SUS, Atenção Domiciliar": {
+          "quantidade_cursos": 78,
+          "quantidade_ofertas": 78,
+          "cursos_unicos": 24,
+          "ofertas_unicas": 78,
+          "instituicoes": 8,
+          "areas_tematicas": 0,
+          "niveis": 2,
+          "modalidades": 1,
+          "total_vagas": 289600.0,
+          "media_vagas_por_oferta": 3712.8205128205127
+        },
+        "UNA-SUS, SE/UNASUS, SAS": {
+          "quantidade_cursos": 37,
+          "quantidade_ofertas": 37,
+          "cursos_unicos": 5,
+          "ofertas_unicas": 37,
+          "instituicoes": 1,
+          "areas_tematicas": 0,
+          "niveis": 1,
+          "modalidades": 1,
+          "total_vagas": 1850000.0,
+          "media_vagas_por_oferta": 50000.0
+        },
+        "UNA-SUS, SAS": {
+          "quantidade_cursos": 46,
+          "quantidade_ofertas": 46,
+          "cursos_unicos": 30,
+          "ofertas_unicas": 46,
+          "instituicoes": 3,
+          "areas_tematicas": 0,
+          "niveis": 2,
+          "modalidades": 1,
+          "total_vagas": 717160.0,
+          "media_vagas_por_oferta": 15590.434782608696
+        },
+        "UNA-SUS, SVS": {
+          "quantidade_cursos": 7,
+          "quantidade_ofertas": 7,
+          "cursos_unicos": 4,
+          "ofertas_unicas": 7,
+          "instituicoes": 1,
+          "areas_tematicas": 0,
+          "niveis": 1,
+          "modalidades": 1,
+          "total_vagas": 225000.0,
+          "media_vagas_por_oferta": 32142.85714285714
+        },
+        "UNA-SUS, Especialização em Saúde da Família": {
+          "quantidade_cursos": 25,
+          "quantidade_ofertas": 25,
+          "cursos_unicos": 13,
+          "ofertas_unicas": 25,
+          "instituicoes": 10,
+          "areas_tematicas": 0,
+          "niveis": 1,
+          "modalidades": 1,
+          "total_vagas": 9745.0,
+          "media_vagas_por_oferta": 389.8
+        },
+        "UNA-SUS, Módulos PROVAB": {
+          "quantidade_cursos": 115,
+          "quantidade_ofertas": 115,
+          "cursos_unicos": 38,
+          "ofertas_unicas": 115,
+          "instituicoes": 12,
+          "areas_tematicas": 0,
+          "niveis": 1,
+          "modalidades": 1,
+          "total_vagas": 1970880.0,
+          "media_vagas_por_oferta": 17138.08695652174
+        },
+        "UNA-SUS, SE/UNASUS, Módulos PROVAB": {
+          "quantidade_cursos": 23,
+          "quantidade_ofertas": 23,
+          "cursos_unicos": 5,
+          "ofertas_unicas": 23,
+          "instituicoes": 1,
+          "areas_tematicas": 0,
+          "niveis": 1,
+          "modalidades": 1,
+          "total_vagas": 1190000.0,
+          "media_vagas_por_oferta": 51739.13043478261
+        },
+        "UNA-SUS, Cursos COVID-19": {
+          "quantidade_cursos": 23,
+          "quantidade_ofertas": 23,
+          "cursos_unicos": 11,
+          "ofertas_unicas": 23,
+          "instituicoes": 7,
+          "areas_tematicas": 0,
+          "niveis": 3,
+          "modalidades": 1,
+          "total_vagas": 3999998.0,
+          "media_vagas_por_oferta": 173912.95652173914
+        },
+        "UNA-SUS, Especialização em Saúde da Família, Marcador Mais Medicos - PROVAB, Mais Médicos": {
+          "quantidade_cursos": 74,
+          "quantidade_ofertas": 74,
+          "cursos_unicos": 19,
+          "ofertas_unicas": 74,
+          "instituicoes": 11,
+          "areas_tematicas": 0,
+          "niveis": 1,
+          "modalidades": 1,
+          "total_vagas": 23616.0,
+          "media_vagas_por_oferta": 319.13513513513516
+        },
+        "UNA-SUS, Especialização, Marcador Mais Medicos - PROVAB, PROVAB 2012": {
+          "quantidade_cursos": 3,
+          "quantidade_ofertas": 3,
+          "cursos_unicos": 2,
+          "ofertas_unicas": 3,
+          "instituicoes": 2,
+          "areas_tematicas": 0,
+          "niveis": 1,
+          "modalidades": 1,
+          "total_vagas": 1254.0,
+          "media_vagas_por_oferta": 418.0
+        },
+        "UNA-SUS, PROVAB, Especialização em Saúde da Família, Marcador Mais Medicos - PROVAB": {
+          "quantidade_cursos": 5,
+          "quantidade_ofertas": 5,
+          "cursos_unicos": 3,
+          "ofertas_unicas": 5,
+          "instituicoes": 2,
+          "areas_tematicas": 0,
+          "niveis": 1,
+          "modalidades": 1,
+          "total_vagas": 2301.0,
+          "media_vagas_por_oferta": 460.2
+        },
+        "UNA-SUS, Marcador Mais Medicos - PROVAB, Mais Médicos": {
+          "quantidade_cursos": 93,
+          "quantidade_ofertas": 93,
+          "cursos_unicos": 20,
+          "ofertas_unicas": 93,
+          "instituicoes": 12,
+          "areas_tematicas": 0,
+          "niveis": 1,
+          "modalidades": 1,
+          "total_vagas": 36272.0,
+          "media_vagas_por_oferta": 390.02150537634407
+        },
+        "UNA-SUS, Especialização em Saúde da Família, PROVAB, Marcador Mais Medicos - PROVAB": {
+          "quantidade_cursos": 18,
+          "quantidade_ofertas": 18,
+          "cursos_unicos": 8,
+          "ofertas_unicas": 18,
+          "instituicoes": 8,
+          "areas_tematicas": 0,
+          "niveis": 1,
+          "modalidades": 1,
+          "total_vagas": 5109.0,
+          "media_vagas_por_oferta": 283.8333333333333
+        },
+        "UNA-SUS, Especialização em Saúde da Família, Marcador Mais Medicos - PROVAB, Mais Médicos 2014": {
+          "quantidade_cursos": 13,
+          "quantidade_ofertas": 13,
+          "cursos_unicos": 8,
+          "ofertas_unicas": 13,
+          "instituicoes": 8,
+          "areas_tematicas": 0,
+          "niveis": 1,
+          "modalidades": 1,
+          "total_vagas": 6194.0,
+          "media_vagas_por_oferta": 476.46153846153845
+        },
+        "UNA-SUS, Especialização em Saúde da Família, Especialização, Marcador Mais Medicos - PROVAB, Mais Médicos 2013": {
+          "quantidade_cursos": 8,
+          "quantidade_ofertas": 8,
+          "cursos_unicos": 7,
+          "ofertas_unicas": 8,
+          "instituicoes": 7,
+          "areas_tematicas": 0,
+          "niveis": 1,
+          "modalidades": 1,
+          "total_vagas": 2583.0,
+          "media_vagas_por_oferta": 322.875
+        },
+        "UNA-SUS, Especialização em Saúde da Família, Especialização, Marcador Mais Medicos - PROVAB, PROVAB 2014": {
+          "quantidade_cursos": 8,
+          "quantidade_ofertas": 8,
+          "cursos_unicos": 5,
+          "ofertas_unicas": 8,
+          "instituicoes": 6,
+          "areas_tematicas": 0,
+          "niveis": 1,
+          "modalidades": 1,
+          "total_vagas": 3016.0,
+          "media_vagas_por_oferta": 377.0
+        },
+        "UNA-SUS, Especialização em Saúde da Família, Especialização, Marcador Mais Medicos - PROVAB, PROVAB 2012": {
+          "quantidade_cursos": 7,
+          "quantidade_ofertas": 7,
+          "cursos_unicos": 4,
+          "ofertas_unicas": 7,
+          "instituicoes": 5,
+          "areas_tematicas": 0,
+          "niveis": 1,
+          "modalidades": 1,
+          "total_vagas": 2946.0,
+          "media_vagas_por_oferta": 420.85714285714283
+        },
+        "UNA-SUS, Especialização em Saúde da Família, Especialização, Marcador Mais Medicos - PROVAB, Mais Médicos 2014": {
+          "quantidade_cursos": 10,
+          "quantidade_ofertas": 10,
+          "cursos_unicos": 7,
+          "ofertas_unicas": 10,
+          "instituicoes": 5,
+          "areas_tematicas": 0,
+          "niveis": 1,
+          "modalidades": 1,
+          "total_vagas": 3866.0,
+          "media_vagas_por_oferta": 386.6
+        },
+        "UNA-SUS, Especialização em Saúde da Família, Especialização": {
+          "quantidade_cursos": 9,
+          "quantidade_ofertas": 9,
+          "cursos_unicos": 5,
+          "ofertas_unicas": 9,
+          "instituicoes": 5,
+          "areas_tematicas": 0,
+          "niveis": 1,
+          "modalidades": 1,
+          "total_vagas": 3137.0,
+          "media_vagas_por_oferta": 348.55555555555554
+        },
+        "UNA-SUS, PROVAB, Marcador Mais Medicos - PROVAB": {
+          "quantidade_cursos": 9,
+          "quantidade_ofertas": 9,
+          "cursos_unicos": 4,
+          "ofertas_unicas": 9,
+          "instituicoes": 2,
+          "areas_tematicas": 0,
+          "niveis": 1,
+          "modalidades": 1,
+          "total_vagas": 2207.0,
+          "media_vagas_por_oferta": 245.22222222222223
+        },
+        "UNA-SUS, Especialização, Marcador Mais Medicos - PROVAB, PROVAB 2014": {
+          "quantidade_cursos": 5,
+          "quantidade_ofertas": 5,
+          "cursos_unicos": 2,
+          "ofertas_unicas": 5,
+          "instituicoes": 2,
+          "areas_tematicas": 0,
+          "niveis": 1,
+          "modalidades": 1,
+          "total_vagas": 926.0,
+          "media_vagas_por_oferta": 185.2
+        },
+        "UNA-SUS, Especialização, Marcador Mais Medicos - PROVAB, Mais Médicos 2014": {
+          "quantidade_cursos": 7,
+          "quantidade_ofertas": 7,
+          "cursos_unicos": 1,
+          "ofertas_unicas": 7,
+          "instituicoes": 1,
+          "areas_tematicas": 0,
+          "niveis": 1,
+          "modalidades": 1,
+          "total_vagas": 2474.0,
+          "media_vagas_por_oferta": 353.42857142857144
+        },
+        "UNA-SUS, Especialização, Marcador Mais Medicos - PROVAB, Mais Médicos 2013": {
+          "quantidade_cursos": 1,
+          "quantidade_ofertas": 1,
+          "cursos_unicos": 1,
+          "ofertas_unicas": 1,
+          "instituicoes": 1,
+          "areas_tematicas": 0,
+          "niveis": 1,
+          "modalidades": 1,
+          "total_vagas": 400.0,
+          "media_vagas_por_oferta": 400.0
+        },
+        "UNA-SUS, SE/UNASUS, Cursos COVID-19": {
+          "quantidade_cursos": 10,
+          "quantidade_ofertas": 10,
+          "cursos_unicos": 3,
+          "ofertas_unicas": 10,
+          "instituicoes": 1,
+          "areas_tematicas": 0,
+          "niveis": 1,
+          "modalidades": 1,
+          "total_vagas": 500000.0,
+          "media_vagas_por_oferta": 50000.0
+        },
+        "UNA-SUS, PMMB": {
+          "quantidade_cursos": 8,
+          "quantidade_ofertas": 8,
+          "cursos_unicos": 1,
+          "ofertas_unicas": 6,
+          "instituicoes": 6,
+          "areas_tematicas": 0,
+          "niveis": 1,
+          "modalidades": 1,
+          "total_vagas": 20000.0,
+          "media_vagas_por_oferta": 2500.0
+        },
+        "UNA-SUS, Especializacao MPB": {
+          "quantidade_cursos": 6,
+          "quantidade_ofertas": 6,
+          "cursos_unicos": 1,
+          "ofertas_unicas": 6,
+          "instituicoes": 2,
+          "areas_tematicas": 0,
+          "niveis": 1,
+          "modalidades": 1,
+          "total_vagas": 3452.0,
+          "media_vagas_por_oferta": 575.3333333333334
+        },
+        "UNA-SUS, Especialização em Saúde da Família, Especialização, Marcador Mais Medicos - PROVAB": {
+          "quantidade_cursos": 1,
+          "quantidade_ofertas": 1,
+          "cursos_unicos": 1,
+          "ofertas_unicas": 1,
+          "instituicoes": 1,
+          "areas_tematicas": 0,
+          "niveis": 1,
+          "modalidades": 1,
+          "total_vagas": 80.0,
+          "media_vagas_por_oferta": 80.0
+        },
+        "UNA-SUS, SE/UNASUS, SVS": {
+          "quantidade_cursos": 11,
+          "quantidade_ofertas": 11,
+          "cursos_unicos": 1,
+          "ofertas_unicas": 11,
+          "instituicoes": 1,
+          "areas_tematicas": 0,
+          "niveis": 1,
+          "modalidades": 1,
+          "total_vagas": 550000.0,
+          "media_vagas_por_oferta": 50000.0
+        }
+      },
+      "cursos_por_programa": {
+        "UNA-SUS, Especialização": 17,
+        "UNA-SUS": 761,
+        "UNA-SUS, SE/UNASUS": 193,
+        "UNA-SUS, Atenção Domiciliar": 78,
+        "UNA-SUS, SE/UNASUS, SAS": 37,
+        "UNA-SUS, SAS": 46,
+        "UNA-SUS, SVS": 7,
+        "UNA-SUS, Especialização em Saúde da Família": 25,
+        "UNA-SUS, Módulos PROVAB": 115,
+        "UNA-SUS, SE/UNASUS, Módulos PROVAB": 23,
+        "UNA-SUS, Cursos COVID-19": 23,
+        "UNA-SUS, Especialização em Saúde da Família, Marcador Mais Medicos - PROVAB, Mais Médicos": 74,
+        "UNA-SUS, Especialização, Marcador Mais Medicos - PROVAB, PROVAB 2012": 3,
+        "UNA-SUS, PROVAB, Especialização em Saúde da Família, Marcador Mais Medicos - PROVAB": 5,
+        "UNA-SUS, Marcador Mais Medicos - PROVAB, Mais Médicos": 93,
+        "UNA-SUS, Especialização em Saúde da Família, PROVAB, Marcador Mais Medicos - PROVAB": 18,
+        "UNA-SUS, Especialização em Saúde da Família, Marcador Mais Medicos - PROVAB, Mais Médicos 2014": 13,
+        "UNA-SUS, Especialização em Saúde da Família, Especialização, Marcador Mais Medicos - PROVAB, Mais Médicos 2013": 8,
+        "UNA-SUS, Especialização em Saúde da Família, Especialização, Marcador Mais Medicos - PROVAB, PROVAB 2014": 8,
+        "UNA-SUS, Especialização em Saúde da Família, Especialização, Marcador Mais Medicos - PROVAB, PROVAB 2012": 7,
+        "UNA-SUS, Especialização em Saúde da Família, Especialização, Marcador Mais Medicos - PROVAB, Mais Médicos 2014": 10,
+        "UNA-SUS, Especialização em Saúde da Família, Especialização": 9,
+        "UNA-SUS, PROVAB, Marcador Mais Medicos - PROVAB": 9,
+        "UNA-SUS, Especialização, Marcador Mais Medicos - PROVAB, PROVAB 2014": 5,
+        "UNA-SUS, Especialização, Marcador Mais Medicos - PROVAB, Mais Médicos 2014": 7,
+        "UNA-SUS, Especialização, Marcador Mais Medicos - PROVAB, Mais Médicos 2013": 1,
+        "UNA-SUS, SE/UNASUS, Cursos COVID-19": 10,
+        "UNA-SUS, PMMB": 8,
+        "UNA-SUS, Especializacao MPB": 6,
+        "UNA-SUS, Especialização em Saúde da Família, Especialização, Marcador Mais Medicos - PROVAB": 1,
+        "UNA-SUS, SE/UNASUS, SVS": 11
+      },
+      "ofertas_por_programa": {
+        "UNA-SUS, Especialização": 17,
+        "UNA-SUS": 761,
+        "UNA-SUS, SE/UNASUS": 193,
+        "UNA-SUS, Atenção Domiciliar": 78,
+        "UNA-SUS, SE/UNASUS, SAS": 37,
+        "UNA-SUS, SAS": 46,
+        "UNA-SUS, SVS": 7,
+        "UNA-SUS, Especialização em Saúde da Família": 25,
+        "UNA-SUS, Módulos PROVAB": 115,
+        "UNA-SUS, SE/UNASUS, Módulos PROVAB": 23,
+        "UNA-SUS, Cursos COVID-19": 23,
+        "UNA-SUS, Especialização em Saúde da Família, Marcador Mais Medicos - PROVAB, Mais Médicos": 74,
+        "UNA-SUS, Especialização, Marcador Mais Medicos - PROVAB, PROVAB 2012": 3,
+        "UNA-SUS, PROVAB, Especialização em Saúde da Família, Marcador Mais Medicos - PROVAB": 5,
+        "UNA-SUS, Marcador Mais Medicos - PROVAB, Mais Médicos": 93,
+        "UNA-SUS, Especialização em Saúde da Família, PROVAB, Marcador Mais Medicos - PROVAB": 18,
+        "UNA-SUS, Especialização em Saúde da Família, Marcador Mais Medicos - PROVAB, Mais Médicos 2014": 13,
+        "UNA-SUS, Especialização em Saúde da Família, Especialização, Marcador Mais Medicos - PROVAB, Mais Médicos 2013": 8,
+        "UNA-SUS, Especialização em Saúde da Família, Especialização, Marcador Mais Medicos - PROVAB, PROVAB 2014": 8,
+        "UNA-SUS, Especialização em Saúde da Família, Especialização, Marcador Mais Medicos - PROVAB, PROVAB 2012": 7,
+        "UNA-SUS, Especialização em Saúde da Família, Especialização, Marcador Mais Medicos - PROVAB, Mais Médicos 2014": 10,
+        "UNA-SUS, Especialização em Saúde da Família, Especialização": 9,
+        "UNA-SUS, PROVAB, Marcador Mais Medicos - PROVAB": 9,
+        "UNA-SUS, Especialização, Marcador Mais Medicos - PROVAB, PROVAB 2014": 5,
+        "UNA-SUS, Especialização, Marcador Mais Medicos - PROVAB, Mais Médicos 2014": 7,
+        "UNA-SUS, Especialização, Marcador Mais Medicos - PROVAB, Mais Médicos 2013": 1,
+        "UNA-SUS, SE/UNASUS, Cursos COVID-19": 10,
+        "UNA-SUS, PMMB": 8,
+        "UNA-SUS, Especializacao MPB": 6,
+        "UNA-SUS, Especialização em Saúde da Família, Especialização, Marcador Mais Medicos - PROVAB": 1,
+        "UNA-SUS, SE/UNASUS, SVS": 11
+      },
+      "vagas_por_programa": {
+        "UNA-SUS, Especialização": 6764.0,
+        "UNA-SUS": 14700528.0,
+        "UNA-SUS, SE/UNASUS": 9655318.0,
+        "UNA-SUS, Atenção Domiciliar": 289600.0,
+        "UNA-SUS, SE/UNASUS, SAS": 1850000.0,
+        "UNA-SUS, SAS": 717160.0,
+        "UNA-SUS, SVS": 225000.0,
+        "UNA-SUS, Especialização em Saúde da Família": 9745.0,
+        "UNA-SUS, Módulos PROVAB": 1970880.0,
+        "UNA-SUS, SE/UNASUS, Módulos PROVAB": 1190000.0,
+        "UNA-SUS, Cursos COVID-19": 3999998.0,
+        "UNA-SUS, Especialização em Saúde da Família, Marcador Mais Medicos - PROVAB, Mais Médicos": 23616.0,
+        "UNA-SUS, Especialização, Marcador Mais Medicos - PROVAB, PROVAB 2012": 1254.0,
+        "UNA-SUS, PROVAB, Especialização em Saúde da Família, Marcador Mais Medicos - PROVAB": 2301.0,
+        "UNA-SUS, Marcador Mais Medicos - PROVAB, Mais Médicos": 36272.0,
+        "UNA-SUS, Especialização em Saúde da Família, PROVAB, Marcador Mais Medicos - PROVAB": 5109.0,
+        "UNA-SUS, Especialização em Saúde da Família, Marcador Mais Medicos - PROVAB, Mais Médicos 2014": 6194.0,
+        "UNA-SUS, Especialização em Saúde da Família, Especialização, Marcador Mais Medicos - PROVAB, Mais Médicos 2013": 2583.0,
+        "UNA-SUS, Especialização em Saúde da Família, Especialização, Marcador Mais Medicos - PROVAB, PROVAB 2014": 3016.0,
+        "UNA-SUS, Especialização em Saúde da Família, Especialização, Marcador Mais Medicos - PROVAB, PROVAB 2012": 2946.0,
+        "UNA-SUS, Especialização em Saúde da Família, Especialização, Marcador Mais Medicos - PROVAB, Mais Médicos 2014": 3866.0,
+        "UNA-SUS, Especialização em Saúde da Família, Especialização": 3137.0,
+        "UNA-SUS, PROVAB, Marcador Mais Medicos - PROVAB": 2207.0,
+        "UNA-SUS, Especialização, Marcador Mais Medicos - PROVAB, PROVAB 2014": 926.0,
+        "UNA-SUS, Especialização, Marcador Mais Medicos - PROVAB, Mais Médicos 2014": 2474.0,
+        "UNA-SUS, Especialização, Marcador Mais Medicos - PROVAB, Mais Médicos 2013": 400.0,
+        "UNA-SUS, SE/UNASUS, Cursos COVID-19": 500000.0,
+        "UNA-SUS, PMMB": 20000.0,
+        "UNA-SUS, Especializacao MPB": 3452.0,
+        "UNA-SUS, Especialização em Saúde da Família, Especialização, Marcador Mais Medicos - PROVAB": 80.0,
+        "UNA-SUS, SE/UNASUS, SVS": 550000.0
+      },
+      "timestamp_analise": "2025-07-29T23:10:54.857574",
+      "programas_ordenados_por_cursos": {
+        "UNA-SUS": 761,
+        "UNA-SUS, SE/UNASUS": 193,
+        "UNA-SUS, Módulos PROVAB": 115,
+        "UNA-SUS, Marcador Mais Medicos - PROVAB, Mais Médicos": 93,
+        "UNA-SUS, Atenção Domiciliar": 78,
+        "UNA-SUS, Especialização em Saúde da Família, Marcador Mais Medicos - PROVAB, Mais Médicos": 74,
+        "UNA-SUS, SAS": 46,
+        "UNA-SUS, SE/UNASUS, SAS": 37,
+        "UNA-SUS, Especialização em Saúde da Família": 25,
+        "UNA-SUS, SE/UNASUS, Módulos PROVAB": 23,
+        "UNA-SUS, Cursos COVID-19": 23,
+        "UNA-SUS, Especialização em Saúde da Família, PROVAB, Marcador Mais Medicos - PROVAB": 18,
+        "UNA-SUS, Especialização": 17,
+        "UNA-SUS, Especialização em Saúde da Família, Marcador Mais Medicos - PROVAB, Mais Médicos 2014": 13,
+        "UNA-SUS, SE/UNASUS, SVS": 11,
+        "UNA-SUS, Especialização em Saúde da Família, Especialização, Marcador Mais Medicos - PROVAB, Mais Médicos 2014": 10,
+        "UNA-SUS, SE/UNASUS, Cursos COVID-19": 10,
+        "UNA-SUS, Especialização em Saúde da Família, Especialização": 9,
+        "UNA-SUS, PROVAB, Marcador Mais Medicos - PROVAB": 9,
+        "UNA-SUS, Especialização em Saúde da Família, Especialização, Marcador Mais Medicos - PROVAB, Mais Médicos 2013": 8,
+        "UNA-SUS, Especialização em Saúde da Família, Especialização, Marcador Mais Medicos - PROVAB, PROVAB 2014": 8,
+        "UNA-SUS, PMMB": 8,
+        "UNA-SUS, SVS": 7,
+        "UNA-SUS, Especialização em Saúde da Família, Especialização, Marcador Mais Medicos - PROVAB, PROVAB 2012": 7,
+        "UNA-SUS, Especialização, Marcador Mais Medicos - PROVAB, Mais Médicos 2014": 7,
+        "UNA-SUS, Especializacao MPB": 6,
+        "UNA-SUS, PROVAB, Especialização em Saúde da Família, Marcador Mais Medicos - PROVAB": 5,
+        "UNA-SUS, Especialização, Marcador Mais Medicos - PROVAB, PROVAB 2014": 5,
+        "UNA-SUS, Especialização, Marcador Mais Medicos - PROVAB, PROVAB 2012": 3,
+        "UNA-SUS, Especialização, Marcador Mais Medicos - PROVAB, Mais Médicos 2013": 1,
+        "UNA-SUS, Especialização em Saúde da Família, Especialização, Marcador Mais Medicos - PROVAB": 1
+      },
+      "programas_ordenados_por_ofertas": {
+        "UNA-SUS": 761,
+        "UNA-SUS, SE/UNASUS": 193,
+        "UNA-SUS, Módulos PROVAB": 115,
+        "UNA-SUS, Marcador Mais Medicos - PROVAB, Mais Médicos": 93,
+        "UNA-SUS, Atenção Domiciliar": 78,
+        "UNA-SUS, Especialização em Saúde da Família, Marcador Mais Medicos - PROVAB, Mais Médicos": 74,
+        "UNA-SUS, SAS": 46,
+        "UNA-SUS, SE/UNASUS, SAS": 37,
+        "UNA-SUS, Especialização em Saúde da Família": 25,
+        "UNA-SUS, SE/UNASUS, Módulos PROVAB": 23,
+        "UNA-SUS, Cursos COVID-19": 23,
+        "UNA-SUS, Especialização em Saúde da Família, PROVAB, Marcador Mais Medicos - PROVAB": 18,
+        "UNA-SUS, Especialização": 17,
+        "UNA-SUS, Especialização em Saúde da Família, Marcador Mais Medicos - PROVAB, Mais Médicos 2014": 13,
+        "UNA-SUS, SE/UNASUS, SVS": 11,
+        "UNA-SUS, Especialização em Saúde da Família, Especialização, Marcador Mais Medicos - PROVAB, Mais Médicos 2014": 10,
+        "UNA-SUS, SE/UNASUS, Cursos COVID-19": 10,
+        "UNA-SUS, Especialização em Saúde da Família, Especialização": 9,
+        "UNA-SUS, PROVAB, Marcador Mais Medicos - PROVAB": 9,
+        "UNA-SUS, Especialização em Saúde da Família, Especialização, Marcador Mais Medicos - PROVAB, Mais Médicos 2013": 8,
+        "UNA-SUS, Especialização em Saúde da Família, Especialização, Marcador Mais Medicos - PROVAB, PROVAB 2014": 8,
+        "UNA-SUS, PMMB": 8,
+        "UNA-SUS, SVS": 7,
+        "UNA-SUS, Especialização em Saúde da Família, Especialização, Marcador Mais Medicos - PROVAB, PROVAB 2012": 7,
+        "UNA-SUS, Especialização, Marcador Mais Medicos - PROVAB, Mais Médicos 2014": 7,
+        "UNA-SUS, Especializacao MPB": 6,
+        "UNA-SUS, PROVAB, Especialização em Saúde da Família, Marcador Mais Medicos - PROVAB": 5,
+        "UNA-SUS, Especialização, Marcador Mais Medicos - PROVAB, PROVAB 2014": 5,
+        "UNA-SUS, Especialização, Marcador Mais Medicos - PROVAB, PROVAB 2012": 3,
+        "UNA-SUS, Especialização, Marcador Mais Medicos - PROVAB, Mais Médicos 2013": 1,
+        "UNA-SUS, Especialização em Saúde da Família, Especialização, Marcador Mais Medicos - PROVAB": 1
+      },
+      "programas_ordenados_por_vagas": {
+        "UNA-SUS": 14700528.0,
+        "UNA-SUS, SE/UNASUS": 9655318.0,
+        "UNA-SUS, Cursos COVID-19": 3999998.0,
+        "UNA-SUS, Módulos PROVAB": 1970880.0,
+        "UNA-SUS, SE/UNASUS, SAS": 1850000.0,
+        "UNA-SUS, SE/UNASUS, Módulos PROVAB": 1190000.0,
+        "UNA-SUS, SAS": 717160.0,
+        "UNA-SUS, SE/UNASUS, SVS": 550000.0,
+        "UNA-SUS, SE/UNASUS, Cursos COVID-19": 500000.0,
+        "UNA-SUS, Atenção Domiciliar": 289600.0,
+        "UNA-SUS, SVS": 225000.0,
+        "UNA-SUS, Marcador Mais Medicos - PROVAB, Mais Médicos": 36272.0,
+        "UNA-SUS, Especialização em Saúde da Família, Marcador Mais Medicos - PROVAB, Mais Médicos": 23616.0,
+        "UNA-SUS, PMMB": 20000.0,
+        "UNA-SUS, Especialização em Saúde da Família": 9745.0,
+        "UNA-SUS, Especialização": 6764.0,
+        "UNA-SUS, Especialização em Saúde da Família, Marcador Mais Medicos - PROVAB, Mais Médicos 2014": 6194.0,
+        "UNA-SUS, Especialização em Saúde da Família, PROVAB, Marcador Mais Medicos - PROVAB": 5109.0,
+        "UNA-SUS, Especialização em Saúde da Família, Especialização, Marcador Mais Medicos - PROVAB, Mais Médicos 2014": 3866.0,
+        "UNA-SUS, Especializacao MPB": 3452.0,
+        "UNA-SUS, Especialização em Saúde da Família, Especialização": 3137.0,
+        "UNA-SUS, Especialização em Saúde da Família, Especialização, Marcador Mais Medicos - PROVAB, PROVAB 2014": 3016.0,
+        "UNA-SUS, Especialização em Saúde da Família, Especialização, Marcador Mais Medicos - PROVAB, PROVAB 2012": 2946.0,
+        "UNA-SUS, Especialização em Saúde da Família, Especialização, Marcador Mais Medicos - PROVAB, Mais Médicos 2013": 2583.0,
+        "UNA-SUS, Especialização, Marcador Mais Medicos - PROVAB, Mais Médicos 2014": 2474.0,
+        "UNA-SUS, PROVAB, Especialização em Saúde da Família, Marcador Mais Medicos - PROVAB": 2301.0,
+        "UNA-SUS, PROVAB, Marcador Mais Medicos - PROVAB": 2207.0,
+        "UNA-SUS, Especialização, Marcador Mais Medicos - PROVAB, PROVAB 2012": 1254.0,
+        "UNA-SUS, Especialização, Marcador Mais Medicos - PROVAB, PROVAB 2014": 926.0,
+        "UNA-SUS, Especialização, Marcador Mais Medicos - PROVAB, Mais Médicos 2013": 400.0,
+        "UNA-SUS, Especialização em Saúde da Família, Especialização, Marcador Mais Medicos - PROVAB": 80.0
+      }
+    },
+    "cobertura_programatica": {
+      "total_registros": 1657,
+      "coluna_programas": "programas_governo",
+      "programas_com_cobertura": 31,
+      "programas_sem_cobertura": 0,
+      "cobertura_por_programa": {
+        "UNA-SUS, Especialização": {
+          "quantidade_cursos": 17,
+          "quantidade_ofertas": 17,
+          "cobertura_geografica": {},
+          "cobertura_institucional": {
+            "Universidade Federal do Maranhão": 5,
+            "Universidade Federal de São Paulo": 4,
+            "Universidade Federal de Goiás": 3,
+            "Universidade Federal do Rio de Janeiro - Instituto de Estudos em Saúde Coletiva": 2,
+            "Consórcio Intermunicipal de Saúde da Baixada Fluminense": 1,
+            "Universidade do Estado do Rio de Janeiro": 1,
+            "Universidade Federal do Ceará": 1
+          },
+          "cobertura_tematica": {},
+          "cobertura_nivel": {
+            "Pós-Graduação": 14,
+            "Extensão": 3
+          },
+          "cobertura_modalidade": {
+            "Ensino a Distância": 17
+          },
+          "total_instituicoes": 7,
+          "total_niveis": 2,
+          "total_modalidades": 1,
+          "total_vagas": 6764.0,
+          "media_vagas": 397.88235294117646
+        },
+        "UNA-SUS": {
+          "quantidade_cursos": 761,
+          "quantidade_ofertas": 761,
+          "cobertura_geografica": {},
+          "cobertura_institucional": {
+            "Universidade Federal de Pelotas": 129,
+            "Universidade Federal de Santa Catarina": 126,
+            "Universidade Federal de Minas Gerais": 106,
+            "Universidade Federal do Maranhão": 84,
+            "Universidade Federal de Ciências da Saúde de Porto Alegre": 69,
+            "Universidade Federal de Goiás": 50,
+            "Universidade Federal de Pernambuco": 46,
+            "Fundação Oswaldo Cruz - Brasília": 31,
+            "Universidade Federal de São Paulo": 31,
+            "Fundação Oswaldo Cruz - Mato Grosso do Sul": 25,
+            "FIOCRUZ Pernambuco - Instituto Aggeu Magalhães": 15,
+            "FIOCRUZ RJ - ICICT": 10,
+            "Universidade Federal do Rio de Janeiro - Instituto de Estudos em Saúde Coletiva": 9,
+            "Universidade Federal de Ouro Preto": 4,
+            "Universidade de Brasília": 4,
+            "Universidade Federal de Alagoas": 4,
+            "Universidade Federal do Piauí": 3,
+            "Universidade do Estado do Amazonas": 3,
+            "Secretaria Executiva da Universidade Aberta do Sistema Único de Saúde": 3,
+            "Universidade Federal do Mato Grosso do Sul": 3,
+            "Universidade Federal do Ceará": 2,
+            "Secretaria de Estado da Saúde - BA": 2,
+            "Universidade Federal do Rio Grande do Sul": 1,
+            "Universidade do Estado do Rio de Janeiro": 1
+          },
+          "cobertura_tematica": {},
+          "cobertura_nivel": {
+            "Educação Profissional e Tecnológica": 563,
+            "Extensão": 128,
+            "Outros": 46,
+            "Pós-Graduação": 23,
+            "Técnico": 1
+          },
+          "cobertura_modalidade": {
+            "Ensino a Distância": 761
+          },
+          "total_instituicoes": 24,
+          "total_niveis": 5,
+          "total_modalidades": 1,
+          "total_vagas": 14700528.0,
+          "media_vagas": 19317.382391590014
+        },
+        "UNA-SUS, SE/UNASUS": {
+          "quantidade_cursos": 193,
+          "quantidade_ofertas": 193,
+          "cobertura_geografica": {},
+          "cobertura_institucional": {
+            "Fundação Oswaldo Cruz - Brasília": 191,
+            "Universidade Federal de Ciências da Saúde de Porto Alegre": 2
+          },
+          "cobertura_tematica": {},
+          "cobertura_nivel": {
+            "Outros": 182,
+            "Extensão": 11
+          },
+          "cobertura_modalidade": {
+            "Ensino a Distância": 193
+          },
+          "total_instituicoes": 2,
+          "total_niveis": 2,
+          "total_modalidades": 1,
+          "total_vagas": 9655318.0,
+          "media_vagas": 50027.55440414508
+        },
+        "UNA-SUS, Atenção Domiciliar": {
+          "quantidade_cursos": 78,
+          "quantidade_ofertas": 78,
+          "cobertura_geografica": {},
+          "cobertura_institucional": {
+            "Universidade Federal de Minas Gerais": 35,
+            "Universidade Federal do Maranhão": 15,
+            "Universidade Federal do Ceará": 8,
+            "Universidade Federal de Ciências da Saúde de Porto Alegre": 7,
+            "Universidade do Estado do Rio de Janeiro": 4,
+            "Universidade Federal de Pernambuco": 4,
+            "Universidade Federal de Santa Catarina": 4,
+            "Universidade Federal de Pelotas": 1
+          },
+          "cobertura_tematica": {},
+          "cobertura_nivel": {
+            "Educação Profissional e Tecnológica": 77,
+            "Extensão": 1
+          },
+          "cobertura_modalidade": {
+            "Ensino a Distância": 78
+          },
+          "total_instituicoes": 8,
+          "total_niveis": 2,
+          "total_modalidades": 1,
+          "total_vagas": 289600.0,
+          "media_vagas": 3712.8205128205127
+        },
+        "UNA-SUS, SE/UNASUS, SAS": {
+          "quantidade_cursos": 37,
+          "quantidade_ofertas": 37,
+          "cobertura_geografica": {},
+          "cobertura_institucional": {
+            "Fundação Oswaldo Cruz - Brasília": 37
+          },
+          "cobertura_tematica": {},
+          "cobertura_nivel": {
+            "Outros": 37
+          },
+          "cobertura_modalidade": {
+            "Ensino a Distância": 37
+          },
+          "total_instituicoes": 1,
+          "total_niveis": 1,
+          "total_modalidades": 1,
+          "total_vagas": 1850000.0,
+          "media_vagas": 50000.0
+        },
+        "UNA-SUS, SAS": {
+          "quantidade_cursos": 46,
+          "quantidade_ofertas": 46,
+          "cobertura_geografica": {},
+          "cobertura_institucional": {
+            "Universidade Federal do Maranhão": 37,
+            "Secretaria Executiva da Universidade Aberta do Sistema Único de Saúde": 7,
+            "Universidade Federal de Minas Gerais": 2
+          },
+          "cobertura_tematica": {},
+          "cobertura_nivel": {
+            "Educação Profissional e Tecnológica": 41,
+            "Extensão": 5
+          },
+          "cobertura_modalidade": {
+            "Ensino a Distância": 46
+          },
+          "total_instituicoes": 3,
+          "total_niveis": 2,
+          "total_modalidades": 1,
+          "total_vagas": 717160.0,
+          "media_vagas": 15590.434782608696
+        },
+        "UNA-SUS, SVS": {
+          "quantidade_cursos": 7,
+          "quantidade_ofertas": 7,
+          "cobertura_geografica": {},
+          "cobertura_institucional": {
+            "Secretaria Executiva da Universidade Aberta do Sistema Único de Saúde": 7
+          },
+          "cobertura_tematica": {},
+          "cobertura_nivel": {
+            "Educação Profissional e Tecnológica": 7
+          },
+          "cobertura_modalidade": {
+            "Ensino a Distância": 7
+          },
+          "total_instituicoes": 1,
+          "total_niveis": 1,
+          "total_modalidades": 1,
+          "total_vagas": 225000.0,
+          "media_vagas": 32142.85714285714
+        },
+        "UNA-SUS, Especialização em Saúde da Família": {
+          "quantidade_cursos": 25,
+          "quantidade_ofertas": 25,
+          "cobertura_geografica": {},
+          "cobertura_institucional": {
+            "Universidade Federal do Mato Grosso do Sul": 5,
+            "Universidade Federal de Pelotas": 4,
+            "Universidade Federal do Maranhão": 3,
+            "Universidade Federal de São Paulo": 3,
+            "Universidade Federal de Santa Catarina": 3,
+            "Universidade Federal de Pernambuco": 3,
+            "Universidade Federal da Bahia": 1,
+            "Universidade do Estado do Rio de Janeiro": 1,
+            "Universidade Federal do Ceará": 1,
+            "Universidade de Brasília": 1
+          },
+          "cobertura_tematica": {},
+          "cobertura_nivel": {
+            "Pós-Graduação": 25
+          },
+          "cobertura_modalidade": {
+            "Ensino a Distância": 25
+          },
+          "total_instituicoes": 10,
+          "total_niveis": 1,
+          "total_modalidades": 1,
+          "total_vagas": 9745.0,
+          "media_vagas": 389.8
+        },
+        "UNA-SUS, Módulos PROVAB": {
+          "quantidade_cursos": 115,
+          "quantidade_ofertas": 115,
+          "cobertura_geografica": {},
+          "cobertura_institucional": {
+            "Secretaria Executiva da Universidade Aberta do Sistema Único de Saúde": 23,
+            "Universidade Federal de Ciências da Saúde de Porto Alegre": 20,
+            "Universidade Federal de Minas Gerais": 13,
+            "Universidade Federal de Santa Catarina": 11,
+            "Universidade Federal de São Paulo": 9,
+            "Universidade de Brasília": 8,
+            "Universidade Federal do Maranhão": 8,
+            "Universidade do Estado do Rio de Janeiro": 7,
+            "Universidade Federal do Ceará": 7,
+            "Universidade Federal de Pernambuco": 4,
+            "Universidade Federal do Mato Grosso do Sul": 3,
+            "Fundação Oswaldo Cruz - Mato Grosso do Sul": 2
+          },
+          "cobertura_tematica": {},
+          "cobertura_nivel": {
+            "Educação Profissional e Tecnológica": 115
+          },
+          "cobertura_modalidade": {
+            "Ensino a Distância": 115
+          },
+          "total_instituicoes": 12,
+          "total_niveis": 1,
+          "total_modalidades": 1,
+          "total_vagas": 1970880.0,
+          "media_vagas": 17138.08695652174
+        },
+        "UNA-SUS, SE/UNASUS, Módulos PROVAB": {
+          "quantidade_cursos": 23,
+          "quantidade_ofertas": 23,
+          "cobertura_geografica": {},
+          "cobertura_institucional": {
+            "Fundação Oswaldo Cruz - Brasília": 23
+          },
+          "cobertura_tematica": {},
+          "cobertura_nivel": {
+            "Outros": 23
+          },
+          "cobertura_modalidade": {
+            "Ensino a Distância": 23
+          },
+          "total_instituicoes": 1,
+          "total_niveis": 1,
+          "total_modalidades": 1,
+          "total_vagas": 1190000.0,
+          "media_vagas": 51739.13043478261
+        },
+        "UNA-SUS, Cursos COVID-19": {
+          "quantidade_cursos": 23,
+          "quantidade_ofertas": 23,
+          "cobertura_geografica": {},
+          "cobertura_institucional": {
+            "Fundação Oswaldo Cruz - Mato Grosso do Sul": 6,
+            "Universidade Federal de Santa Catarina": 5,
+            "Universidade Federal de Pelotas": 4,
+            "Universidade Federal do Maranhão": 4,
+            "Universidade Federal de São Paulo": 2,
+            "Universidade Federal de Minas Gerais": 1,
+            "Universidade Federal do Piauí": 1
+          },
+          "cobertura_tematica": {},
+          "cobertura_nivel": {
+            "Educação Profissional e Tecnológica": 15,
+            "Extensão": 5,
+            "Outros": 3
+          },
+          "cobertura_modalidade": {
+            "Ensino a Distância": 23
+          },
+          "total_instituicoes": 7,
+          "total_niveis": 3,
+          "total_modalidades": 1,
+          "total_vagas": 3999998.0,
+          "media_vagas": 173912.95652173914
+        },
+        "UNA-SUS, Especialização em Saúde da Família, Marcador Mais Medicos - PROVAB, Mais Médicos": {
+          "quantidade_cursos": 74,
+          "quantidade_ofertas": 74,
+          "cobertura_geografica": {},
+          "cobertura_institucional": {
+            "Universidade Federal de Minas Gerais": 10,
+            "Universidade Federal de Pernambuco": 10,
+            "Universidade do Estado do Rio de Janeiro": 9,
+            "Universidade Federal de São Paulo": 9,
+            "Universidade Federal do Ceará": 9,
+            "Universidade de Brasília": 6,
+            "Universidade Federal de Santa Catarina": 5,
+            "Universidade Federal do Maranhão": 5,
+            "Universidade Federal do Mato Grosso do Sul": 5,
+            "Universidade Federal de Ciências da Saúde de Porto Alegre": 4,
+            "Universidade Federal de Pelotas": 2
+          },
+          "cobertura_tematica": {},
+          "cobertura_nivel": {
+            "Pós-Graduação": 74
+          },
+          "cobertura_modalidade": {
+            "Ensino a Distância": 74
+          },
+          "total_instituicoes": 11,
+          "total_niveis": 1,
+          "total_modalidades": 1,
+          "total_vagas": 23616.0,
+          "media_vagas": 319.13513513513516
+        },
+        "UNA-SUS, Especialização, Marcador Mais Medicos - PROVAB, PROVAB 2012": {
+          "quantidade_cursos": 3,
+          "quantidade_ofertas": 3,
+          "cobertura_geografica": {},
+          "cobertura_institucional": {
+            "Universidade Federal de Minas Gerais": 2,
+            "Universidade Federal de Ciências da Saúde de Porto Alegre": 1
+          },
+          "cobertura_tematica": {},
+          "cobertura_nivel": {
+            "Pós-Graduação": 3
+          },
+          "cobertura_modalidade": {
+            "Ensino a Distância": 3
+          },
+          "total_instituicoes": 2,
+          "total_niveis": 1,
+          "total_modalidades": 1,
+          "total_vagas": 1254.0,
+          "media_vagas": 418.0
+        },
+        "UNA-SUS, PROVAB, Especialização em Saúde da Família, Marcador Mais Medicos - PROVAB": {
+          "quantidade_cursos": 5,
+          "quantidade_ofertas": 5,
+          "cobertura_geografica": {},
+          "cobertura_institucional": {
+            "Universidade Federal de Minas Gerais": 3,
+            "Universidade Federal de Ciências da Saúde de Porto Alegre": 2
+          },
+          "cobertura_tematica": {},
+          "cobertura_nivel": {
+            "Pós-Graduação": 5
+          },
+          "cobertura_modalidade": {
+            "Ensino a Distância": 5
+          },
+          "total_instituicoes": 2,
+          "total_niveis": 1,
+          "total_modalidades": 1,
+          "total_vagas": 2301.0,
+          "media_vagas": 460.2
+        },
+        "UNA-SUS, Marcador Mais Medicos - PROVAB, Mais Médicos": {
+          "quantidade_cursos": 93,
+          "quantidade_ofertas": 93,
+          "cobertura_geografica": {},
+          "cobertura_institucional": {
+            "Universidade Federal de Minas Gerais": 35,
+            "Universidade Federal de São Paulo": 11,
+            "Universidade Federal do Piauí": 10,
+            "Universidade Federal da Bahia": 7,
+            "Universidade Federal de Santa Catarina": 5,
+            "Universidade Federal de Alagoas": 5,
+            "Fundação Oswaldo Cruz - Mato Grosso do Sul": 5,
+            "Universidade Federal do Pará": 4,
+            "Universidade Federal do Rio Grande do Norte": 4,
+            "Universidade Federal de Ciências da Saúde de Porto Alegre": 3,
+            "Universidade Federal do Paraná": 2,
+            "Universidade do Estado do Amazonas": 2
+          },
+          "cobertura_tematica": {},
+          "cobertura_nivel": {
+            "Pós-Graduação": 93
+          },
+          "cobertura_modalidade": {
+            "Ensino a Distância": 93
+          },
+          "total_instituicoes": 12,
+          "total_niveis": 1,
+          "total_modalidades": 1,
+          "total_vagas": 36272.0,
+          "media_vagas": 390.02150537634407
+        },
+        "UNA-SUS, Especialização em Saúde da Família, PROVAB, Marcador Mais Medicos - PROVAB": {
+          "quantidade_cursos": 18,
+          "quantidade_ofertas": 18,
+          "cobertura_geografica": {},
+          "cobertura_institucional": {
+            "Universidade do Estado do Rio de Janeiro": 6,
+            "Universidade Federal de Pelotas": 3,
+            "Universidade Federal de Santa Catarina": 3,
+            "Universidade Federal do Maranhão": 2,
+            "Universidade Federal do Ceará": 1,
+            "Universidade Federal do Mato Grosso do Sul": 1,
+            "Universidade Federal de Pernambuco": 1,
+            "Universidade Federal de São Paulo": 1
+          },
+          "cobertura_tematica": {},
+          "cobertura_nivel": {
+            "Pós-Graduação": 18
+          },
+          "cobertura_modalidade": {
+            "Ensino a Distância": 18
+          },
+          "total_instituicoes": 8,
+          "total_niveis": 1,
+          "total_modalidades": 1,
+          "total_vagas": 5109.0,
+          "media_vagas": 283.8333333333333
+        },
+        "UNA-SUS, Especialização em Saúde da Família, Marcador Mais Medicos - PROVAB, Mais Médicos 2014": {
+          "quantidade_cursos": 13,
+          "quantidade_ofertas": 13,
+          "cobertura_geografica": {},
+          "cobertura_institucional": {
+            "Universidade do Estado do Rio de Janeiro": 3,
+            "Universidade Federal do Maranhão": 3,
+            "Universidade Federal de Pelotas": 2,
+            "Universidade Federal de Minas Gerais": 1,
+            "Universidade Federal de Santa Catarina": 1,
+            "Universidade Federal do Mato Grosso do Sul": 1,
+            "Universidade Federal de Pernambuco": 1,
+            "Universidade Federal de Ciências da Saúde de Porto Alegre": 1
+          },
+          "cobertura_tematica": {},
+          "cobertura_nivel": {
+            "Pós-Graduação": 13
+          },
+          "cobertura_modalidade": {
+            "Ensino a Distância": 13
+          },
+          "total_instituicoes": 8,
+          "total_niveis": 1,
+          "total_modalidades": 1,
+          "total_vagas": 6194.0,
+          "media_vagas": 476.46153846153845
+        },
+        "UNA-SUS, Especialização em Saúde da Família, Especialização, Marcador Mais Medicos - PROVAB, Mais Médicos 2013": {
+          "quantidade_cursos": 8,
+          "quantidade_ofertas": 8,
+          "cobertura_geografica": {},
+          "cobertura_institucional": {
+            "Universidade Federal de Pernambuco": 2,
+            "Universidade Federal do Ceará": 1,
+            "Universidade do Estado do Rio de Janeiro": 1,
+            "Universidade Federal do Mato Grosso do Sul": 1,
+            "Universidade Federal do Maranhão": 1,
+            "Universidade Federal de Ciências da Saúde de Porto Alegre": 1,
+            "Universidade Federal de São Paulo": 1
+          },
+          "cobertura_tematica": {},
+          "cobertura_nivel": {
+            "Pós-Graduação": 8
+          },
+          "cobertura_modalidade": {
+            "Ensino a Distância": 8
+          },
+          "total_instituicoes": 7,
+          "total_niveis": 1,
+          "total_modalidades": 1,
+          "total_vagas": 2583.0,
+          "media_vagas": 322.875
+        },
+        "UNA-SUS, Especialização em Saúde da Família, Especialização, Marcador Mais Medicos - PROVAB, PROVAB 2014": {
+          "quantidade_cursos": 8,
+          "quantidade_ofertas": 8,
+          "cobertura_geografica": {},
+          "cobertura_institucional": {
+            "Universidade Federal de Pernambuco": 3,
+            "Universidade do Estado do Rio de Janeiro": 1,
+            "Universidade Federal do Ceará": 1,
+            "Universidade Federal do Mato Grosso do Sul": 1,
+            "Universidade Federal do Maranhão": 1,
+            "Universidade Federal de São Paulo": 1
+          },
+          "cobertura_tematica": {},
+          "cobertura_nivel": {
+            "Pós-Graduação": 8
+          },
+          "cobertura_modalidade": {
+            "Ensino a Distância": 8
+          },
+          "total_instituicoes": 6,
+          "total_niveis": 1,
+          "total_modalidades": 1,
+          "total_vagas": 3016.0,
+          "media_vagas": 377.0
+        },
+        "UNA-SUS, Especialização em Saúde da Família, Especialização, Marcador Mais Medicos - PROVAB, PROVAB 2012": {
+          "quantidade_cursos": 7,
+          "quantidade_ofertas": 7,
+          "cobertura_geografica": {},
+          "cobertura_institucional": {
+            "Universidade Federal de Santa Catarina": 2,
+            "Universidade Federal do Maranhão": 2,
+            "Universidade do Estado do Rio de Janeiro": 1,
+            "Universidade Federal do Ceará": 1,
+            "Universidade Federal de São Paulo": 1
+          },
+          "cobertura_tematica": {},
+          "cobertura_nivel": {
+            "Pós-Graduação": 7
+          },
+          "cobertura_modalidade": {
+            "Ensino a Distância": 7
+          },
+          "total_instituicoes": 5,
+          "total_niveis": 1,
+          "total_modalidades": 1,
+          "total_vagas": 2946.0,
+          "media_vagas": 420.85714285714283
+        },
+        "UNA-SUS, Especialização em Saúde da Família, Especialização, Marcador Mais Medicos - PROVAB, Mais Médicos 2014": {
+          "quantidade_cursos": 10,
+          "quantidade_ofertas": 10,
+          "cobertura_geografica": {},
+          "cobertura_institucional": {
+            "Universidade Federal de Pernambuco": 5,
+            "Universidade Federal de São Paulo": 2,
+            "Universidade Federal do Ceará": 1,
+            "Universidade Federal do Mato Grosso do Sul": 1,
+            "Universidade Federal de Ciências da Saúde de Porto Alegre": 1
+          },
+          "cobertura_tematica": {},
+          "cobertura_nivel": {
+            "Pós-Graduação": 10
+          },
+          "cobertura_modalidade": {
+            "Ensino a Distância": 10
+          },
+          "total_instituicoes": 5,
+          "total_niveis": 1,
+          "total_modalidades": 1,
+          "total_vagas": 3866.0,
+          "media_vagas": 386.6
+        },
+        "UNA-SUS, Especialização em Saúde da Família, Especialização": {
+          "quantidade_cursos": 9,
+          "quantidade_ofertas": 9,
+          "cobertura_geografica": {},
+          "cobertura_institucional": {
+            "Universidade Federal do Ceará": 2,
+            "Universidade Federal do Mato Grosso do Sul": 2,
+            "Universidade Federal do Estado do Rio de Janeiro": 2,
+            "Universidade Federal de Santa Catarina": 2,
+            "Universidade Federal do Maranhão": 1
+          },
+          "cobertura_tematica": {},
+          "cobertura_nivel": {
+            "Pós-Graduação": 9
+          },
+          "cobertura_modalidade": {
+            "Ensino a Distância": 9
+          },
+          "total_instituicoes": 5,
+          "total_niveis": 1,
+          "total_modalidades": 1,
+          "total_vagas": 3137.0,
+          "media_vagas": 348.55555555555554
+        },
+        "UNA-SUS, PROVAB, Marcador Mais Medicos - PROVAB": {
+          "quantidade_cursos": 9,
+          "quantidade_ofertas": 9,
+          "cobertura_geografica": {},
+          "cobertura_institucional": {
+            "Universidade Federal de Minas Gerais": 6,
+            "Universidade Federal de São Paulo": 3
+          },
+          "cobertura_tematica": {},
+          "cobertura_nivel": {
+            "Pós-Graduação": 9
+          },
+          "cobertura_modalidade": {
+            "Ensino a Distância": 9
+          },
+          "total_instituicoes": 2,
+          "total_niveis": 1,
+          "total_modalidades": 1,
+          "total_vagas": 2207.0,
+          "media_vagas": 245.22222222222223
+        },
+        "UNA-SUS, Especialização, Marcador Mais Medicos - PROVAB, PROVAB 2014": {
+          "quantidade_cursos": 5,
+          "quantidade_ofertas": 5,
+          "cobertura_geografica": {},
+          "cobertura_institucional": {
+            "Universidade Federal de Minas Gerais": 4,
+            "Universidade Federal de Ciências da Saúde de Porto Alegre": 1
+          },
+          "cobertura_tematica": {},
+          "cobertura_nivel": {
+            "Pós-Graduação": 5
+          },
+          "cobertura_modalidade": {
+            "Ensino a Distância": 5
+          },
+          "total_instituicoes": 2,
+          "total_niveis": 1,
+          "total_modalidades": 1,
+          "total_vagas": 926.0,
+          "media_vagas": 185.2
+        },
+        "UNA-SUS, Especialização, Marcador Mais Medicos - PROVAB, Mais Médicos 2014": {
+          "quantidade_cursos": 7,
+          "quantidade_ofertas": 7,
+          "cobertura_geografica": {},
+          "cobertura_institucional": {
+            "Universidade Federal de Minas Gerais": 7
+          },
+          "cobertura_tematica": {},
+          "cobertura_nivel": {
+            "Pós-Graduação": 7
+          },
+          "cobertura_modalidade": {
+            "Ensino a Distância": 7
+          },
+          "total_instituicoes": 1,
+          "total_niveis": 1,
+          "total_modalidades": 1,
+          "total_vagas": 2474.0,
+          "media_vagas": 353.42857142857144
+        },
+        "UNA-SUS, Especialização, Marcador Mais Medicos - PROVAB, Mais Médicos 2013": {
+          "quantidade_cursos": 1,
+          "quantidade_ofertas": 1,
+          "cobertura_geografica": {},
+          "cobertura_institucional": {
+            "Universidade Federal de Minas Gerais": 1
+          },
+          "cobertura_tematica": {},
+          "cobertura_nivel": {
+            "Pós-Graduação": 1
+          },
+          "cobertura_modalidade": {
+            "Ensino a Distância": 1
+          },
+          "total_instituicoes": 1,
+          "total_niveis": 1,
+          "total_modalidades": 1,
+          "total_vagas": 400.0,
+          "media_vagas": 400.0
+        },
+        "UNA-SUS, SE/UNASUS, Cursos COVID-19": {
+          "quantidade_cursos": 10,
+          "quantidade_ofertas": 10,
+          "cobertura_geografica": {},
+          "cobertura_institucional": {
+            "Fundação Oswaldo Cruz - Brasília": 10
+          },
+          "cobertura_tematica": {},
+          "cobertura_nivel": {
+            "Outros": 10
+          },
+          "cobertura_modalidade": {
+            "Ensino a Distância": 10
+          },
+          "total_instituicoes": 1,
+          "total_niveis": 1,
+          "total_modalidades": 1,
+          "total_vagas": 500000.0,
+          "media_vagas": 50000.0
+        },
+        "UNA-SUS, PMMB": {
+          "quantidade_cursos": 8,
+          "quantidade_ofertas": 8,
+          "cobertura_geografica": {},
+          "cobertura_institucional": {
+            "Fundação Oswaldo Cruz - Mato Grosso do Sul": 2,
+            "Universidade de Brasília": 2,
+            "Universidade Federal de São Paulo": 1,
+            "Universidade Federal do Ceará": 1,
+            "Universidade Federal de Minas Gerais": 1,
+            "Universidade Federal de Santa Catarina": 1
+          },
+          "cobertura_tematica": {},
+          "cobertura_nivel": {
+            "Pós-Graduação": 8
+          },
+          "cobertura_modalidade": {
+            "Ensino a Distância": 8
+          },
+          "total_instituicoes": 6,
+          "total_niveis": 1,
+          "total_modalidades": 1,
+          "total_vagas": 20000.0,
+          "media_vagas": 2500.0
+        },
+        "UNA-SUS, Especializacao MPB": {
+          "quantidade_cursos": 6,
+          "quantidade_ofertas": 6,
+          "cobertura_geografica": {},
+          "cobertura_institucional": {
+            "Universidade Federal do Maranhão": 3,
+            "Universidade Federal de Santa Catarina": 3
+          },
+          "cobertura_tematica": {},
+          "cobertura_nivel": {
+            "Pós-Graduação": 6
+          },
+          "cobertura_modalidade": {
+            "Ensino a Distância": 6
+          },
+          "total_instituicoes": 2,
+          "total_niveis": 1,
+          "total_modalidades": 1,
+          "total_vagas": 3452.0,
+          "media_vagas": 575.3333333333334
+        },
+        "UNA-SUS, Especialização em Saúde da Família, Especialização, Marcador Mais Medicos - PROVAB": {
+          "quantidade_cursos": 1,
+          "quantidade_ofertas": 1,
+          "cobertura_geografica": {},
+          "cobertura_institucional": {
+            "Universidade Federal de Pernambuco": 1
+          },
+          "cobertura_tematica": {},
+          "cobertura_nivel": {
+            "Pós-Graduação": 1
+          },
+          "cobertura_modalidade": {
+            "Ensino a Distância": 1
+          },
+          "total_instituicoes": 1,
+          "total_niveis": 1,
+          "total_modalidades": 1,
+          "total_vagas": 80.0,
+          "media_vagas": 80.0
+        },
+        "UNA-SUS, SE/UNASUS, SVS": {
+          "quantidade_cursos": 11,
+          "quantidade_ofertas": 11,
+          "cobertura_geografica": {},
+          "cobertura_institucional": {
+            "Fundação Oswaldo Cruz - Brasília": 11
+          },
+          "cobertura_tematica": {},
+          "cobertura_nivel": {
+            "Outros": 11
+          },
+          "cobertura_modalidade": {
+            "Ensino a Distância": 11
+          },
+          "total_instituicoes": 1,
+          "total_niveis": 1,
+          "total_modalidades": 1,
+          "total_vagas": 550000.0,
+          "media_vagas": 50000.0
+        }
+      },
+      "lacunas_programaticas": [
+        {
+          "programa": "UNA-SUS, Especialização",
+          "lacunas": [
+            "Pouca diversidade temática",
+            "Pouca diversidade de modalidades"
+          ],
+          "quantidade_cursos": 17
+        },
+        {
+          "programa": "UNA-SUS",
+          "lacunas": [
+            "Pouca diversidade temática",
+            "Pouca diversidade de modalidades"
+          ],
+          "quantidade_cursos": 761
+        },
+        {
+          "programa": "UNA-SUS, SE/UNASUS",
+          "lacunas": [
+            "Poucas instituições",
+            "Pouca diversidade temática",
+            "Pouca diversidade de modalidades"
+          ],
+          "quantidade_cursos": 193
+        },
+        {
+          "programa": "UNA-SUS, Atenção Domiciliar",
+          "lacunas": [
+            "Pouca diversidade temática",
+            "Pouca diversidade de modalidades"
+          ],
+          "quantidade_cursos": 78
+        },
+        {
+          "programa": "UNA-SUS, SE/UNASUS, SAS",
+          "lacunas": [
+            "Poucas instituições",
+            "Pouca diversidade temática",
+            "Pouca diversidade de níveis",
+            "Pouca diversidade de modalidades"
+          ],
+          "quantidade_cursos": 37
+        },
+        {
+          "programa": "UNA-SUS, SAS",
+          "lacunas": [
+            "Pouca diversidade temática",
+            "Pouca diversidade de modalidades"
+          ],
+          "quantidade_cursos": 46
+        },
+        {
+          "programa": "UNA-SUS, SVS",
+          "lacunas": [
+            "Poucas instituições",
+            "Pouca diversidade temática",
+            "Pouca diversidade de níveis",
+            "Pouca diversidade de modalidades"
+          ],
+          "quantidade_cursos": 7
+        },
+        {
+          "programa": "UNA-SUS, Especialização em Saúde da Família",
+          "lacunas": [
+            "Pouca diversidade temática",
+            "Pouca diversidade de níveis",
+            "Pouca diversidade de modalidades"
+          ],
+          "quantidade_cursos": 25
+        },
+        {
+          "programa": "UNA-SUS, Módulos PROVAB",
+          "lacunas": [
+            "Pouca diversidade temática",
+            "Pouca diversidade de níveis",
+            "Pouca diversidade de modalidades"
+          ],
+          "quantidade_cursos": 115
+        },
+        {
+          "programa": "UNA-SUS, SE/UNASUS, Módulos PROVAB",
+          "lacunas": [
+            "Poucas instituições",
+            "Pouca diversidade temática",
+            "Pouca diversidade de níveis",
+            "Pouca diversidade de modalidades"
+          ],
+          "quantidade_cursos": 23
+        },
+        {
+          "programa": "UNA-SUS, Cursos COVID-19",
+          "lacunas": [
+            "Pouca diversidade temática",
+            "Pouca diversidade de modalidades"
+          ],
+          "quantidade_cursos": 23
+        },
+        {
+          "programa": "UNA-SUS, Especialização em Saúde da Família, Marcador Mais Medicos - PROVAB, Mais Médicos",
+          "lacunas": [
+            "Pouca diversidade temática",
+            "Pouca diversidade de níveis",
+            "Pouca diversidade de modalidades"
+          ],
+          "quantidade_cursos": 74
+        },
+        {
+          "programa": "UNA-SUS, Especialização, Marcador Mais Medicos - PROVAB, PROVAB 2012",
+          "lacunas": [
+            "Poucas instituições",
+            "Pouca diversidade temática",
+            "Pouca diversidade de níveis",
+            "Pouca diversidade de modalidades"
+          ],
+          "quantidade_cursos": 3
+        },
+        {
+          "programa": "UNA-SUS, PROVAB, Especialização em Saúde da Família, Marcador Mais Medicos - PROVAB",
+          "lacunas": [
+            "Poucas instituições",
+            "Pouca diversidade temática",
+            "Pouca diversidade de níveis",
+            "Pouca diversidade de modalidades"
+          ],
+          "quantidade_cursos": 5
+        },
+        {
+          "programa": "UNA-SUS, Marcador Mais Medicos - PROVAB, Mais Médicos",
+          "lacunas": [
+            "Pouca diversidade temática",
+            "Pouca diversidade de níveis",
+            "Pouca diversidade de modalidades"
+          ],
+          "quantidade_cursos": 93
+        },
+        {
+          "programa": "UNA-SUS, Especialização em Saúde da Família, PROVAB, Marcador Mais Medicos - PROVAB",
+          "lacunas": [
+            "Pouca diversidade temática",
+            "Pouca diversidade de níveis",
+            "Pouca diversidade de modalidades"
+          ],
+          "quantidade_cursos": 18
+        },
+        {
+          "programa": "UNA-SUS, Especialização em Saúde da Família, Marcador Mais Medicos - PROVAB, Mais Médicos 2014",
+          "lacunas": [
+            "Pouca diversidade temática",
+            "Pouca diversidade de níveis",
+            "Pouca diversidade de modalidades"
+          ],
+          "quantidade_cursos": 13
+        },
+        {
+          "programa": "UNA-SUS, Especialização em Saúde da Família, Especialização, Marcador Mais Medicos - PROVAB, Mais Médicos 2013",
+          "lacunas": [
+            "Pouca diversidade temática",
+            "Pouca diversidade de níveis",
+            "Pouca diversidade de modalidades"
+          ],
+          "quantidade_cursos": 8
+        },
+        {
+          "programa": "UNA-SUS, Especialização em Saúde da Família, Especialização, Marcador Mais Medicos - PROVAB, PROVAB 2014",
+          "lacunas": [
+            "Pouca diversidade temática",
+            "Pouca diversidade de níveis",
+            "Pouca diversidade de modalidades"
+          ],
+          "quantidade_cursos": 8
+        },
+        {
+          "programa": "UNA-SUS, Especialização em Saúde da Família, Especialização, Marcador Mais Medicos - PROVAB, PROVAB 2012",
+          "lacunas": [
+            "Pouca diversidade temática",
+            "Pouca diversidade de níveis",
+            "Pouca diversidade de modalidades"
+          ],
+          "quantidade_cursos": 7
+        },
+        {
+          "programa": "UNA-SUS, Especialização em Saúde da Família, Especialização, Marcador Mais Medicos - PROVAB, Mais Médicos 2014",
+          "lacunas": [
+            "Pouca diversidade temática",
+            "Pouca diversidade de níveis",
+            "Pouca diversidade de modalidades"
+          ],
+          "quantidade_cursos": 10
+        },
+        {
+          "programa": "UNA-SUS, Especialização em Saúde da Família, Especialização",
+          "lacunas": [
+            "Pouca diversidade temática",
+            "Pouca diversidade de níveis",
+            "Pouca diversidade de modalidades"
+          ],
+          "quantidade_cursos": 9
+        },
+        {
+          "programa": "UNA-SUS, PROVAB, Marcador Mais Medicos - PROVAB",
+          "lacunas": [
+            "Poucas instituições",
+            "Pouca diversidade temática",
+            "Pouca diversidade de níveis",
+            "Pouca diversidade de modalidades"
+          ],
+          "quantidade_cursos": 9
+        },
+        {
+          "programa": "UNA-SUS, Especialização, Marcador Mais Medicos - PROVAB, PROVAB 2014",
+          "lacunas": [
+            "Poucas instituições",
+            "Pouca diversidade temática",
+            "Pouca diversidade de níveis",
+            "Pouca diversidade de modalidades"
+          ],
+          "quantidade_cursos": 5
+        },
+        {
+          "programa": "UNA-SUS, Especialização, Marcador Mais Medicos - PROVAB, Mais Médicos 2014",
+          "lacunas": [
+            "Poucas instituições",
+            "Pouca diversidade temática",
+            "Pouca diversidade de níveis",
+            "Pouca diversidade de modalidades"
+          ],
+          "quantidade_cursos": 7
+        },
+        {
+          "programa": "UNA-SUS, Especialização, Marcador Mais Medicos - PROVAB, Mais Médicos 2013",
+          "lacunas": [
+            "Poucas instituições",
+            "Pouca diversidade temática",
+            "Pouca diversidade de níveis",
+            "Pouca diversidade de modalidades"
+          ],
+          "quantidade_cursos": 1
+        },
+        {
+          "programa": "UNA-SUS, SE/UNASUS, Cursos COVID-19",
+          "lacunas": [
+            "Poucas instituições",
+            "Pouca diversidade temática",
+            "Pouca diversidade de níveis",
+            "Pouca diversidade de modalidades"
+          ],
+          "quantidade_cursos": 10
+        },
+        {
+          "programa": "UNA-SUS, PMMB",
+          "lacunas": [
+            "Pouca diversidade temática",
+            "Pouca diversidade de níveis",
+            "Pouca diversidade de modalidades"
+          ],
+          "quantidade_cursos": 8
+        },
+        {
+          "programa": "UNA-SUS, Especializacao MPB",
+          "lacunas": [
+            "Poucas instituições",
+            "Pouca diversidade temática",
+            "Pouca diversidade de níveis",
+            "Pouca diversidade de modalidades"
+          ],
+          "quantidade_cursos": 6
+        },
+        {
+          "programa": "UNA-SUS, Especialização em Saúde da Família, Especialização, Marcador Mais Medicos - PROVAB",
+          "lacunas": [
+            "Poucas instituições",
+            "Pouca diversidade temática",
+            "Pouca diversidade de níveis",
+            "Pouca diversidade de modalidades"
+          ],
+          "quantidade_cursos": 1
+        },
+        {
+          "programa": "UNA-SUS, SE/UNASUS, SVS",
+          "lacunas": [
+            "Poucas instituições",
+            "Pouca diversidade temática",
+            "Pouca diversidade de níveis",
+            "Pouca diversidade de modalidades"
+          ],
+          "quantidade_cursos": 11
+        }
+      ],
+      "concentracao_programatica": {
+        "programas_com_mais_cursos": {
+          "UNA-SUS": 761,
+          "UNA-SUS, SE/UNASUS": 193,
+          "UNA-SUS, Módulos PROVAB": 115,
+          "UNA-SUS, Marcador Mais Medicos - PROVAB, Mais Médicos": 93,
+          "UNA-SUS, Atenção Domiciliar": 78,
+          "UNA-SUS, Especialização em Saúde da Família, Marcador Mais Medicos - PROVAB, Mais Médicos": 74,
+          "UNA-SUS, SAS": 46,
+          "UNA-SUS, SE/UNASUS, SAS": 37,
+          "UNA-SUS, Especialização em Saúde da Família": 25,
+          "UNA-SUS, SE/UNASUS, Módulos PROVAB": 23
+        },
+        "programas_com_mais_ofertas": {
+          "UNA-SUS": 761,
+          "UNA-SUS, SE/UNASUS": 193,
+          "UNA-SUS, Módulos PROVAB": 115,
+          "UNA-SUS, Marcador Mais Medicos - PROVAB, Mais Médicos": 93,
+          "UNA-SUS, Atenção Domiciliar": 78,
+          "UNA-SUS, Especialização em Saúde da Família, Marcador Mais Medicos - PROVAB, Mais Médicos": 74,
+          "UNA-SUS, SAS": 46,
+          "UNA-SUS, SE/UNASUS, SAS": 37,
+          "UNA-SUS, Especialização em Saúde da Família": 25,
+          "UNA-SUS, SE/UNASUS, Módulos PROVAB": 23
+        },
+        "programas_com_mais_vagas": {
+          "UNA-SUS": 14700528.0,
+          "UNA-SUS, SE/UNASUS": 9655318.0,
+          "UNA-SUS, Cursos COVID-19": 3999998.0,
+          "UNA-SUS, Módulos PROVAB": 1970880.0,
+          "UNA-SUS, SE/UNASUS, SAS": 1850000.0,
+          "UNA-SUS, SE/UNASUS, Módulos PROVAB": 1190000.0,
+          "UNA-SUS, SAS": 717160.0,
+          "UNA-SUS, SE/UNASUS, SVS": 550000.0,
+          "UNA-SUS, SE/UNASUS, Cursos COVID-19": 500000.0,
+          "UNA-SUS, Atenção Domiciliar": 289600.0
+        }
+      },
+      "distribuicao_geografica": {},
+      "timestamp_analise": "2025-07-29T23:10:54.878350"
+    },
+    "distribuicao_geografica": {
+      "total_registros": 1657,
+      "coluna_programas": "programas_governo",
+      "estados_identificados": 7,
+      "estados_sem_identificacao": 0,
+      "distribuicao_por_estado": {
+        "AC": {
+          "cursos": 0,
+          "ofertas": 0,
+          "vagas": 0,
+          "instituicoes": [],
+          "programas": [],
+          "total_instituicoes": 0,
+          "total_programas": 0
+        },
+        "AL": {
+          "cursos": 1542,
+          "ofertas": 1542,
+          "vagas": 34095563.0,
+          "instituicoes": [
+            "Universidade Federal de Goiás",
+            "Universidade Federal de Minas Gerais",
+            "Universidade Federal do Piauí",
+            "FIOCRUZ Pernambuco - Instituto Aggeu Magalhães",
+            "Universidade Federal de Alagoas",
+            "Universidade Federal da Bahia",
+            "Universidade Federal do Estado do Rio de Janeiro",
+            "Universidade Federal de Ciências da Saúde de Porto Alegre",
+            "Universidade Federal do Maranhão",
+            "Universidade Federal do Rio Grande do Norte",
+            "Universidade Federal do Rio Grande do Sul",
+            "Fundação Oswaldo Cruz - Mato Grosso do Sul",
+            "Fundação Oswaldo Cruz - Brasília",
+            "Universidade Federal do Pará",
+            "Universidade Federal do Ceará",
+            "Consórcio Intermunicipal de Saúde da Baixada Fluminense",
+            "Universidade Federal do Rio de Janeiro - Instituto de Estudos em Saúde Coletiva",
+            "Universidade Federal de Ouro Preto",
+            "Universidade Federal de Pernambuco",
+            "Universidade Federal do Mato Grosso do Sul",
+            "Universidade Federal do Paraná",
+            "Universidade Federal de Santa Catarina",
+            "Universidade Federal de São Paulo",
+            "Universidade Federal de Pelotas"
+          ],
+          "programas": [
+            "UNA-SUS, Especialização, Marcador Mais Medicos - PROVAB, PROVAB 2014",
+            "UNA-SUS, SAS",
+            "UNA-SUS, SE/UNASUS, Cursos COVID-19",
+            "UNA-SUS, Especializacao MPB",
+            "UNA-SUS, SE/UNASUS, Módulos PROVAB",
+            NaN,
+            "UNA-SUS, Especialização, Marcador Mais Medicos - PROVAB, Mais Médicos 2013",
+            "UNA-SUS, PROVAB, Especialização em Saúde da Família, Marcador Mais Medicos - PROVAB",
+            "UNA-SUS, Módulos PROVAB",
+            "UNA-SUS, SE/UNASUS",
+            "UNA-SUS, Especialização, Marcador Mais Medicos - PROVAB, PROVAB 2012",
+            "UNA-SUS, Especialização",
+            "UNA-SUS, Especialização em Saúde da Família",
+            "UNA-SUS, Especialização em Saúde da Família, Especialização, Marcador Mais Medicos - PROVAB, PROVAB 2012",
+            "UNA-SUS, Especialização em Saúde da Família, Especialização",
+            "UNA-SUS, Especialização em Saúde da Família, PROVAB, Marcador Mais Medicos - PROVAB",
+            "UNA-SUS, SE/UNASUS, SAS",
+            "UNA-SUS, SE/UNASUS, SVS",
+            "UNA-SUS, Especialização em Saúde da Família, Especialização, Marcador Mais Medicos - PROVAB",
+            "UNA-SUS, PMMB",
+            "UNA-SUS, Especialização em Saúde da Família, Especialização, Marcador Mais Medicos - PROVAB, Mais Médicos 2014",
+            "UNA-SUS, Especialização em Saúde da Família, Marcador Mais Medicos - PROVAB, Mais Médicos",
+            "UNA-SUS, Especialização em Saúde da Família, Marcador Mais Medicos - PROVAB, Mais Médicos 2014",
+            "UNA-SUS, Especialização em Saúde da Família, Especialização, Marcador Mais Medicos - PROVAB, Mais Médicos 2013",
+            "UNA-SUS, Especialização em Saúde da Família, Especialização, Marcador Mais Medicos - PROVAB, PROVAB 2014",
+            "UNA-SUS, PROVAB, Marcador Mais Medicos - PROVAB",
+            "UNA-SUS, Especialização, Marcador Mais Medicos - PROVAB, Mais Médicos 2014",
+            "UNA-SUS, Atenção Domiciliar",
+            "UNA-SUS, Cursos COVID-19",
+            "UNA-SUS, Marcador Mais Medicos - PROVAB, Mais Médicos",
+            "UNA-SUS"
+          ],
+          "total_instituicoes": 24,
+          "total_programas": 31
+        },
+        "AP": {
+          "cursos": 0,
+          "ofertas": 0,
+          "vagas": 0,
+          "instituicoes": [],
+          "programas": [],
+          "total_instituicoes": 0,
+          "total_programas": 0
+        },
+        "AM": {
+          "cursos": 5,
+          "ofertas": 5,
+          "vagas": 75432.0,
+          "instituicoes": [
+            "Universidade do Estado do Amazonas"
+          ],
+          "programas": [
+            "UNA-SUS, Marcador Mais Medicos - PROVAB, Mais Médicos",
+            "UNA-SUS"
+          ],
+          "total_instituicoes": 1,
+          "total_programas": 2
+        },
+        "BA": {
+          "cursos": 2,
+          "ofertas": 2,
+          "vagas": 3660.0,
+          "instituicoes": [
+            "Secretaria de Estado da Saúde - BA"
+          ],
+          "programas": [
+            "UNA-SUS"
+          ],
+          "total_instituicoes": 1,
+          "total_programas": 1
+        },
+        "CE": {
+          "cursos": 0,
+          "ofertas": 0,
+          "vagas": 0,
+          "instituicoes": [],
+          "programas": [],
+          "total_instituicoes": 0,
+          "total_programas": 0
+        },
+        "DF": {
+          "cursos": 0,
+          "ofertas": 0,
+          "vagas": 0,
+          "instituicoes": [],
+          "programas": [],
+          "total_instituicoes": 0,
+          "total_programas": 0
+        },
+        "ES": {
+          "cursos": 35,
+          "ofertas": 35,
+          "vagas": 105740.0,
+          "instituicoes": [
+            "Universidade do Estado do Rio de Janeiro"
+          ],
+          "programas": [
+            "UNA-SUS, Módulos PROVAB",
+            "UNA-SUS, Especialização",
+            "UNA-SUS, Atenção Domiciliar",
+            "UNA-SUS, Especialização em Saúde da Família",
+            "UNA-SUS, Especialização em Saúde da Família, Especialização, Marcador Mais Medicos - PROVAB, PROVAB 2012",
+            "UNA-SUS, Especialização em Saúde da Família, Marcador Mais Medicos - PROVAB, Mais Médicos",
+            "UNA-SUS, Especialização em Saúde da Família, Marcador Mais Medicos - PROVAB, Mais Médicos 2014",
+            "UNA-SUS, Especialização em Saúde da Família, Especialização, Marcador Mais Medicos - PROVAB, Mais Médicos 2013",
+            "UNA-SUS, Especialização em Saúde da Família, Especialização, Marcador Mais Medicos - PROVAB, PROVAB 2014",
+            "UNA-SUS",
+            "UNA-SUS, Especialização em Saúde da Família, PROVAB, Marcador Mais Medicos - PROVAB"
+          ],
+          "total_instituicoes": 1,
+          "total_programas": 11
+        },
+        "GO": {
+          "cursos": 0,
+          "ofertas": 0,
+          "vagas": 0,
+          "instituicoes": [],
+          "programas": [],
+          "total_instituicoes": 0,
+          "total_programas": 0
+        },
+        "MA": {
+          "cursos": 40,
+          "ofertas": 40,
+          "vagas": 1416000.0,
+          "instituicoes": [
+            "Secretaria Executiva da Universidade Aberta do Sistema Único de Saúde"
+          ],
+          "programas": [
+            "UNA-SUS, Módulos PROVAB",
+            "UNA-SUS",
+            "UNA-SUS, SVS",
+            "UNA-SUS, SAS"
+          ],
+          "total_instituicoes": 1,
+          "total_programas": 4
+        },
+        "MT": {
+          "cursos": 0,
+          "ofertas": 0,
+          "vagas": 0,
+          "instituicoes": [],
+          "programas": [],
+          "total_instituicoes": 0,
+          "total_programas": 0
+        },
+        "MS": {
+          "cursos": 0,
+          "ofertas": 0,
+          "vagas": 0,
+          "instituicoes": [],
+          "programas": [],
+          "total_instituicoes": 0,
+          "total_programas": 0
+        },
+        "MG": {
+          "cursos": 0,
+          "ofertas": 0,
+          "vagas": 0,
+          "instituicoes": [],
+          "programas": [],
+          "total_instituicoes": 0,
+          "total_programas": 0
+        },
+        "PA": {
+          "cursos": 0,
+          "ofertas": 0,
+          "vagas": 0,
+          "instituicoes": [],
+          "programas": [],
+          "total_instituicoes": 0,
+          "total_programas": 0
+        },
+        "PB": {
+          "cursos": 0,
+          "ofertas": 0,
+          "vagas": 0,
+          "instituicoes": [],
+          "programas": [],
+          "total_instituicoes": 0,
+          "total_programas": 0
+        },
+        "PR": {
+          "cursos": 0,
+          "ofertas": 0,
+          "vagas": 0,
+          "instituicoes": [],
+          "programas": [],
+          "total_instituicoes": 0,
+          "total_programas": 0
+        },
+        "PE": {
+          "cursos": 0,
+          "ofertas": 0,
+          "vagas": 0,
+          "instituicoes": [],
+          "programas": [],
+          "total_instituicoes": 0,
+          "total_programas": 0
+        },
+        "PI": {
+          "cursos": 0,
+          "ofertas": 0,
+          "vagas": 0,
+          "instituicoes": [],
+          "programas": [],
+          "total_instituicoes": 0,
+          "total_programas": 0
+        },
+        "RJ": {
+          "cursos": 10,
+          "ofertas": 10,
+          "vagas": 60572.0,
+          "instituicoes": [
+            "FIOCRUZ RJ - ICICT"
+          ],
+          "programas": [
+            "UNA-SUS"
+          ],
+          "total_instituicoes": 1,
+          "total_programas": 1
+        },
+        "RN": {
+          "cursos": 0,
+          "ofertas": 0,
+          "vagas": 0,
+          "instituicoes": [],
+          "programas": [],
+          "total_instituicoes": 0,
+          "total_programas": 0
+        },
+        "RS": {
+          "cursos": 23,
+          "ofertas": 23,
+          "vagas": 461960.0,
+          "instituicoes": [
+            "Universidade de Brasília"
+          ],
+          "programas": [
+            "UNA-SUS, Módulos PROVAB",
+            "UNA-SUS, PMMB",
+            "UNA-SUS, Especialização em Saúde da Família",
+            "UNA-SUS, Especialização em Saúde da Família, Marcador Mais Medicos - PROVAB, Mais Médicos",
+            NaN,
+            "UNA-SUS"
+          ],
+          "total_instituicoes": 1,
+          "total_programas": 6
+        },
+        "RO": {
+          "cursos": 0,
+          "ofertas": 0,
+          "vagas": 0,
+          "instituicoes": [],
+          "programas": [],
+          "total_instituicoes": 0,
+          "total_programas": 0
+        },
+        "RR": {
+          "cursos": 0,
+          "ofertas": 0,
+          "vagas": 0,
+          "instituicoes": [],
+          "programas": [],
+          "total_instituicoes": 0,
+          "total_programas": 0
+        },
+        "SC": {
+          "cursos": 0,
+          "ofertas": 0,
+          "vagas": 0,
+          "instituicoes": [],
+          "programas": [],
+          "total_instituicoes": 0,
+          "total_programas": 0
+        },
+        "SP": {
+          "cursos": 0,
+          "ofertas": 0,
+          "vagas": 0,
+          "instituicoes": [],
+          "programas": [],
+          "total_instituicoes": 0,
+          "total_programas": 0
+        },
+        "SE": {
+          "cursos": 0,
+          "ofertas": 0,
+          "vagas": 0,
+          "instituicoes": [],
+          "programas": [],
+          "total_instituicoes": 0,
+          "total_programas": 0
+        },
+        "TO": {
+          "cursos": 0,
+          "ofertas": 0,
+          "vagas": 0,
+          "instituicoes": [],
+          "programas": [],
+          "total_instituicoes": 0,
+          "total_programas": 0
+        }
+      },
+      "distribuicao_por_regiao": {
+        "NORTE": {
+          "cursos": 5,
+          "ofertas": 5,
+          "vagas": 75432.0,
+          "estados": [
+            "AC",
+            "AP",
+            "AM",
+            "PA",
+            "RO",
+            "RR",
+            "TO"
+          ],
+          "instituicoes": [
+            "Universidade do Estado do Amazonas"
+          ],
+          "programas": [
+            "UNA-SUS, Marcador Mais Medicos - PROVAB, Mais Médicos",
+            "UNA-SUS"
+          ],
+          "total_instituicoes": 1,
+          "total_programas": 2
+        },
+        "NORDESTE": {
+          "cursos": 1584,
+          "ofertas": 1584,
+          "vagas": 35515223.0,
+          "estados": [
+            "AL",
+            "BA",
+            "CE",
+            "MA",
+            "PB",
+            "PE",
+            "PI",
+            "RN",
+            "SE"
+          ],
+          "instituicoes": [
+            "Universidade Federal de Goiás",
+            "Universidade Federal de Minas Gerais",
+            "Universidade Federal do Piauí",
+            "Secretaria Executiva da Universidade Aberta do Sistema Único de Saúde",
+            "FIOCRUZ Pernambuco - Instituto Aggeu Magalhães",
+            "Universidade Federal de Alagoas",
+            "Universidade Federal da Bahia",
+            "Universidade Federal do Estado do Rio de Janeiro",
+            "Universidade Federal de Ciências da Saúde de Porto Alegre",
+            "Universidade Federal do Maranhão",
+            "Universidade Federal do Rio Grande do Norte",
+            "Universidade Federal do Rio Grande do Sul",
+            "Fundação Oswaldo Cruz - Mato Grosso do Sul",
+            "Fundação Oswaldo Cruz - Brasília",
+            "Secretaria de Estado da Saúde - BA",
+            "Universidade Federal do Pará",
+            "Universidade Federal do Ceará",
+            "Consórcio Intermunicipal de Saúde da Baixada Fluminense",
+            "Universidade Federal do Rio de Janeiro - Instituto de Estudos em Saúde Coletiva",
+            "Universidade Federal de Ouro Preto",
+            "Universidade Federal de Pernambuco",
+            "Universidade Federal do Mato Grosso do Sul",
+            "Universidade Federal do Paraná",
+            "Universidade Federal de Santa Catarina",
+            "Universidade Federal de São Paulo",
+            "Universidade Federal de Pelotas"
+          ],
+          "programas": [
+            "UNA-SUS, Especialização, Marcador Mais Medicos - PROVAB, PROVAB 2014",
+            "UNA-SUS, SAS",
+            "UNA-SUS, SE/UNASUS, Cursos COVID-19",
+            "UNA-SUS, Especializacao MPB",
+            "UNA-SUS, SE/UNASUS, Módulos PROVAB",
+            NaN,
+            "UNA-SUS, Especialização, Marcador Mais Medicos - PROVAB, Mais Médicos 2013",
+            "UNA-SUS, PROVAB, Especialização em Saúde da Família, Marcador Mais Medicos - PROVAB",
+            "UNA-SUS, Módulos PROVAB",
+            "UNA-SUS, SE/UNASUS",
+            "UNA-SUS, Especialização, Marcador Mais Medicos - PROVAB, PROVAB 2012",
+            "UNA-SUS, Especialização",
+            "UNA-SUS, Especialização em Saúde da Família",
+            "UNA-SUS, Especialização em Saúde da Família, Especialização, Marcador Mais Medicos - PROVAB, PROVAB 2012",
+            "UNA-SUS, SVS",
+            "UNA-SUS, Especialização em Saúde da Família, Especialização",
+            "UNA-SUS, Especialização em Saúde da Família, PROVAB, Marcador Mais Medicos - PROVAB",
+            "UNA-SUS, SE/UNASUS, SAS",
+            "UNA-SUS, SE/UNASUS, SVS",
+            "UNA-SUS, Especialização em Saúde da Família, Especialização, Marcador Mais Medicos - PROVAB",
+            "UNA-SUS, PMMB",
+            "UNA-SUS, Especialização em Saúde da Família, Especialização, Marcador Mais Medicos - PROVAB, Mais Médicos 2014",
+            "UNA-SUS, Especialização em Saúde da Família, Marcador Mais Medicos - PROVAB, Mais Médicos",
+            "UNA-SUS, Especialização em Saúde da Família, Marcador Mais Medicos - PROVAB, Mais Médicos 2014",
+            "UNA-SUS, Especialização em Saúde da Família, Especialização, Marcador Mais Medicos - PROVAB, Mais Médicos 2013",
+            "UNA-SUS, Especialização em Saúde da Família, Especialização, Marcador Mais Medicos - PROVAB, PROVAB 2014",
+            "UNA-SUS, PROVAB, Marcador Mais Medicos - PROVAB",
+            "UNA-SUS, Especialização, Marcador Mais Medicos - PROVAB, Mais Médicos 2014",
+            "UNA-SUS, Atenção Domiciliar",
+            "UNA-SUS, Cursos COVID-19",
+            "UNA-SUS, Marcador Mais Medicos - PROVAB, Mais Médicos",
+            "UNA-SUS"
+          ],
+          "total_instituicoes": 26,
+          "total_programas": 32
+        },
+        "CENTRO-OESTE": {
+          "cursos": 0,
+          "ofertas": 0,
+          "vagas": 0,
+          "estados": [
+            "DF",
+            "GO",
+            "MT",
+            "MS"
+          ],
+          "instituicoes": [],
+          "programas": [],
+          "total_instituicoes": 0,
+          "total_programas": 0
+        },
+        "SUDESTE": {
+          "cursos": 45,
+          "ofertas": 45,
+          "vagas": 166312.0,
+          "estados": [
+            "ES",
+            "MG",
+            "RJ",
+            "SP"
+          ],
+          "instituicoes": [
+            "Universidade do Estado do Rio de Janeiro",
+            "FIOCRUZ RJ - ICICT"
+          ],
+          "programas": [
+            "UNA-SUS, Módulos PROVAB",
+            "UNA-SUS, Especialização",
+            "UNA-SUS, Atenção Domiciliar",
+            "UNA-SUS, Especialização em Saúde da Família",
+            "UNA-SUS, Especialização em Saúde da Família, Especialização, Marcador Mais Medicos - PROVAB, PROVAB 2012",
+            "UNA-SUS, Especialização em Saúde da Família, Marcador Mais Medicos - PROVAB, Mais Médicos",
+            "UNA-SUS, Especialização em Saúde da Família, Marcador Mais Medicos - PROVAB, Mais Médicos 2014",
+            "UNA-SUS, Especialização em Saúde da Família, Especialização, Marcador Mais Medicos - PROVAB, Mais Médicos 2013",
+            "UNA-SUS, Especialização em Saúde da Família, Especialização, Marcador Mais Medicos - PROVAB, PROVAB 2014",
+            "UNA-SUS",
+            "UNA-SUS, Especialização em Saúde da Família, PROVAB, Marcador Mais Medicos - PROVAB"
+          ],
+          "total_instituicoes": 2,
+          "total_programas": 11
+        },
+        "SUL": {
+          "cursos": 23,
+          "ofertas": 23,
+          "vagas": 461960.0,
+          "estados": [
+            "PR",
+            "RS",
+            "SC"
+          ],
+          "instituicoes": [
+            "Universidade de Brasília"
+          ],
+          "programas": [
+            "UNA-SUS, Módulos PROVAB",
+            "UNA-SUS, PMMB",
+            "UNA-SUS, Especialização em Saúde da Família",
+            "UNA-SUS, Especialização em Saúde da Família, Marcador Mais Medicos - PROVAB, Mais Médicos",
+            NaN,
+            "UNA-SUS"
+          ],
+          "total_instituicoes": 1,
+          "total_programas": 6
+        }
+      },
+      "programas_por_estado": {},
+      "programas_por_regiao": {},
+      "polos_educacionais": {
+        "AL": {
+          "cursos": 1542,
+          "instituicoes": 24,
+          "programas": 31
+        }
+      },
+      "desertos_educacionais": [
+        {
+          "estado": "AC",
+          "cursos": 0,
+          "instituicoes": 0,
+          "programas": 0
+        },
+        {
+          "estado": "AP",
+          "cursos": 0,
+          "instituicoes": 0,
+          "programas": 0
+        },
+        {
+          "estado": "AM",
+          "cursos": 5,
+          "instituicoes": 1,
+          "programas": 2
+        },
+        {
+          "estado": "BA",
+          "cursos": 2,
+          "instituicoes": 1,
+          "programas": 1
+        },
+        {
+          "estado": "CE",
+          "cursos": 0,
+          "instituicoes": 0,
+          "programas": 0
+        },
+        {
+          "estado": "DF",
+          "cursos": 0,
+          "instituicoes": 0,
+          "programas": 0
+        },
+        {
+          "estado": "GO",
+          "cursos": 0,
+          "instituicoes": 0,
+          "programas": 0
+        },
+        {
+          "estado": "MT",
+          "cursos": 0,
+          "instituicoes": 0,
+          "programas": 0
+        },
+        {
+          "estado": "MS",
+          "cursos": 0,
+          "instituicoes": 0,
+          "programas": 0
+        },
+        {
+          "estado": "MG",
+          "cursos": 0,
+          "instituicoes": 0,
+          "programas": 0
+        },
+        {
+          "estado": "PA",
+          "cursos": 0,
+          "instituicoes": 0,
+          "programas": 0
+        },
+        {
+          "estado": "PB",
+          "cursos": 0,
+          "instituicoes": 0,
+          "programas": 0
+        },
+        {
+          "estado": "PR",
+          "cursos": 0,
+          "instituicoes": 0,
+          "programas": 0
+        },
+        {
+          "estado": "PE",
+          "cursos": 0,
+          "instituicoes": 0,
+          "programas": 0
+        },
+        {
+          "estado": "PI",
+          "cursos": 0,
+          "instituicoes": 0,
+          "programas": 0
+        },
+        {
+          "estado": "RN",
+          "cursos": 0,
+          "instituicoes": 0,
+          "programas": 0
+        },
+        {
+          "estado": "RO",
+          "cursos": 0,
+          "instituicoes": 0,
+          "programas": 0
+        },
+        {
+          "estado": "RR",
+          "cursos": 0,
+          "instituicoes": 0,
+          "programas": 0
+        },
+        {
+          "estado": "SC",
+          "cursos": 0,
+          "instituicoes": 0,
+          "programas": 0
+        },
+        {
+          "estado": "SP",
+          "cursos": 0,
+          "instituicoes": 0,
+          "programas": 0
+        },
+        {
+          "estado": "SE",
+          "cursos": 0,
+          "instituicoes": 0,
+          "programas": 0
+        },
+        {
+          "estado": "TO",
+          "cursos": 0,
+          "instituicoes": 0,
+          "programas": 0
+        }
+      ],
+      "timestamp_analise": "2025-07-29T23:10:54.899603"
+    }
+  }
+}
