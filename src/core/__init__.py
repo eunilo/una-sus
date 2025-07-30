@@ -10,6 +10,6 @@ Módulo central do sistema contendo as funcionalidades principais:
 - analyzer: Sistema de análise e estatísticas
 """
 
-from . import analyzer, database, scraper
+from . import database
 
-__all__ = ["database", "scraper", "analyzer"]
+__all__ = ["database"]

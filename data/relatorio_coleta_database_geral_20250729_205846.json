@@ -1,0 +1,78 @@
+{
+  "resumo_geral": {
+    "total_cursos": 554,
+    "timestamp_coleta": "2025-07-29T20:58:46.159932",
+    "versao_coletor": "1.0.0",
+    "tipo_coleta": "database_geral_sem_filtros",
+    "localizacao": "diretorio_raiz"
+  },
+  "estatisticas": {
+    "campos_disponiveis": [
+      "co_seq_curso",
+      "no_curso",
+      "qt_carga_horaria_total",
+      "co_seq_orgao",
+      "sg_orgao",
+      "no_orgao",
+      "no_formato",
+      "no_nivel",
+      "no_modalidade",
+      "ds_imagem",
+      "status",
+      "status_ordem",
+      "rank",
+      "metadata_coleta",
+      "ofertas",
+      "campos_processados"
+    ],
+    "campos_preenchidos": {
+      "co_seq_curso": 554,
+      "no_curso": 554,
+      "qt_carga_horaria_total": 554,
+      "co_seq_orgao": 554,
+      "sg_orgao": 554,
+      "no_orgao": 554,
+      "no_formato": 554,
+      "no_nivel": 554,
+      "no_modalidade": 554,
+      "ds_imagem": 554,
+      "status": 554,
+      "status_ordem": 554,
+      "rank": 554,
+      "metadata_coleta": 554,
+      "ofertas": 554,
+      "campos_processados": 554
+    },
+    "percentual_preenchimento": {
+      "co_seq_curso": 100.0,
+      "no_curso": 100.0,
+      "qt_carga_horaria_total": 100.0,
+      "co_seq_orgao": 100.0,
+      "sg_orgao": 100.0,
+      "no_orgao": 100.0,
+      "no_formato": 100.0,
+      "no_nivel": 100.0,
+      "no_modalidade": 100.0,
+      "ds_imagem": 100.0,
+      "status": 100.0,
+      "status_ordem": 100.0,
+      "rank": 100.0,
+      "metadata_coleta": 100.0,
+      "ofertas": 100.0,
+      "campos_processados": 100.0
+    },
+    "vagas_estatisticas": {
+      "total_vagas": 0,
+      "media_vagas": 0,
+      "min_vagas": 0,
+      "max_vagas": 0,
+      "cursos_com_vagas": 0,
+      "percentual_preenchido": 0
+    }
+  },
+  "arquivos_gerados": {
+    "json": "data/unasus_database_geral_20250729_205846.json",
+    "csv": "data/unasus_database_geral_20250729_205846.csv",
+    "excel": "data/unasus_database_geral_20250729_205846.xlsx"
+  }
+}

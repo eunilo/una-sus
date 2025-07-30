@@ -62,32 +62,59 @@ una-sus/
 ```bash
 # Python 3.8+
 python --version
-
-# Instalar dependências
-pip install -r requirements/requirements.txt
 ```
+
+### **🔧 Instalação Automática**
+O sistema **instala automaticamente** todas as dependências necessárias na primeira execução!
+
+- ✅ **Dependências detectadas** automaticamente
+- ✅ **Instalação automática** via pip
+- ✅ **Verificação de compatibilidade** com Python
+- ✅ **Tratamento de erros** com instruções claras
 
 ### **🎯 Execução Rápida**
 
-#### **1. Sistema de Database**
+#### **1. Inicialização Simples (Recomendado)**
 ```bash
-# Executar sistema principal
-python src/core/database.py
+# Script principal com menu interativo
+python start.py
 ```
 
-#### **2. Scrapers**
+#### **2. Coletor Database Geral (Principal)**
+```bash
+# Executar coletor principal
+python coletor_database_geral.py
+```
+
+#### **3. Sistema de Database (Menu Interativo)**
+```bash
+# Executar sistema principal com menu
+python run_database.py
+```
+
+#### **4. Scrapers Diretos**
 ```bash
 # Scraper básico
-python src/scrapers/basic.py
+python run_scraper_basic.py
 
 # Scraper melhorado
-python src/scrapers/enhanced.py
+python run_scraper_enhanced.py
 ```
 
-#### **3. Scripts de Exemplo**
+#### **5. Scripts de Exemplo**
 ```bash
 # Exemplo de uso
 python scripts/run_example.py
+```
+
+#### **6. Execução Direta (Alternativa)**
+```bash
+# Sistema de database
+python src/core/database.py
+
+# Scrapers
+python src/scrapers/basic.py
+python src/scrapers/enhanced.py
 ```
 
 ### **🐳 Docker (Opcional)**
@@ -100,10 +127,12 @@ docker-compose -f docker/docker-compose.yml up --build
 
 ## 📊 **Funcionalidades Principais**
 
-### **🎯 Sistema de Database**
-- **Database SQLite** completo e robusto
+### **🎯 Coletor Database Geral**
+- **Coleta completa** de dados UNA-SUS
+- **Database SQLite** robusto e atualizado
 - **1.656 registros** de cursos e ofertas
 - **27 campos** originais preservados
+- **Checkpointing** e logs detalhados
 - **Exports** em CSV e JSON
 - **Análises estatísticas** automáticas
 
