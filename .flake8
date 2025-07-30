@@ -1,0 +1,32 @@
+[flake8]
+# Configuração do Flake8 para o projeto UNA-SUS
+
+# Comprimento máximo de linha (padrão PEP 8 é 79, mas 88 é mais moderno)
+max-line-length = 88
+
+# Arquivos e diretórios a serem ignorados
+exclude = 
+    .git,
+    __pycache__,
+    .venv,
+    build,
+    dist,
+    *.egg-info,
+    archive,
+    data,
+    relatorios,
+    docs,
+    tests
+
+# Códigos de erro a serem ignorados
+ignore = E203,W503,E402,F401,F541,F841
+
+# Complexidade máxima de funções
+max-complexity = 10
+
+# Estatísticas detalhadas
+statistics = True
+count = True
+
+# Formato de saída
+format = %(path)s:%(row)d:%(col)d: %(code)s %(text)s 

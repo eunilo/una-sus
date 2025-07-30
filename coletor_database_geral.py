@@ -128,10 +128,13 @@ class ColetorDatabaseGeral:
         }
 
         # Cookies necessários (baseados no scraper original)
+        shibsession_key = (
+            "_shibsession_64656661756c7468747470733a2f2f7777772e756e617375732e676f762e6272"
+        )
         self.cookies = {
             "PORTAL_UNASUS": "4ru34cs848mfbopb6vseqluni4",
             "UNASUSAnonID": "ID1ef7d6246158f7cf31c06b928bc56f8e",
-            "_shibsession_64656661756c7468747470733a2f2f7777772e756e617375732e676f762e6272": "_329a72cffc11d2904ae393c82d0cfb72",
+            shibsession_key: "_329a72cffc11d2904ae393c82d0cfb72",
         }
 
         # Payload para requisições (baseado no scraper original)
@@ -382,7 +385,9 @@ class ColetorDatabaseGeral:
                 {"id_oferta": "", "erro": "ID do curso não encontrado"}
             )
             registros.append(registro_curso)
-            self.logger.warning("⚠️ ID do curso não encontrado para extração de ofertas")
+            self.logger.warning(
+                "⚠️ ID do curso não encontrado para extração de ofertas"
+            )
 
         # Adicionar campos processados se não existirem
         for registro in registros:
@@ -395,7 +400,10 @@ class ColetorDatabaseGeral:
                     "categoria": registro.get("no_formato", ""),
                     "publico_alvo": registro.get("publico_alvo", ""),
                     "palavras_chave": registro.get("palavras_chave", ""),
-                    "link": f"https://www.unasus.gov.br/cursos/curso/{registro.get('co_seq_curso', '')}",
+                    "link": (
+                        f"https://www.unasus.gov.br/cursos/curso/"
+                        f"{registro.get('co_seq_curso', '')}"
+                    ),
                     "vagas": registro.get("vagas", 0),
                     "numero_vagas": registro.get("numero_vagas", 0),
                     "qt_vagas": registro.get("qt_vagas", 0),
@@ -571,20 +579,19 @@ class ColetorDatabaseGeral:
                 dados["vagas"] = vagas_match.group(1) if vagas_match else ""
 
                 # Extrair público-alvo
-                publico_match = re.search(
-                    r"Público-alvo:\s*(.*?)(?=\n\n|\nLocal|\nFormato|\nNível|\nModalidade|\nProgramas|\nTemas|\nDeCs|\nDescrição|\nPalavras-chave|$)",
-                    texto_completo,
-                    re.DOTALL,
+                publico_pattern = (
+                    r"Público-alvo:\s*(.*?)(?=\n\n|\nLocal|\nFormato|\nNível|"
+                    r"\nModalidade|\nProgramas|\nTemas|\nDeCs|\nDescrição|"
+                    r"\nPalavras-chave|$)"
                 )
-                dados["publico_alvo"] = (
-                    publico_match.group(1).strip() if publico_match else ""
-                )
+                publico_match = re.search(publico_pattern, texto_completo, re.DOTALL)
+                publico_alvo = publico_match.group(1).strip() if publico_match else ""
+                dados["publico_alvo"] = publico_alvo
 
                 # Extrair local da oferta
                 local_match = re.search(r"Local:\s*(.*?)(?=\n|$)", texto_completo)
-                dados["local_oferta"] = (
-                    local_match.group(1).strip() if local_match else ""
-                )
+                local_oferta = local_match.group(1).strip() if local_match else ""
+                dados["local_oferta"] = local_oferta
 
                 # Extrair formato
                 formato_match = re.search(r"Formato:\s*(.*?)(?=\n|$)", texto_completo)

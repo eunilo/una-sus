@@ -204,9 +204,9 @@ class DatabaseCompleto:
             cursor.execute(
                 """
                 SELECT no_orgao, COUNT(*) as total_ofertas, COUNT(DISTINCT co_seq_curso) as total_cursos
-                FROM dados_completos 
-                GROUP BY no_orgao 
-                ORDER BY total_cursos DESC 
+                FROM dados_completos
+                GROUP BY no_orgao
+                ORDER BY total_cursos DESC
                 LIMIT 10
             """
             )
@@ -224,11 +224,11 @@ class DatabaseCompleto:
             # Estatísticas de carga horária
             cursor.execute(
                 """
-                SELECT 
+                SELECT
                     AVG(qt_carga_horaria_total) as media,
                     MIN(qt_carga_horaria_total) as minima,
                     MAX(qt_carga_horaria_total) as maxima
-                FROM dados_completos 
+                FROM dados_completos
                 WHERE qt_carga_horaria_total IS NOT NULL
             """
             )

@@ -233,15 +233,13 @@ def executar_analise_completa():
 
                 if "distribuicao_geografica" in programas:
                     distribuicao = programas["distribuicao_geografica"]
-                    print(
-                        f"  • Estados com dados: {distribuicao.get('estados_identificados', 0)}"
-                    )
-                    print(
-                        f"  • Polos educacionais: {len(distribuicao.get('polos_educacionais', {}))}"
-                    )
-                    print(
-                        f"  • Desertos educacionais: {len(distribuicao.get('desertos_educacionais', []))}"
-                    )
+                    estados = distribuicao.get('estados_identificados', 0)
+                    polos = len(distribuicao.get('polos_educacionais', {}))
+                    desertos = len(distribuicao.get('desertos_educacionais', []))
+                    
+                    print(f"  • Estados com dados: {estados}")
+                    print(f"  • Polos educacionais: {polos}")
+                    print(f"  • Desertos educacionais: {desertos}")
 
             # Salvar relatórios
             from analise.relatorios import salvar_relatorio_json, salvar_relatorio_texto
@@ -273,16 +271,21 @@ def executar_estatisticas_basicas():
             estatisticas = analisador.gerar_estatisticas_basicas()
 
             print(f"\n📈 ESTATÍSTICAS BÁSICAS:")
-            print(f"Total de registros: {estatisticas.get('total_registros', 0):,}")
-            print(f"Total de colunas: {estatisticas.get('total_colunas', 0)}")
-            print(f"Uso de memória: {estatisticas.get('memoria_uso', 0):,} bytes")
+            total_registros = estatisticas.get('total_registros', 0)
+            total_colunas = estatisticas.get('total_colunas', 0)
+            memoria_uso = estatisticas.get('memoria_uso', 0)
+            
+            print(f"Total de registros: {total_registros:,}")
+            print(f"Total de colunas: {total_colunas}")
+            print(f"Uso de memória: {memoria_uso:,} bytes")
 
             # Mostrar colunas com problemas
             if "colunas_info" in estatisticas:
                 print(f"\n⚠️ COLUNAS COM PROBLEMAS:")
                 for coluna, info in estatisticas["colunas_info"].items():
-                    if info.get("percentual_nulos", 0) > 50:
-                        print(f"  • {coluna}: {info['percentual_nulos']:.1f}% nulos")
+                    percentual = info.get("percentual_nulos", 0)
+                    if percentual > 50:
+                        print(f"  • {coluna}: {percentual:.1f}% nulos")
 
         else:
             print("❌ Não foi possível carregar os dados!")
