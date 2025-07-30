@@ -55,7 +55,7 @@ Sistema **completo e avançado** para análise de dados educacionais da platafor
 una-sus/
 ├── 🎯 SCRIPTS PRINCIPAIS
 │   ├── coletor_database_geral.py    # Script principal
-│   ├── start.py                     # Menu interativo
+│   ├── start.py                     # ⭐ PONTO DE ENTRADA PRINCIPAL
 │   └── scraper_unasus.py            # Backup original
 │
 ├── 📂 analise/                      # SISTEMA DE ANÁLISE (FASE 1)
@@ -109,11 +109,31 @@ O sistema **instala automaticamente** todas as dependências necessárias na pri
 - ✅ **Verificação de compatibilidade** com Python
 - ✅ **Tratamento de erros** com instruções claras
 
-### **🎯 Execução Rápida**
+---
 
-#### **1. Menu Interativo (Recomendado)**
+## ⭐ **PRIMEIROS PASSOS - COMEÇAR AQUI**
+
+### **🚀 PONTO DE ENTRADA PRINCIPAL**
 ```bash
-# Sistema completo com menu interativo
+# 1. Clone o repositório
+git clone https://github.com/eunilo/una-sus.git
+cd una-sus
+
+# 2. Execute o sistema principal
+python start.py
+
+# 3. Escolha uma opção do menu interativo
+```
+
+**💡 O `start.py` é o script principal para usar o sistema!**
+
+---
+
+## 🎯 **Execução Rápida**
+
+### **⭐ COMEÇAR AQUI - Menu Interativo (RECOMENDADO)**
+```bash
+# ⭐ PONTO DE ENTRADA PRINCIPAL DO SISTEMA
 python start.py
 ```
 
@@ -127,13 +147,13 @@ python start.py
 - 📊 **Estatísticas Básicas**
 - 📋 **Gerar Relatórios**
 
-#### **2. Coletor Principal**
+### **2. Coletor Principal**
 ```bash
 # Executar coletor de dados
 python coletor_database_geral.py
 ```
 
-#### **3. Análise Completa**
+### **3. Análise Completa**
 ```bash
 # Executar todas as análises da FASE 1
 python -c "from analise.analisador_geral import AnalisadorGeral; a = AnalisadorGeral(); a.carregar_dados(); r = a.gerar_relatorio_completo(); print('✅ Análise completa realizada!')"
