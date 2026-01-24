@@ -1,4 +1,4 @@
-# 🏥 UNA-SUS - Sistema de Análise de Programas de Governo
+# 🏥 UNA-SUS - Sistema de Análise da Universidade Aberta do SUS
 
 > **📚 Sistema Completo de Análise Educacional em Saúde Pública**  
 > Plataforma modular e profissional para análise de dados educacionais da Universidade Aberta do SUS (UNA-SUS) com foco em programas de governo e distribuição geográfica.

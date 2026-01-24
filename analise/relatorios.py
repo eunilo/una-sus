@@ -302,6 +302,17 @@ def gerar_relatorios_visuais(
                 )
                 arquivos_gerados.append(arquivo_distribuicao)
 
+                relatorio_distribuicao_completo = (
+                    visual.gerar_relatorio_distribuicao_completo(
+                        programas["distribuicao_geografica"]
+                    )
+                )
+                arquivo_distribuicao_completo = visual.salvar_relatorio_visual(
+                    relatorio_distribuicao_completo,
+                    "distribuicao_geografica_completo.txt",
+                )
+                arquivos_gerados.append(arquivo_distribuicao_completo)
+
         # Relatório completo visual
         relatorio_completo_visual = visual.gerar_relatorio_completo(relatorio)
         arquivo_completo = visual.salvar_relatorio_visual(

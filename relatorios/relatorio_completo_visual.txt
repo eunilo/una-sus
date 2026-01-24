@@ -3,31 +3,31 @@
 🏥 UNA-SUS - SISTEMA DE ANÁLISE DE PROGRAMAS DE GOVERNO
 ================================================================================
 📋 RELATÓRIO COMPLETO DE ANÁLISE
-📅 Gerado em: 30/07/2025 às 10:40:08
+📅 Gerado em: 23/01/2026 às 12:07:54
 ================================================================================
 
 📊 ESTATÍSTICAS BÁSICAS
 ----------------------------------------
-📈 Total de Registros: 1,657
-📋 Total de Colunas: 29
-💾 Uso de Memória: 4,661,838 bytes
+📈 Total de Registros: 1,717
+📋 Total de Colunas: 28
+💾 Uso de Memória: 4,776,040 bytes
 
 📚 ANÁLISE DE CURSOS
 ----------------------------------------
-🎓 Total de Cursos: 1,657
-📖 Cursos Únicos: 522
+🎓 Total de Cursos: 1,717
+📖 Cursos Únicos: 541
 
 🎯 ANÁLISE DE OFERTAS
 ----------------------------------------
-📝 Total de Ofertas: 1,657
-🎯 Ofertas Únicas: 1,652
-💺 Vagas Disponíveis: 36,218,927.0
+📝 Total de Ofertas: 1,717
+🎯 Ofertas Únicas: 1,715
+💺 Vagas Disponíveis: 38,907,924
 
 🏛️ ANÁLISE DE PROGRAMAS DE GOVERNO
 --------------------------------------------------
-🎯 Programas Únicos: 31
-📚 Total de Cursos: 1,657
-🎓 Total de Ofertas: 1,657
+🎯 Programas Únicos: 32
+📚 Total de Cursos: 1,717
+🎓 Total de Ofertas: 1,717
 📍 Estados com Dados: 7
 🏆 Polos Educacionais: 1
 ⚠️ Desertos Educacionais: 22

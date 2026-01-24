@@ -3,27 +3,110 @@
 🏥 UNA-SUS - SISTEMA DE ANÁLISE DE PROGRAMAS DE GOVERNO
 ================================================================================
 📋 RELATÓRIO TÉCNICO COMPLETO - COBERTURA PROGRAMÁTICA
-📅 Gerado em: 30/07/2025 às 10:40:08
+📅 Gerado em: 23/01/2026 às 12:07:54
 ================================================================================
 
 📈 RESUMO GERAL
 ==================================================
-✅ Programas com Cobertura: 31
-❌ Programas sem Cobertura: 17
-📊 Total de Registros: 1,657
+✅ Cursos com Cobertura: 32
+❌ Cursos sem Cobertura: 0
+📊 Total de Registros: 1,717
 
-🏆 CONCENTRAÇÃO COMPLETA POR REGISTROS
+📌 CURSOS SEM COBERTURA (SEM PROGRAMA)
+============================================================
+ 1. Abordagem Cuidados para o desenvolvimento da criança na atenção primária a saúde
+     🏢 Universidade Federal de Minas Gerais
+ 2. Abordagem familiar e manejo das fragilidades e da rede de apoio
+     🏢 Fundação Oswaldo Cruz - Brasília
+ 3. A consulta da criança e da mulher/pessoa no puerpério na primeira semana de vida na Atenção Primária à Saúde
+     🏢 Universidade Federal de Santa Catarina
+ 4. Atributos da Atenção Primária à Saúde: Conceito e Princípios Norteadores
+     🏢 Universidade Federal de Minas Gerais
+ 5. Cuidado Paliativo na Rede de Atenção do Sistema Único de Saúde
+     🏢 Universidade Federal de Minas Gerais
+ 6. Curso Básico do SEI!/MS - 4.0
+     🏢 Fundação Oswaldo Cruz - Brasília
+ 7. Dengue: Casos Clínicos para Atualização do Manejo (2024)
+     🏢 Fundação Oswaldo Cruz - Brasília
+ 8. Desenvolvimento neuropsicomotor, sinais de alerta e intervenção precoce: um guia para profissionais de saúde.
+     🏢 Universidade Federal de Santa Catarina
+ 9. Direitos Humanos da Pessoa Idosa e da Pessoa Idosa com Deficiência
+     🏢 Fundação Oswaldo Cruz - Brasília
+10. Direitos Humanos e Saúde
+     🏢 Fundação Oswaldo Cruz - Brasília
+11. EducaSUS Metodologias de Educação em Saúde para a rede do Programa Saúde na Escola – PSE Anos Finais
+     🏢 Fundação Oswaldo Cruz - Brasília
+12. Elaborando um protocolo de ensaio clínico: população, intervenções/exposições, randomização, desfechos e cegamento (ECR-II)
+     🏢 Fundação Oswaldo Cruz - Brasília
+13. Elaborando um protocolo de ensaio clínico randomizado: considerações estatísticas, éticas e operacionais (ECR-III)
+     🏢 Fundação Oswaldo Cruz - Brasília
+14. Elaborando um protocolo de ensaio clínico randomizado: racional, objetivos e delineamento do estudo (ECR-I)
+     🏢 Fundação Oswaldo Cruz - Brasília
+15. Envelhecimento da População Brasileira
+     🏢 Fundação Oswaldo Cruz - Brasília
+16. Equidade em Prática no Sistema Único de Saúde
+     🏢 Fundação Oswaldo Cruz - Brasília
+17. Especialização em Saúde da Família - PEPSUS
+     🏢 Universidade Federal do Rio Grande do Norte
+18. Exames Laboratoriais para o Diagnóstico da Filariose Linfática
+     🏢 FIOCRUZ Pernambuco - Instituto Aggeu Magalhães
+19. Ferramentas de Abordagem clínica para um cuidado integral na APS
+     🏢 Universidade Federal de Minas Gerais
+20. Gerência de Serviços de Atenção Primária à Saúde
+     🏢 Fundação Oswaldo Cruz - Mato Grosso do Sul
+21. Implementação das Recomendações para a Operacionalização da Política Nacional de Promoção da Saúde na Atenção Primária à Saúde (APS)
+     🏢 Fundação Oswaldo Cruz - Brasília
+22. Introdução à epidemiologia clínica
+     🏢 Fundação Oswaldo Cruz - Brasília
+23. Linha de Cuidado para a Atenção Integral a Crianças e Adolescentes em Situação de Violência Sexual
+     🏢 Universidade Federal de Santa Catarina
+24. Longitudinalidade do cuidado e o uso de tecnologias de informação na APS
+     🏢 Universidade Federal de Minas Gerais
+25. Manejo Clínico das formas crônicas e epidemiologia da filariose
+     🏢 FIOCRUZ Pernambuco - Instituto Aggeu Magalhães
+26. Manejo da Coinfecção Tuberculose-HIV
+     🏢 Fundação Oswaldo Cruz - Brasília
+27. Mpox: Uma abordagem geral para profissionais de saúde
+     🏢 Fundação Oswaldo Cruz - Mato Grosso do Sul
+28. Participação da Sociedade Civil Organizada na Preparação e Resposta às Emergências de Saúde Pública
+     🏢 Fundação Oswaldo Cruz - Brasília
+29. Potencializando a prática na APS: a gestão da clínica na APS
+     🏢 Universidade Federal de Minas Gerais
+30. Potencializando a prática na APS: Ferramentas de Abordagem Comunitária e a Competência Cultural
+     🏢 Universidade Federal de Minas Gerais
+31. Potencializando a prática na APS: Ferramentas de abordagem familiar
+     🏢 Universidade Federal de Minas Gerais
+32. Preceptoria de Medicina de Familia e Comunidade -  Ênfase em Clínica de MFC
+     🏢 Universidade Federal de Ciências da Saúde de Porto Alegre
+33. Prevenção de carências de micronutrientes na Atenção Primária à Saúde
+     🏢 Universidade Federal de Santa Catarina
+34. Programa Academia da Saúde
+     🏢 Universidade Federal de Santa Catarina
+35. Programa Bolsa Família
+     🏢 Fundação Oswaldo Cruz - Brasília
+36. Promoção da amamentação e da alimentação complementar saudável na Atenção Primária à Saúde (APS): recomendações do Guia Alimentar para Crianças Brasileiras Menores de 2 Anos
+     🏢 Universidade Federal de Santa Catarina
+37. Promoção do acesso e equidade no âmbito da Atenção Primária à Saúde para o cuidado integral da população LGBTQIAPN+
+     🏢 Fundação Oswaldo Cruz - Brasília
+38. Saúde Mental e Atenção Psicossocial na COVID-19
+     🏢 Fundação Oswaldo Cruz - Brasília
+39. Tráfico de Pessoas e Migrantes Contrabandeados
+     🏢 Fundação Oswaldo Cruz - Brasília
+40. Vigilancia y Control de Vectores de Importancia en Salud Pública
+     🏢 Universidade de Brasília
+
+🏆 CONCENTRAÇÃO COMPLETA POR PROGRAMA
 ==================================================
- 1. UNA-SUS                                            [█████████████░░░░░░░░░░░░░░░░░] 45.9% 761
- 2. UNA-SUS, SE/UNASUS                                 [███░░░░░░░░░░░░░░░░░░░░░░░░░░░] 11.6% 193
- 3. UNA-SUS, Módulos PROVAB                            [██░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 6.9% 115
- 4. UNA-SUS, Marcador Mais Medicos - PROVAB, Mais Médicos [█░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 5.6% 93
- 5. UNA-SUS, Atenção Domiciliar                        [█░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 4.7% 78
- 6. UNA-SUS, Especialização em Saúde da Família, Marcador Mais Medicos - PROVAB, Mais Médicos [█░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 4.5% 74
- 7. UNA-SUS, SAS                                       [░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 2.8% 46
- 8. UNA-SUS, SE/UNASUS, SAS                            [░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 2.2% 37
- 9. UNA-SUS, Especialização em Saúde da Família        [░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 1.5% 25
-10. UNA-SUS, SE/UNASUS, Módulos PROVAB                 [░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 1.4% 23
+ 1. UNA-SUS                                                      [█████████████░░░░░░░░░░░░░░░░░] 45.3% 778
+ 2. UNA-SUS, SE/UNASUS                                           [███░░░░░░░░░░░░░░░░░░░░░░░░░░░] 12.3% 212
+ 3. UNA-SUS, Módulos PROVAB                                      [██░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 6.7% 115
+ 4. UNA-SUS, Marcador Mais Medicos - PROVAB, Mais Médicos        [█░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 5.5% 94
+ 5. UNA-SUS, Atenção Domiciliar                                  [█░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 4.5% 78
+ 6. UNA-SUS, Especialização em Saúde da Família, Marcador Mais Medicos - PROVAB, Mais Médicos [█░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 4.3% 74
+ 7. UNA-SUS, SAS                                                 [░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 2.7% 47
+ 8. UNA-SUS, SE/UNASUS, SAS                                      [░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 2.2% 37
+ 9. UNA-SUS, Especialização em Saúde da Família                  [░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 1.5% 25
+10. UNA-SUS, Cursos COVID-19                                     [░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 1.5% 25
 
 📋 ANÁLISE COMPLETA - TODOS OS PROGRAMAS E REGISTROS
 ============================================================
@@ -32,315 +115,319 @@
    📋 Registros individuais:
        1. Curso de Especialização Estratégia Saúde da Família
           🏢 Universidade Federal de Minas Gerais
-          📚 Especialização | 🎯 400.0 vagas
+          📚 Especialização | 🎯 400 vagas
+
+🔴 UNA-SUS, PMMB, Marcador Mais Medicos - PROVAB, Mais Médicos
+   📊 Total de registros: 1
+   📋 Registros individuais:
+       1. Especialização em Medicina de Família e Comunidade
+          🏢 Universidade Federal do Amazonas
+          📚 Especialização | 🎯 2000 vagas
 
 🔴 UNA-SUS, Especialização em Saúde da Família, Especialização, Marcador Mais Medicos - PROVAB
    📊 Total de registros: 1
    📋 Registros individuais:
        1. I Curso de Pós-graduação (Especialização) Multiprofissional em Saúde das Famílias e das Comunidades
           🏢 Universidade Federal de Pernambuco
-          📚 Especialização | 🎯 80.0 vagas
+          📚 Especialização | 🎯 80 vagas
 
 🔴 UNA-SUS, Especialização, Marcador Mais Medicos - PROVAB, PROVAB 2012
    📊 Total de registros: 3
    📋 Registros individuais:
        1. Curso de Especialização em Atenção Básica em Saúde da Família
           🏢 Universidade Federal de Minas Gerais
-          📚 Especialização | 🎯 444.0 vagas
+          📚 Especialização | 🎯 444 vagas
        2. Curso de Especialização em Atenção Básica em Saúde da Família
           🏢 Universidade Federal de Minas Gerais
-          📚 Especialização | 🎯 302.0 vagas
+          📚 Especialização | 🎯 302 vagas
        3. Saúde da Familia
           🏢 Universidade Federal de Ciências da Saúde de Porto Alegre
-          📚 Especialização | 🎯 508.0 vagas
+          📚 Especialização | 🎯 508 vagas
 
 🟡 UNA-SUS, PROVAB, Especialização em Saúde da Família, Marcador Mais Medicos - PROVAB
    📊 Total de registros: 5
    📋 Registros individuais:
        1. Curso de Especialização em Atenção Básica em Saúde da Família
           🏢 Universidade Federal de Minas Gerais
-          📚 Especialização | 🎯 299.0 vagas
+          📚 Especialização | 🎯 299 vagas
        2. Curso de Especialização Estratégia Saúde da Família
           🏢 Universidade Federal de Minas Gerais
-          📚 Especialização | 🎯 1000.0 vagas
+          📚 Especialização | 🎯 1000 vagas
        3. Curso de Especialização Estratégia Saúde da Família
           🏢 Universidade Federal de Minas Gerais
-          📚 Especialização | 🎯 2.0 vagas
+          📚 Especialização | 🎯 2 vagas
        4. Saúde da Familia
           🏢 Universidade Federal de Ciências da Saúde de Porto Alegre
-          📚 Especialização | 🎯 500.0 vagas
+          📚 Especialização | 🎯 500 vagas
        5. Saúde da Familia
           🏢 Universidade Federal de Ciências da Saúde de Porto Alegre
-          📚 Especialização | 🎯 500.0 vagas
+          📚 Especialização | 🎯 500 vagas
 
 🟡 UNA-SUS, Especialização, Marcador Mais Medicos - PROVAB, PROVAB 2014
    📊 Total de registros: 5
    📋 Registros individuais:
        1. Curso de Especialização Estratégia Saúde da Família
           🏢 Universidade Federal de Minas Gerais
-          📚 Especialização | 🎯 31.0 vagas
+          📚 Especialização | 🎯 117 vagas
        2. Curso de Especialização Estratégia Saúde da Família
           🏢 Universidade Federal de Minas Gerais
-          📚 Especialização | 🎯 436.0 vagas
+          📚 Especialização | 🎯 31 vagas
        3. Curso de Especialização Estratégia Saúde da Família
           🏢 Universidade Federal de Minas Gerais
-          📚 Especialização | 🎯 117.0 vagas
+          📚 Especialização | 🎯 436 vagas
        4. Curso de Especialização Estratégia Saúde da Família
           🏢 Universidade Federal de Minas Gerais
-          📚 Especialização | 🎯 45.0 vagas
+          📚 Especialização | 🎯 45 vagas
        5. Saúde da Familia
           🏢 Universidade Federal de Ciências da Saúde de Porto Alegre
-          📚 Especialização | 🎯 297.0 vagas
+          📚 Especialização | 🎯 297 vagas
 
 🟡 UNA-SUS, Especializacao MPB
    📊 Total de registros: 6
    📋 Registros individuais:
        1. Especialização em Medicina de Família e Comunidade
           🏢 Universidade Federal do Maranhão
-          📚 Especialização | 🎯 210.0 vagas
+          📚 Especialização | 🎯 210 vagas
        2. Especialização em Medicina de Família e Comunidade
           🏢 Universidade Federal do Maranhão
-          📚 Especialização | 🎯 240.0 vagas
+          📚 Especialização | 🎯 240 vagas
        3. Especialização em Medicina de Família e Comunidade
           🏢 Universidade Federal do Maranhão
-          📚 Especialização | 🎯 752.0 vagas
+          📚 Especialização | 🎯 752 vagas
        4. Especialização em Medicina de Família e Comunidade
           🏢 Universidade Federal de Santa Catarina
-          📚 Especialização | 🎯 250.0 vagas
+          📚 Especialização | 🎯 250 vagas
        5. Especialização em Medicina de Família e Comunidade
           🏢 Universidade Federal de Santa Catarina
-          📚 Especialização | 🎯 1000.0 vagas
+          📚 Especialização | 🎯 1000 vagas
        6. Especialização em Medicina de Família e Comunidade
           🏢 Universidade Federal de Santa Catarina
-          📚 Especialização | 🎯 1000.0 vagas
+          📚 Especialização | 🎯 1000 vagas
 
 🟡 UNA-SUS, SVS
    📊 Total de registros: 7
    📋 Registros individuais:
        1. Ações para Controle da Tuberculose na Atenção Básica
           🏢 Secretaria Executiva da Universidade Aberta do Sistema Único de Saúde
-          📚 Qualificação Profissional | 🎯 50000.0 vagas
+          📚 Qualificação Profissional | 🎯 50000 vagas
        2. Manejo da Coinfecção Tuberculose-HIV
           🏢 Secretaria Executiva da Universidade Aberta do Sistema Único de Saúde
-          📚 Qualificação Profissional | 🎯 50000.0 vagas
+          📚 Qualificação Profissional | 🎯 50000 vagas
        3. Manejo da Coinfecção Tuberculose-HIV
           🏢 Secretaria Executiva da Universidade Aberta do Sistema Único de Saúde
-          📚 Qualificação Profissional | 🎯 50000.0 vagas
+          📚 Qualificação Profissional | 🎯 50000 vagas
        4. Manejo da Coinfecção Tuberculose-HIV
           🏢 Secretaria Executiva da Universidade Aberta do Sistema Único de Saúde
-          📚 Qualificação Profissional | 🎯 20000.0 vagas
+          📚 Qualificação Profissional | 🎯 20000 vagas
        5. Manejo da Coinfecção Tuberculose-HIV (TB-HIV)
           🏢 Secretaria Executiva da Universidade Aberta do Sistema Único de Saúde
-          📚 Qualificação Profissional | 🎯 20000.0 vagas
+          📚 Qualificação Profissional | 🎯 20000 vagas
        6. Manejo da Coinfecção Tuberculose-HIV (TB-HIV)
           🏢 Secretaria Executiva da Universidade Aberta do Sistema Único de Saúde
-          📚 Qualificação Profissional | 🎯 15000.0 vagas
+          📚 Qualificação Profissional | 🎯 15000 vagas
        7. Organização de serviços para o atendimento de pessoas coinfectadas por TB-HIV
           🏢 Secretaria Executiva da Universidade Aberta do Sistema Único de Saúde
-          📚 Qualificação Profissional | 🎯 20000.0 vagas
+          📚 Qualificação Profissional | 🎯 20000 vagas
 
 🟡 UNA-SUS, Especialização em Saúde da Família, Especialização, Marcador Mais Medicos - PROVAB, PROVAB 2012
    📊 Total de registros: 7
    📋 Registros individuais:
        1. Curso de Especialização em Saúde da Família
           🏢 Universidade do Estado do Rio de Janeiro
-          📚 Especialização | 🎯 218.0 vagas
+          📚 Especialização | 🎯 218 vagas
        2. Curso de Especialização, Pesquisa e Inovação em Saúde da Família
           🏢 Universidade Federal do Ceará
-          📚 Especialização | 🎯 590.0 vagas
+          📚 Especialização | 🎯 590 vagas
        3. Especialização em Saúde da Família
           🏢 Universidade Federal de Santa Catarina
-          📚 Especialização | 🎯 128.0 vagas
+          📚 Especialização | 🎯 128 vagas
        4. Especialização em Saúde da Família
           🏢 Universidade Federal de Santa Catarina
-          📚 Especialização | 🎯 500.0 vagas
+          📚 Especialização | 🎯 500 vagas
        5. Especialização em Saúde da Família
           🏢 Universidade Federal do Maranhão
-          📚 Especialização | 🎯 373.0 vagas
+          📚 Especialização | 🎯 373 vagas
        6. Especialização em Saúde da Família
           🏢 Universidade Federal do Maranhão
-          📚 Especialização | 🎯 687.0 vagas
+          📚 Especialização | 🎯 687 vagas
        7. Saúde da Família - Profissionais da Atenção Básica - PROVAB
           🏢 Universidade Federal de São Paulo
-          📚 Especialização | 🎯 450.0 vagas
+          📚 Especialização | 🎯 450 vagas
 
 🟡 UNA-SUS, Especialização, Marcador Mais Medicos - PROVAB, Mais Médicos 2014
    📊 Total de registros: 7
    📋 Registros individuais:
        1. Curso de Especialização Estratégia Saúde da Família
           🏢 Universidade Federal de Minas Gerais
-          📚 Especialização | 🎯 300.0 vagas
+          📚 Especialização | 🎯 300 vagas
        2. Curso de Especialização Estratégia Saúde da Família
           🏢 Universidade Federal de Minas Gerais
-          📚 Especialização | 🎯 300.0 vagas
+          📚 Especialização | 🎯 300 vagas
        3. Curso de Especialização Estratégia Saúde da Família
           🏢 Universidade Federal de Minas Gerais
-          📚 Especialização | 🎯 500.0 vagas
+          📚 Especialização | 🎯 500 vagas
        4. Curso de Especialização Estratégia Saúde da Família
           🏢 Universidade Federal de Minas Gerais
-          📚 Especialização | 🎯 500.0 vagas
+          📚 Especialização | 🎯 500 vagas
        5. Curso de Especialização Estratégia Saúde da Família
           🏢 Universidade Federal de Minas Gerais
-          📚 Especialização | 🎯 344.0 vagas
+          📚 Especialização | 🎯 30 vagas
        6. Curso de Especialização Estratégia Saúde da Família
           🏢 Universidade Federal de Minas Gerais
-          📚 Especialização | 🎯 30.0 vagas
+          📚 Especialização | 🎯 344 vagas
        7. Curso de Especialização Estratégia Saúde da Família
           🏢 Universidade Federal de Minas Gerais
-          📚 Especialização | 🎯 500.0 vagas
+          📚 Especialização | 🎯 500 vagas
+
+🟡 UNA-SUS, PMMB
+   📊 Total de registros: 7
+   📋 Registros individuais:
+       1. Especialização em Medicina de Família e Comunidade
+          🏢 Universidade Federal do Ceará
+          📚 Especialização | 🎯 2000 vagas
+       2. Especialização em Medicina de Família e Comunidade
+          🏢 Universidade Federal de São Paulo
+          📚 Especialização | 🎯 4000 vagas
+       3. Especialização em Medicina de Família e Comunidade
+          🏢 Universidade Federal de São Paulo
+          📚 Especialização | 🎯 4000 vagas
+       4. Especialização em Medicina de Família e Comunidade
+          🏢 Universidade Federal de Minas Gerais
+          📚 Especialização | 🎯 2000 vagas
+       5. Especialização em Medicina de Família e Comunidade
+          🏢 Universidade Federal do Ceará
+          📚 Especialização | 🎯 2000 vagas
+       6. Especialização em Medicina de Família e Comunidade
+          🏢 Fundação Oswaldo Cruz - Mato Grosso do Sul
+          📚 Especialização | 🎯 2000 vagas
+       7. Especialização em Medicina de Família e Comunidade
+          🏢 Universidade de Brasília
+          📚 Especialização | 🎯 2000 vagas
 
 🟡 UNA-SUS, Especialização em Saúde da Família, Especialização, Marcador Mais Medicos - PROVAB, Mais Médicos 2013
    📊 Total de registros: 8
    📋 Registros individuais:
        1. Curso de Especialização em Saúde da Família
           🏢 Universidade do Estado do Rio de Janeiro
-          📚 Especialização | 🎯 288.0 vagas
+          📚 Especialização | 🎯 288 vagas
        2. Curso de Especialização, Pesquisa e Inovação em Saúde da Família
           🏢 Universidade Federal do Ceará
-          📚 Especialização | 🎯 352.0 vagas
+          📚 Especialização | 🎯 352 vagas
        3. Curso de Pós-Graduação em Atenção Básica em Saúde da Família
           🏢 Universidade Federal do Mato Grosso do Sul
-          📚 Especialização | 🎯 689.0 vagas
+          📚 Especialização | 🎯 689 vagas
        4. Especialização em Saúde da Família
           🏢 Universidade Federal do Maranhão
-          📚 Especialização | 🎯 211.0 vagas
+          📚 Especialização | 🎯 211 vagas
        5. I Curso de Pós-Graduação (Especialização) em Saúde da Família, a distância (1º ciclo e 2º ciclo 1ª etapa  - Mais Médicos)
           🏢 Universidade Federal de Pernambuco
-          📚 Especialização | 🎯 100.0 vagas
+          📚 Especialização | 🎯 260 vagas
        6. I Curso de Pós-Graduação (Especialização) em Saúde da Família, a distância (1º ciclo e 2º ciclo 1ª etapa  - Mais Médicos)
           🏢 Universidade Federal de Pernambuco
-          📚 Especialização | 🎯 260.0 vagas
+          📚 Especialização | 🎯 100 vagas
        7. Saúde da Família - Mais Médicos
           🏢 Universidade Federal de Ciências da Saúde de Porto Alegre
-          📚 Especialização | 🎯 250.0 vagas
+          📚 Especialização | 🎯 250 vagas
        8. Saúde da Família - Profissionais da Atenção Básica - Mais Médicos (PAB3)
           🏢 Universidade Federal de São Paulo
-          📚 Especialização | 🎯 433.0 vagas
+          📚 Especialização | 🎯 433 vagas
 
 🟡 UNA-SUS, Especialização em Saúde da Família, Especialização, Marcador Mais Medicos - PROVAB, PROVAB 2014
    📊 Total de registros: 8
    📋 Registros individuais:
        1. Curso de Especialização em Saúde da Família
           🏢 Universidade do Estado do Rio de Janeiro
-          📚 Especialização | 🎯 526.0 vagas
+          📚 Especialização | 🎯 526 vagas
        2. Curso de Especialização em Saúde da Família
           🏢 Universidade Federal do Ceará
-          📚 Especialização | 🎯 625.0 vagas
+          📚 Especialização | 🎯 625 vagas
        3. Curso de Pós-Graduação em Atenção Básica em Saúde da Família
           🏢 Universidade Federal do Mato Grosso do Sul
-          📚 Especialização | 🎯 411.0 vagas
+          📚 Especialização | 🎯 411 vagas
        4. Especialização em Saúde da Família
           🏢 Universidade Federal do Maranhão
-          📚 Especialização | 🎯 234.0 vagas
+          📚 Especialização | 🎯 234 vagas
        5. I Curso de Pós-graduação (Especialização) Multiprofissional em Saúde das Famílias e das Comunidades
           🏢 Universidade Federal de Pernambuco
-          📚 Especialização | 🎯 250.0 vagas
+          📚 Especialização | 🎯 250 vagas
        6. I Curso de Pós-graduação (Especialização) Multiprofissional em Saúde das Famílias e das Comunidades
           🏢 Universidade Federal de Pernambuco
-          📚 Especialização | 🎯 165.0 vagas
+          📚 Especialização | 🎯 165 vagas
        7. I Curso de Pós-graduação (Especialização) Multiprofissional em Saúde das Famílias e das Comunidades
           🏢 Universidade Federal de Pernambuco
-          📚 Especialização | 🎯 105.0 vagas
+          📚 Especialização | 🎯 105 vagas
        8. Saúde da Família - Profissionais da Atenção Básica - Mais Médicos e PROVAB (PAB4)
           🏢 Universidade Federal de São Paulo
-          📚 Especialização | 🎯 700.0 vagas
-
-🟡 UNA-SUS, PMMB
-   📊 Total de registros: 8
-   📋 Registros individuais:
-       1. Especialização em Medicina de Família e Comunidade
-          🏢 Universidade Federal do Ceará
-          📚 Especialização | 🎯 2000.0 vagas
-       2. Especialização em Medicina de Família e Comunidade
-          🏢 Universidade Federal de São Paulo
-          📚 Especialização | 🎯 4000.0 vagas
-       3. Especialização em Medicina de Família e Comunidade
-          🏢 Universidade Federal de Minas Gerais
-          📚 Especialização | 🎯 2000.0 vagas
-       4. Especialização em Medicina de Família e Comunidade
-          🏢 Universidade de Brasília
-          📚 Especialização | 🎯 2000.0 vagas
-       5. Especialização em Medicina de Família e Comunidade
-          🏢 Universidade Federal de Santa Catarina
-          📚 Especialização | 🎯 4000.0 vagas
-       6. Especialização em Medicina de Família e Comunidade
-          🏢 Fundação Oswaldo Cruz - Mato Grosso do Sul
-          📚 Especialização | 🎯 2000.0 vagas
-       7. Especialização em Medicina de Família e Comunidade
-          🏢 Fundação Oswaldo Cruz - Mato Grosso do Sul
-          📚 Especialização | 🎯 2000.0 vagas
-       8. Especialização em Medicina de Família e Comunidade
-          🏢 Universidade de Brasília
-          📚 Especialização | 🎯 2000.0 vagas
+          📚 Especialização | 🎯 700 vagas
 
 🟡 UNA-SUS, Especialização em Saúde da Família, Especialização
    📊 Total de registros: 9
    📋 Registros individuais:
        1. Curso de Especialização em Saúde da Família
           🏢 Universidade Federal do Ceará
-          📚 Especialização | 🎯 222.0 vagas
+          📚 Especialização | 🎯 222 vagas
        2. Curso de Especialização em Saúde da Família
           🏢 Universidade Federal do Ceará
-          📚 Especialização | 🎯 1.0 vagas
+          📚 Especialização | 🎯 1 vagas
        3. Curso de Pós-Graduação em Atenção Básica em Saúde da Família
           🏢 Universidade Federal do Mato Grosso do Sul
-          📚 Especialização | 🎯 395.0 vagas
+          📚 Especialização | 🎯 395 vagas
        4. Curso de Pós-Graduação em Atenção Básica em Saúde da Família
           🏢 Universidade Federal do Mato Grosso do Sul
-          📚 Especialização | 🎯 199.0 vagas
+          📚 Especialização | 🎯 199 vagas
        5. CURSO DE PÓS-GRADUAÇÃO EM ESTRATÉGIA DE SAÚDE DA FAMÍLIA
           🏢 Universidade Federal do Estado do Rio de Janeiro
-          📚 Especialização | 🎯 150.0 vagas
+          📚 Especialização | 🎯 150 vagas
        6. CURSO DE PÓS-GRADUAÇÃO EM ESTRATÉGIA DE SAÚDE DA FAMÍLIA
           🏢 Universidade Federal do Estado do Rio de Janeiro
-          📚 Especialização | 🎯 300.0 vagas
+          📚 Especialização | 🎯 300 vagas
        7. Especialização em Saúde da Família
           🏢 Universidade Federal de Santa Catarina
-          📚 Especialização | 🎯 500.0 vagas
+          📚 Especialização | 🎯 500 vagas
        8. Especialização em Saúde da Família
           🏢 Universidade Federal do Maranhão
-          📚 Especialização | 🎯 750.0 vagas
+          📚 Especialização | 🎯 750 vagas
        9. Especialização Multiprofissional em Saúde da Família
           🏢 Universidade Federal de Santa Catarina
-          📚 Especialização | 🎯 620.0 vagas
+          📚 Especialização | 🎯 620 vagas
 
 🟡 UNA-SUS, PROVAB, Marcador Mais Medicos - PROVAB
    📊 Total de registros: 9
    📋 Registros individuais:
        1. Curso de Especialização Estratégia Saúde da Família
           🏢 Universidade Federal de Minas Gerais
-          📚 Especialização | 🎯 4.0 vagas
+          📚 Especialização | 🎯 4 vagas
        2. Curso de Especialização Estratégia Saúde da Família
           🏢 Universidade Federal de Minas Gerais
-          📚 Especialização | 🎯 200.0 vagas
+          📚 Especialização | 🎯 200 vagas
        3. Curso de Especialização Estratégia Saúde da Família
           🏢 Universidade Federal de Minas Gerais
-          📚 Especialização | 🎯 200.0 vagas
+          📚 Especialização | 🎯 200 vagas
        4. Curso de Especialização Estratégia Saúde da Família
           🏢 Universidade Federal de Minas Gerais
-          📚 Especialização | 🎯 1000.0 vagas
+          📚 Especialização | 🎯 1000 vagas
        5. Curso de Especialização Estratégia Saúde da Família
           🏢 Universidade Federal de Minas Gerais
-          📚 Especialização | 🎯 300.0 vagas
+          📚 Especialização | 🎯 300 vagas
        6. Curso de Especialização Estratégia Saúde da Família
           🏢 Universidade Federal de Minas Gerais
-          📚 Especialização | 🎯 200.0 vagas
+          📚 Especialização | 🎯 200 vagas
        7. Saúde da Família - ESF11
           🏢 Universidade Federal de São Paulo
-          📚 Especialização | 🎯 100.0 vagas
+          📚 Especialização | 🎯 100 vagas
        8. Saúde da Família - ESF12
           🏢 Universidade Federal de São Paulo
-          📚 Especialização | 🎯 200.0 vagas
+          📚 Especialização | 🎯 200 vagas
        9. Saúde da Família II
           🏢 Universidade Federal de São Paulo
-          📚 Especialização | 🎯 3.0 vagas
+          📚 Especialização | 🎯 3 vagas
 
 📋 METODOLOGIA E NOTAS TÉCNICAS
 ==================================================
 • Dados coletados do portal UNA-SUS
 • Análise baseada em registros de ofertas
 • Classificação por programas de governo
-• Data de geração: 30/07/2025 10:40
+• Data de geração: 23/01/2026 12:07
 
 
 ================================================================================

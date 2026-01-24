@@ -3,53 +3,66 @@
 🏥 UNA-SUS - SISTEMA DE ANÁLISE DE PROGRAMAS DE GOVERNO
 ================================================================================
 📋 MAPEAMENTO DE PROGRAMAS DE GOVERNO
-📅 Gerado em: 30/07/2025 às 10:40:08
+📅 Gerado em: 23/01/2026 às 12:07:54
 ================================================================================
 
 📈 RESUMO GERAL
 ----------------------------------------
-🎯 Total de Programas: 31
-📚 Total de Cursos: 1,657
-🎓 Total de Ofertas: 1,657
+🎯 Total de Programas: 32
+📚 Total de Cursos: 1,717
+🎓 Total de Ofertas: 1,717
+
+🧪 DIAGNÓSTICO DOS CAMPOS DE PROGRAMAS
+--------------------------------------------------
+✅ Campo: programas_governo
+   • Preenchidos: 1,671
+   • Vazios: 46
+   • Percentual: 97.3%
+   • Exemplos (top 5):
+     - UNA-SUS: 778
+     - UNA-SUS, SE/UNASUS: 212
+     - UNA-SUS, Módulos PROVAB: 115
+     - UNA-SUS, Marcador Mais Medicos - PROVAB, Mais Médicos: 94
+     - UNA-SUS, Atenção Domiciliar: 78
 
 🏆 TOP 10 PROGRAMAS POR QUANTIDADE DE CURSOS
 --------------------------------------------------
- 1. UNA-SUS                             [█████████████░░░░░░░░░░░░░░░░░] 45.9% 761
- 2. UNA-SUS, SE/UNASUS                  [███░░░░░░░░░░░░░░░░░░░░░░░░░░░] 11.6% 193
- 3. UNA-SUS, Módulos PROVAB             [██░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 6.9% 115
- 4. UNA-SUS, Marcador Mais Medicos - PR [█░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 5.6% 93
- 5. UNA-SUS, Atenção Domiciliar         [█░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 4.7% 78
- 6. UNA-SUS, Especialização em Saúde da [█░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 4.5% 74
- 7. UNA-SUS, SAS                        [░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 2.8% 46
+ 1. UNA-SUS                             [█████████████░░░░░░░░░░░░░░░░░] 45.3% 778
+ 2. UNA-SUS, SE/UNASUS                  [███░░░░░░░░░░░░░░░░░░░░░░░░░░░] 12.3% 212
+ 3. UNA-SUS, Módulos PROVAB             [██░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 6.7% 115
+ 4. UNA-SUS, Marcador Mais Medicos - PR [█░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 5.5% 94
+ 5. UNA-SUS, Atenção Domiciliar         [█░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 4.5% 78
+ 6. UNA-SUS, Especialização em Saúde da [█░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 4.3% 74
+ 7. UNA-SUS, SAS                        [░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 2.7% 47
  8. UNA-SUS, SE/UNASUS, SAS             [░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 2.2% 37
  9. UNA-SUS, Especialização em Saúde da [░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 1.5% 25
-10. UNA-SUS, SE/UNASUS, Módulos PROVAB  [░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 1.4% 23
+10. UNA-SUS, Cursos COVID-19            [░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 1.5% 25
 
 🎯 TOP 10 PROGRAMAS POR QUANTIDADE DE OFERTAS
 --------------------------------------------------
- 1. UNA-SUS                             [█████████████░░░░░░░░░░░░░░░░░] 45.9% 761
- 2. UNA-SUS, SE/UNASUS                  [███░░░░░░░░░░░░░░░░░░░░░░░░░░░] 11.6% 193
- 3. UNA-SUS, Módulos PROVAB             [██░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 6.9% 115
- 4. UNA-SUS, Marcador Mais Medicos - PR [█░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 5.6% 93
- 5. UNA-SUS, Atenção Domiciliar         [█░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 4.7% 78
- 6. UNA-SUS, Especialização em Saúde da [█░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 4.5% 74
- 7. UNA-SUS, SAS                        [░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 2.8% 46
+ 1. UNA-SUS                             [█████████████░░░░░░░░░░░░░░░░░] 45.3% 778
+ 2. UNA-SUS, SE/UNASUS                  [███░░░░░░░░░░░░░░░░░░░░░░░░░░░] 12.3% 212
+ 3. UNA-SUS, Módulos PROVAB             [██░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 6.7% 115
+ 4. UNA-SUS, Marcador Mais Medicos - PR [█░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 5.5% 94
+ 5. UNA-SUS, Atenção Domiciliar         [█░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 4.5% 78
+ 6. UNA-SUS, Especialização em Saúde da [█░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 4.3% 74
+ 7. UNA-SUS, SAS                        [░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 2.7% 47
  8. UNA-SUS, SE/UNASUS, SAS             [░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 2.2% 37
  9. UNA-SUS, Especialização em Saúde da [░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 1.5% 25
-10. UNA-SUS, SE/UNASUS, Módulos PROVAB  [░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 1.4% 23
+10. UNA-SUS, Cursos COVID-19            [░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 1.5% 25
 
 💺 TOP 10 PROGRAMAS POR QUANTIDADE DE VAGAS
 --------------------------------------------------
- 1. UNA-SUS, Especialização             [░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 0.0% 6,764.0
- 2. UNA-SUS                             [██████████████████████████████] 100.0% 14,700,528.0
- 3. UNA-SUS, SE/UNASUS                  [███████████████████░░░░░░░░░░░] 65.7% 9,655,318.0
- 4. UNA-SUS, Atenção Domiciliar         [░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 2.0% 289,600.0
- 5. UNA-SUS, SE/UNASUS, SAS             [███░░░░░░░░░░░░░░░░░░░░░░░░░░░] 12.6% 1,850,000.0
- 6. UNA-SUS, SAS                        [█░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 4.9% 717,160.0
- 7. UNA-SUS, SVS                        [░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 1.5% 225,000.0
- 8. UNA-SUS, Especialização em Saúde da [░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 0.1% 9,745.0
- 9. UNA-SUS, Módulos PROVAB             [████░░░░░░░░░░░░░░░░░░░░░░░░░░] 13.4% 1,970,880.0
-10. UNA-SUS, SE/UNASUS, Módulos PROVAB  [██░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 8.1% 1,190,000.0
+ 1. UNA-SUS, Especialização             [░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 0.0% 6,764
+ 2. UNA-SUS                             [██████████████████████████████] 100.0% 15,300,261
+ 3. UNA-SUS, SE/UNASUS                  [████████████████████░░░░░░░░░░] 69.4% 10,615,318
+ 4. UNA-SUS, Atenção Domiciliar         [░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 1.9% 289,600
+ 5. UNA-SUS, SE/UNASUS, SAS             [███░░░░░░░░░░░░░░░░░░░░░░░░░░░] 12.1% 1,850,000
+ 6. UNA-SUS, SAS                        [█░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 4.8% 737,160
+ 7. UNA-SUS, SVS                        [░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 1.5% 225,000
+ 8. UNA-SUS, Especialização em Saúde da [░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 0.1% 9,745
+ 9. UNA-SUS, Módulos PROVAB             [███░░░░░░░░░░░░░░░░░░░░░░░░░░░] 12.9% 1,970,880
+10. UNA-SUS, SE/UNASUS, Módulos PROVAB  [██░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 7.8% 1,190,000
 
 ================================================================================
 📊 Sistema de Análise UNA-SUS - Relatório Gerado Automaticamente

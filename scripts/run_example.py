@@ -9,6 +9,15 @@ Demonstra como usar os principais componentes do sistema.
 
 import os
 import sys
+import os
+
+# Garantir execução a partir da raiz do projeto e usar venv, se existir
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+os.chdir(BASE_DIR)
+if sys.prefix == getattr(sys, "base_prefix", sys.prefix):
+    venv_python = os.path.join(BASE_DIR, ".venv", "Scripts", "python.exe")
+    if os.path.exists(venv_python):
+        os.execv(venv_python, [venv_python, *sys.argv])
 
 # Adicionar o diretório raiz ao path
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))

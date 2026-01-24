@@ -1,0 +1,787 @@
+
+================================================================================
+🏥 UNA-SUS - SISTEMA DE ANÁLISE DE PROGRAMAS DE GOVERNO
+================================================================================
+📋 DISTRIBUIÇÃO GEOGRÁFICA COMPLETA POR ESTADO
+📅 Gerado em: 23/01/2026 às 12:07:54
+================================================================================
+
+🗺️ RESUMO GERAL
+--------------------------------------------------
+📍 Estados com Dados: 7
+❓ Estados sem Identificação: 0
+🏆 Polos Educacionais: 1
+⚠️ Desertos Educacionais: 22
+
+📌 OFERTAS POR ESTADO (DETALHADO)
+--------------------------------------------------------------------------------
+🧭 Estado: AC
+   📝 Ofertas: 0
+   📚 Cursos únicos: 0
+   💺 Vagas: 0
+   🏢 Instituições: 0
+   🏛️ Programas: 0
+   🎓 Cursos (únicos): nenhum
+
+🧭 Estado: AL
+   📝 Ofertas: 1,603
+   📚 Cursos únicos: 515
+   💺 Vagas: 36,786,560
+   🏢 Instituições: 25
+   🏛️ Programas: 32
+   🎓 Cursos (únicos):
+     • 1º Formação de Preceptores para o SUS
+     • 2º Formação de Preceptores para o SUS
+     • A Enfermagem no Contexto das Hepatites Virais
+     • A Interdisciplinaridade no Cuidado ao Paciente com DRC
+     • A consulta da criança e da mulher/pessoa no puerpério na primeira semana de vida na Atenção Primária à Saúde
+     • A dinâmica da violência no contexto familiar
+     • A importância da Gestão de Projetos na Administração Pública
+     • ARES e Acesso Aberto
+     • Abordagem Clínica de Zika na Atenção Primária à Saúde
+     • Abordagem Cuidados para o desenvolvimento da criança na atenção primária a saúde
+     • Abordagem Domiciliar de Pacientes em Cuidados Paliativos
+     • Abordagem Domiciliar em Situações Clínicas Comuns Materno-Infantis
+     • Abordagem Domiciliar em Situações Clínicas Comuns em Idosos
+     • Abordagem Domiciliar em Situações Clínicas Comuns em Idosos - Enfermagem
+     • Abordagem Domiciliar em Situações Clínicas Comuns em Idosos - Medicina
+     • Abordagem Familiar
+     • Abordagem Familiar na Atenção Domiciliar
+     • Abordagem Farmacêutica na DRC
+     • Abordagem Nutricional ao Paciente com DRC
+     • Abordagem das síndromes geriátricas e cuidados paliativos na Atenção Primária à Saúde
+     • Abordagem do Sobrepeso e Obesidade na Atenção Primária em Saúde
+     • Abordagem domiciliar de situações clínicas comuns em adultos
+     • Abordagem dos Problemas Respiratórios no Adulto Comuns na Atenção Básica - Enfermagem
+     • Abordagem dos Problemas Respiratórios no Adulto Comuns na Atenção Básica - Medicina
+     • Abordagem familiar e manejo das fragilidades e da rede de apoio
+     • Abordagens de adultos em situações de urgência e emergência na Atenção Básica
+     • Abordagens em situações de urgências dermatológicas na Atenção Básica
+     • Acesso e Acolhimento na Atenção à Saúde do Homem
+     • Acesso e acolhimento na atenção à saúde do homem na Atenção Primária à Saúde
+     • Amamenta e alimenta Brasil: recomendações baseadas no Guia Alimentar para Crianças Brasileiras Menores de 2 anos
+     • Análise de Situação de Saúde: Conceitos, Interpretação e Uso dos Indicadores de Saúde
+     • Aperfeiçoamento em Saúde Mental e Atenção Psicossocial de Adolescentes e Jovens
+     • Aperfeiçoando a Comunicação no Cuidado em Saúde
+     • Apoio à Saúde da Família
+     • Aspectos Operacionais IV: Gerenciamento e conclusão do estudo
+     • Aspectos operacionais I: organização de documentos e dados de pesquisa
+     • Aspectos operacionais II: estruturação da equipe e tópicos regulatórios em pesquisa 
+     • Aspectos operacionais III: implementação e acompanhamento do estudo
+     • Assistência Domiciliar na Rede de Atenção Básica à Saúde
+     • Assistência Odontológica a Pacientes com DCNT na Atenção Primária: Diabetes, Hipertensão e Doença Renal Crônica
+     • Assistência Odontológica para Pacientes com DCNT na Atenção Primária: Doenças Cardiovasculares
+     • Assistência Odontológica para Pacientes com DCNT na Atenção Primária: Pacientes com Câncer
+     • Assistência Odontológica para Pacientes com DCNT: doenças respiratórias crônicas
+     • Atenção Ginecológica, Climatério e Prevenção dos Cânceres de Colo de Útero e Mama na Atenção Básica
+     • Atenção Integral à Saúde da Criança I
+     • Atenção Integral à Saúde da Criança II
+     • Atenção Integral à Saúde das Mulheres
+     • Atenção Integral à Saúde das Populações do Campo, da Floresta e das Águas
+     • Atenção Integral à Saúde do Homem
+     • Atenção Integral às Crianças com Alterações do Crescimento e Desenvolvimento, relacionadas às Infecções Zika e STORCH
+     • Atenção a homens e mulheres em situação de violência por parceiro íntimo
+     • Atenção a homens e mulheres em situação de violência por parceiro íntimo (2024)
+     • Atenção aos problemas neurológicos frequentes na Atenção Básica
+     • Atenção domiciliar na rede básica de saúde (AD2)
+     • Atenção e Cuidado da Saúde Bucal da Pessoa com Deficiência
+     • Atenção na Identificação Precoce de Deficiências em Crianças por Meio de Triagem Auditiva Neonatal (TAN) e Triagem Ocular Neonatal (TON)
+     • Atenção à Pessoa Amputada
+     • Atenção à Pessoa Idosa com Deficiência
+     • Atenção à Pessoa com Paralisia Cerebral
+     • Atenção à Pessoa com Síndrome de Down
+     • Atenção à Pessoa com Traumatismo Cranioencefálico (TCE)
+     • Atenção à Reabilitação da Pessoa com Síndrome Pós-Poliomielite e Comorbidades
+     • Atenção à Reabilitação da Pessoa com Transtornos do Espectro do Autismo
+     • Atenção à Saúde Bucal da Pessoa com Deficiência
+     • Atenção à Saúde Mental do Homem
+     • Atenção à Saúde Organizada em Redes
+     • Atenção à Saúde Sexual e Reprodutiva do Homem
+     • Atenção à Saúde da Pessoa Idosa
+     • Atenção à Saúde da Pessoa com Estomia
+     • Atenção à Saúde da Pessoa com Lesão Medular
+     • Atenção à Saúde das Mulheres com Deficiência
+     • Atenção à Saúde na Reabilitação Visual
+     • Atenção às Mulheres no Climatério
+     • Atenção às Mulheres no Pré-Natal de Baixo Risco, Puerpério e Promoção do Aleitamento Materno na Atenção Básica
+     • Atributos da Atenção Primária à Saúde: Conceito e Princípios Norteadores
+     • Atualização do Manejo Clínico da Influenza
+     • Atualização do Manejo Clínico da Pessoa com Chikungunya
+     • Avaliação Educacional
+     • Avaliação Multidimensional da Pessoa Idosa
+     • Avaliação Multidimensional da Saúde da Pessoa Idosa
+     • Avaliação da Aprendizagem
+     • Avaliação de Risco a Saúde Humana por exposição à substância Química - versão 2
+     • Avaliação de Risco à Saúde Humana por Exposição a Substâncias Químicas - versão 1
+     • Ações Estratégicas para a Saúde da Pessoa Idosa
+     • Ações de Vigilância e Prevenção de Doenças Crônicas não Transmissíveis (DCNT)
+     • Ações estratégicas no cuidado à pessoa idosa na Atenção Primária
+     • CLINICA DA SAÚDE MENTAL NA ATENÇÃO PRIMÁRIA EM SAÚDE: TRANSTORNOS MENTAIS COMUNS (TMC)
+     • CURSO CRISE E URGÊNCIA EM SAÚDE MENTAL
+     • CURSO DE ESPECIALIZAÇÃO EM SAÚDE DA FAMÍLIA - BAIXADA FLUMINENSE
+     • CURSO DE PÓS-GRADUAÇÃO EM ESTRATÉGIA DE SAÚDE DA FAMÍLIA
+     • Caderneta da Criança: Instrumento intersetorial para promoção da atenção integral à saúde da criança
+     • Caderneta de Saúde da Pessoa Idosa: um instrumento de avaliação multidimensional
+     • Caderneta de saúde da pessoa idosa
+     • Capacitação de Profissionais da Odontologia Brasileira Vinculados ao SUS para a Atenção e o Cuidado da Saúde Bucal da Pessoa com Deficiência
+     • Capacitação em Dependência Química
+     • Capacitação em Eventos Agudos na Atenção Básica
+     • Capacitação em Saúde Mental
+     • Capacitação em Saúde Mental na Atenção Primária
+     • Capacitação em Saúde da Pessoa Idosa
+     • Capacitação sobre Influenza para Profissionais de Vigilância em Saúde
+     • Certificado Digital
+     • Classificação de Risco e Vulnerabilidades na Atenção Primária em Saúde
+     • Como Buscar Evidências Científicas nas Bases de Dados da Área da Saúde
+     • Comunicação Efetiva com a Pessoa com Deficiência Auditiva e Surda na Atenção Primária em Saúde
+     • Comunicação, perda auditiva e atenção à saúde da pessoa com deficiência auditiva e surda: uma inter-relação necessária
+     • Condições Clínicas e Agravos à Saúde Frequentes em Pessoas Idosas
+     • Condições Clínicas e Agravos à Saúde Frequentes na Pessoa Idosa
+     • Conhecendo a Realidade da Saúde Indígena no Brasil
+     • Conhecendo o Guia Alimentar para a População Brasileira
+     • Consentimento Livre e Esclarecido
+     • Contato Covid - Rastreamento e Monitoramento dos Contatos dos Casos de Covid-19
+     • Controle do tabagismo na Atenção Básica
+     • Controle, Avaliação e Regulação dos Serviços em Saúde
+     • Cuidado Paliativo em Atenção Domiciliar
+     • Cuidado Paliativo na Rede de Atenção do Sistema Único de Saúde
+     • Cuidado aos Pacientes Vítimas de Queimadura
+     • Cuidado da Criança e Adolescente com Sobrepeso e Obesidade na Atenção Primária à Saúde
+     • Cuidado em Casos de Mordedura de Animais e Intoxicação por Animais Peçonhentos, Plantas Tóxicas e Medicamentos
+     • Cuidado em Crises Epilépticas e Epilepsia
+     • Cuidado em Reações Anafiláticas
+     • Cuidado em Saúde Bucal da Pessoa com Doença Infecciosa Transmissível
+     • Cuidado em Saúde Bucal para Gestantes e Puérperas
+     • Cuidado em Saúde Bucal para Pessoas com Deficiência na Atenção Primária à Saúde
+     • Cuidado em Saúde Bucal para Pessoas em Situações de Urgências Odontológicas
+     • Cuidado em Situações Frequentes de Dor
+     • Cuidado à Pessoa com Multimorbidade e Polimedicamentos
+     • Cuidadores e a Atenção Domiciliar
+     • Cuidados Básicos com a Saúde Bucal de Pessoas Idosas
+     • Cuidados de Enfermagem para a pessoa idosa na Atenção Primária à Saúde
+     • Curso Básico do SEI!/MS - 4.0
+     • Curso Saúde da Pessoa Idosa
+     • Curso de Aperfeiçoamento Multiprofissional de Preceptores para Integração Ensino e Serviço nos Territórios de Saúde
+     • Curso de Aperfeiçoamento em Atenção Domiciliar
+     • Curso de Aperfeiçoamento em Atenção Domiciliar 1
+     • Curso de Atualização em Saúde Mental da Infância e Adolescência no Âmbito da Rede de Atenção Psicossocial
+     • Curso de Capacitação Profissional em Implantação e Gerenciamento do Serviço de Atenção Domiciliar
+     • Curso de Capacitação Profissional em Princípios do Cuidado Domiciliar 1
+     • Curso de Capacitação a Distância em Saúde, Desastres e Desenvolvimento - versão 1
+     • Curso de Capacitação a Distância em Saúde, Desastres e Desenvolvimento - versão 2
+     • Curso de Capacitação a Distância em Saúde, Desastres e Desenvolvimento - versão 3
+     • Curso de Capacitação de Profissionais dos Núcleos de Apoio á Saúde da Família - NASF MS
+     • Curso de Capacitação em saúde Mental e trabalho em rede: demandas relacionadas ao consumo de álcool e outras drogas
+     • Curso de Especialização Estratégia Saúde da Família
+     • Curso de Especialização Multiprofissional na Atenção Básica
+     • Curso de Especialização em Atenção Básica em Saúde da Família
+     • Curso de Especialização em Atenção Domiciliar
+     • Curso de Especialização em Gestão do Cuidado em Saúde da Família
+     • Curso de Especialização em Saúde Coletiva com Concentração em Gestão da Atenção Básica - Ênfase em Saúde da Família (PROVAB)
+     • Curso de Especialização em Saúde Coletiva: concentração em Atenção Básica - Saúde da Família
+     • Curso de Especialização em Saúde Materno-Infantil
+     • Curso de Especialização em Saúde da Família
+     • Curso de Especialização em Saúde da Família - Educação a Distância
+     • Curso de Especialização na Atenção Básica
+     • Curso de Especialização, Pesquisa e Inovação em Saúde da Família
+     • Curso de Eventos Agudos em Situações Crônicas de Saúde
+     • Curso de Formação de Tutores - UnA-SUS
+     • Curso de Geoprocessamento em Saúde
+     • Curso de Gestão da Assistência Farmacêutica - EaD:  Aperfeiçoamento
+     • Curso de Gestão da Assistência Farmacêutica - EaD: Especialização
+     • Curso de Gestão da Assistência Farmacêutica:  EaD
+     • Curso de Introdução e Acolhimento aos Trabalhadores no AVA Moodle - A Saúde Baseada em Evidências e a Clínica Ampliada
+     • Curso de Introdução à Atenção Domiciliar
+     • Curso de Pós-Graduação em Atenção Básica em Saúde da Família
+     • Delineando um projeto de pesquisa
+     • Dengue: Casos Clínicos para Atualização do Manejo
+     • Dengue: Casos Clínicos para Atualização do Manejo (2024)
+     • Dermatologia na Atenção Básica
+     • Descompensação do Diabetes Mellitus e Alterações Agudas da Hipertensão Arterial Sistêmica (HAS)
+     • Desenvolvimento neuropsicomotor, sinais de alerta e intervenção precoce: um guia para profissionais de saúde.
+     • Design de Interfaces Digitais
+     • Desmistificando a Deficiência
+     • Diagnóstico da DRC
+     • Diagnóstico e Cuidado Onco-hematológico na Atenção Primária à Saúde - APS
+     • Direitos Humanos da Pessoa Idosa e da Pessoa Idosa com Deficiência
+     • Direitos Humanos e Saúde
+     • Doença de Chagas na Atenção Primária à Saúde
+     • Doenças do Aparelho Digestivo
+     • Doenças infectocontagiosas na atenção básica à saúde
+     • Doenças ocasionadas por vírus respiratórios emergentes, incluindo o COVID-19
+     • EducaSUS Metodologias de Educação em Saúde para a rede do Programa Saúde na Escola – PSE Anos Finais
+     • EducaSUS – Metodologias de Educação em Saúde para a rede do Programa Saúde na Escola – PSE – Educação Infantil
+     • EducaSUS – Metodologias de Educação em Saúde para a rede do Programa Saúde na Escola – PSE – Ensino Fundamental (anos iniciais)
+     • Educação Permanente em Saúde
+     • Elaborando um protocolo de ensaio clínico randomizado: considerações estatísticas, éticas e operacionais (ECR-III)
+     • Elaborando um protocolo de ensaio clínico randomizado: racional, objetivos e delineamento do estudo (ECR-I)
+     • Elaborando um protocolo de ensaio clínico: população, intervenções/exposições, randomização, desfechos e cegamento (ECR-II)
+     • Elaboração de Storyboard
+     • Encerramento de Projetos no Âmbito da Administração Pública
+     • Enfrentamento da COVID-19 e demais doenças virais
+     • Enfrentamento das Arboviroses
+     • Engajamento do Paciente
+     • Envelhecimento da População Brasileira
+     • Equidade em Prática no Sistema Único de Saúde
+     • Escuta de Crianças e Adolescentes na rede de serviços do SUS
+     • Especialização Multiprofissional em Saúde da Família
+     • Especialização em Atenção Básica
+     • Especialização em Atenção Básica de Saúde
+     • Especialização em Atenção Básica em Saúde
+     • Especialização em Atenção Domiciliar
+     • Especialização em Atenção Primária em Saúde
+     • Especialização em Epidemiologia
+     • Especialização em Gestão do Cuidado em Saúde da Família
+     • Especialização em Medicina de Família e Comunidade
+     • Especialização em Nefrologia Multidisciplinar
+     • Especialização em Saúde Digital
+     • Especialização em Saúde Mental
+     • Especialização em Saúde da Família
+     • Especialização em Saúde da Família - PEPSUS
+     • Especialização em Saúde da Família e Comunidade
+     • Especialização em Saúde da Pessoa Idosa
+     • Especialização em Vigilância em Saúde Ambiental
+     • Esquistossomose: Manejo Clínico e Epidemiológico na Atenção Básica
+     • Estimulação Precoce: crianças de zero a 3 anos com atraso no desenvolvimento neuropsicomotor
+     • Estratificação dos Perfis de Funcionalidades
+     • Estratégia amamenta e alimenta Brasil: formação de tutores
+     • Estratégia brasileira para a Saúde Digital: o que precisamos saber?
+     • Estratégia de prevenção e controle da obesidade infantil (PROTEJA)
+     • Estratégias Educacionais
+     • Estratégias de Prevenção da DRC em Pacientes dos Grupos de Risco
+     • Eventos Agudos em  Saúde Mental
+     • Eventos Agudos em Saúde Bucal
+     • Eventos Agudos em Situações Clínicas
+     • Eventos Agudos em Situações Crônicas de Saúde
+     • Exames Laboratoriais para o Diagnóstico da Filariose Linfática
+     • Execução e Monitoramento de Projetos no Âmbito da Administração Pública
+     • Ferramentas da Gestão do Cuidado à Saúde da Pessoa com Deficiência nos Serviços de Reabilitação
+     • Ferramentas de Abordagem clínica para um cuidado integral na APS
+     • Fundamentos Básicos de Biossegurança e Bioproteção
+     • Fundamentos da Gestão em Saúde
+     • Fundamentos e tecnologias para o enfrentamento da COVID-19 e de outras doenças virais
+     • Genomic Surveillance Applied to Infectious and Viral Diseases
+     • Gerenciamento da Comunicação em Gestão de Projetos na Administração Pública
+     • Gerenciamento de Aquisição de Bens e Serviços no Âmbito de Projetos da Administração Pública
+     • Gerenciamento de Risco no Âmbito de Projetos da Administração Pública
+     • Gerência de Serviços de Atenção Primária à Saúde
+     • Gestão Administrativa de Programas de Residência Médica
+     • Gestão Administrativa de Programas de Residência em Área Profissional da Saúde - modalidades uni e multiprofissional
+     • Gestão Local de Desastres Naturais para a Atenção Básica
+     • Gestão da Clínica na Atenção Básica
+     • Gestão da Formação para o SUS
+     • Gestão do Cuidado em Saúde da Família
+     • Gestão do Cuidado na Atenção Domiciliar
+     • Gestão e Financiamento das Ações da Vigilância em Saúde
+     • Governança em Projetos na Administração Pública
+     • Governança em Saúde Digital no Mundo e no Brasil
+     • Guia para o manejo de situações de violência doméstica contra a mulher na APS
+     • Hanseníase na Atenção Básica
+     • Hanseníase na Atenção Primária: inclusão social por meio do enfrentamento ao estigma e da discriminação
+     • Hanseníase na Atenção Primária: o cuidado integral em hanseníase
+     • Hanseníase na Atenção Primária: o programa de hanseníase nas políticas públicas de saúde no Brasil
+     • Hemograma, Anemia e Linfadenopatia
+     • Histórico do Sistema CEP/CONEP
+     • Homens e a Saúde no Trabalho
+     • Homens e atenção à saúde do trabalhador
+     • I Curso de Pós-Graduação (Especialização) em Atenção Primária à Saúde, a distância
+     • I Curso de Pós-Graduação (Especialização) em Saúde da Família, a distância (1º ciclo e 2º ciclo 1ª etapa  - Mais Médicos)
+     • I Curso de Pós-Graduação (Especialização) em Saúde da Família, a distância (2º ciclo 2ª etapa - Mais Médicos)
+     • I Curso de Pós-graduação (Especialização) Multiprofissional em Saúde das Famílias e das Comunidades
+     • Identificação dos Grupos de Risco para Doenças Renais Crônicas (DRC)
+     • Implantação e Gerenciamento do Serviço de Atenção Domiciliar
+     • Implementação das Recomendações para a Operacionalização da Política Nacional de Promoção da Saúde na Atenção Primária à Saúde (APS)
+     • Imunização em Gestantes
+     • Incorporação da Funcionalidade no Processo de Avaliação e Cuidado em Saúde da Pessoa com Deficiência
+     • Indicadores de Saúde
+     • Iniciação à Gestão de Projetos na Administração Pública
+     • Instrutivo sobre cuidado às crianças com desnutrição na Atenção Primária à Saúde
+     • Integração com a Rede Nacional de Dados em Saúde
+     • Intercorrências Agudas no Domicílio I
+     • Intercorrências Agudas no Domicílio II
+     • Intercorrências Agudas no Domicílio III
+     • Intercorrências na Saúde Sexual e Reprodutiva do Homem
+     • Intervenções de Promoção da Saúde no Território
+     • Introdução ao Diagnóstico Laboratorial de Tuberculose e outras Micobacterioses
+     • Introdução à Atenção Domiciliar
+     • Introdução à Avaliação em Saúde (Foco em Atenção Básica)
+     • Introdução à Biossegurança Aplicada a Laboratórios
+     • Introdução à Política de Atenção Integral à Saúde de Adolescentes em conflito com a Lei (PNAISARI)
+     • Introdução à Regulação no SUS
+     • Introdução à epidemiologia clínica
+     • Introdução à urgência e emergência na Atenção Básica
+     • Introdução às ferramentas de Administração Estratégica e de Planejamento para Gestores de Serviços de Reabilitação
+     • Investigação de Surtos e Epidemias
+     • Juventudes e Participação Social
+     • LOINC - Logical Observation Identifiers Names and Codes
+     • Licitação e Contratos Administrativos
+     • Liderança e Gestão de Conflito
+     • Linha de Cuidado para a Atenção Integral a Crianças e Adolescentes em Situação de Violência Sexual
+     • Linha de cuidados para atenção Integral à saúde da pessoa idosa
+     • Longitudinalidade do cuidado e o uso de tecnologias de informação na APS
+     • Malária na Atenção Básica
+     • Malária na Atenção Primária à Saúde
+     • Manejo Clínico da COVID-19 na Atenção Primária à Saúde
+     • Manejo Clínico das formas crônicas e epidemiologia da filariose
+     • Manejo Clínico de Chikungunya
+     • Manejo Clínico de Pacientes com DRC - Módulo Básico
+     • Manejo Clínico do Paciente com DRC - Módulo Avançado
+     • Manejo clínico da COVID-19 na Atenção Especializada
+     • Manejo da Coinfecção Tuberculose-HIV
+     • Manejo da Tuberculose na Atenção Primária à Saúde para População Geral
+     • Manejo da Tuberculose na Atenção Primária à Saúde para População Indígena
+     • Manejo da Tuberculose na Atenção Primária à Saúde para População Privada de Liberdade
+     • Manejo da Tuberculose na Atenção Primária à Saúde para População com HIV
+     • Manejo da Tuberculose na Atenção Primária à Saúde para População em Situação de Rua
+     • Manejo do Sarampo nos Serviços de Saúde
+     • Medicamentos na Atenção Primária no SUS
+     • Medicina Rural
+     • Medidas de proteção no manejo da COVID-19 na Atenção Especializada
+     • Medidas de proteção no manejo da COVID-19 na Atenção Primária à Saúde
+     • Microcefalia e infecção por vírus Zika: abordagem para a estimulação precoce na atenção domiciliar
+     • Monitoramento do Processo de Ensino e Aprendizagem
+     • Monitoramento e Avaliação das Ações em Saúde
+     • Monitoramento e Avaliação de Serviço de Atenção Domiciliar - AD20
+     • Monitoramento e Avaliação em Promoção da Saúde
+     • Monkeypox: uma abordagem geral para profissionais de saúde
+     • Morbimortalidade por causas externas da saúde do homem
+     • Morbimortalidade por causas externas na saúde do homem (2024)
+     • Mpox: Uma abordagem geral para profissionais de saúde
+     • Mudanças no Financiamento do SUS
+     • Método Clínico Centrado na Pessoa
+     • O Fazer da Saúde Indígena
+     • O Novo Coronavírus e a COVID-19
+     • O Papel do Desenho Instrucional na EAD
+     • O Processo de Trabalho no SUS e a Importância das Ações de Planejamento em Saúde
+     • O SUS na Formação de Recursos Humanos
+     • Objetivos de Aprendizagem
+     • Odontologia para Pacientes com Comprometimento Sistêmico
+     • Oftalmologia na Atenção Básica à Saúde
+     • Organização da Atenção à Saúde no SUS
+     • Organização das Ações de Imunizações no Município
+     • Organização das Ações para Vigilância, Prevenção e Controle de Doenças Transmitidas por Aedes Aegypti
+     • Organização do SUS
+     • Orientação para Abertura de Programa de Residência Médica
+     • Orientação para Abertura de Programa de Residência Médica (versão atualizada em maio/2023)
+     • Orientação para Abertura de Programa de Residência em Área Profissional da Saúde
+     • Orientação para Abertura de Programa de Residência em Área Profissional da Saúde (versão atualizada em maio/2023)
+     • Orientações Gerais ao Paciente com COVID-19 na Atenção Primária à Saúde
+     • Orientações sobre a COVID-19 na Atenção Especializada
+     • Oxigenoterapia e ventilação mecânica em atenção domiciliar (AD16)
+     • PORTOS - Português Online para a Saúde
+     • Padrões de TI para EAD
+     • Para elas: atenção integral à saúde da mulher em situação de violência
+     • Participação da Sociedade Civil Organizada na Preparação e Resposta às Emergências de Saúde Pública
+     • Participação e Controle Social
+     • Paternidade e Cuidado
+     • Paternidade e Cuidado (2024)
+     • Pensamento Computacional
+     • Planejamento das Práticas Educativas
+     • Planejamento de Projetos na Administração Pública
+     • Planejamento em Saúde
+     • Planejamento, Gestão e Gerenciamento: O Uso de Instrumento de Avaliação
+     • Plano de Comunicação em Saúde
+     • Plano de Contingência: dimensões para sua operacionalização
+     • Política Nacional de Atenção Integral à Saúde do Homem
+     • Política Nacional de Atenção ao Portador de Doença Renal Crônica
+     • Política Nacional de Humanização
+     • Políticas Públicas no enfrentamento da violência por parceiro íntimo
+     • Políticas públicas no enfrentamento da violência por parceiro íntimo (2024)
+     • População em Situação de Rua
+     • Potencializando a prática na APS: Ferramentas de Abordagem Comunitária e a Competência Cultural
+     • Potencializando a prática na APS: Ferramentas de abordagem familiar
+     • Potencializando a prática na APS: a gestão da clínica na APS
+     • Preceptoria de Medicina de Familia e Comunidade -  Ênfase em Clínica de MFC
+     • Preceptoria de Medicina de Familia e Comunidade -  Ênfase em Tutoria a Distância
+     • Preceptoria em Atenção Primária à Saúde
+     • Preparação de Planos de Contingência
+     • Prescrição, Concessão, Adaptação e Manutenção de Órteses, Próteses e Meios Auxiliares de Locomoção
+     • Prestação de Contas de Projetos no Âmbito da Administração Pública
+     • Prevenção ao suicídio
+     • Prevenção da Transmissão Vertical do HIV/AIDS, Hepatites Virais e Sífilis
+     • Prevenção de carências de micronutrientes na Atenção Primária à Saúde
+     • Prevenção e Manejo de Pacientes Oncológicos na Atenção Primária a Saúde
+     • Prevenção e controle de infecções (PCI) causadas pelo novo coronavírus (COVID-19)
+     • Prevenção e cuidados às doenças prevalentes em homens
+     • Prevenção e cuidados às doenças prevalentes em homens (2024)
+     • Princípios Metodológicos Básicos e Questões Éticas
+     • Princípios e Diretrizes da Promoção de Saúde
+     • Princípios para o cuidado domiciliar II
+     • Princípios para o cuidado domiciliar por profissionais de nível superior (AD13)
+     • Princípios, Diretrizes e Avanços do SUS
+     • Procedimentos Administrativos dos CEPs
+     • Procedimentos Operacionais da Plataforma Brasil
+     • Procedimentos em Atenção Primária
+     • Processo de Incorporação de Tecnologia em Saúde no SUS
+     • Processos de Trabalho e Redes de Atenção à Saúde
+     • Profissionalismo e Identidade Profissional do Preceptor
+     • Programa Academia da Saúde
+     • Programa Bolsa Família
+     • Programa de formação para organização e qualificação do cuidado às pessoas com Doenças Crônicas Não transmissíveis (DCNT) na Atenção Primária do Estado de Goiás para gestores da área da saúde
+     • Programa de formação para organização e qualificação do cuidado às pessoas com Doenças Crônicas Não transmissíveis (DCNT) na Atenção Primária do Estado de Goiás para profissionais da saúde
+     • Promovendo mudanças: comunicação inclusiva nos serviços de Atenção Primária à Saúde
+     • Promoção da Alimentação Adequada e Saudável na Atenção Básica - PAAS.
+     • Promoção da alimentação saudável na Atenção Básica
+     • Promoção da amamentação e da alimentação complementar saudável na Atenção Primária à Saúde (APS): recomendações do Guia Alimentar para Crianças Brasileiras Menores de 2 Anos
+     • Promoção da atividade física na Atenção Primária à Saúde e sua inserção nos instrumentos de planejamento e de gestão do SUS
+     • Promoção do acesso e equidade no âmbito da Atenção Primária à Saúde para o cuidado integral da população LGBTQIAPN+
+     • Promoção do aleitamento materno na Atenção Básica
+     • Promoção do ganho de peso adequado na gestação
+     • Promoção do uso racional de medicamentos na Atenção Básica
+     • Propedêutica Cardiovascular na Atenção Básica
+     • Proteger e Cuidar de adolescentes na APS
+     • Protocolo Clínico da COVID-19 na Atenção Primária à Saúde
+     • Práticas Educacionais no Contexto da Atenção à Saúde
+     • Práticas éticas e legais no enfrentamento da morte
+     • QualiGuia - Formação para utilização dos Protocolos de Uso do Guia Alimentar para a População Brasileira
+     • Queixas Comuns no Atendimento à Demanda Espontânea e Urgências e/ou Emergências na Atenção Primária à Saúde 2
+     • Queixas Mamárias
+     • Queixas comuns no atendimento à demanda espontânea e urgências e/ou emergências na Atenção Primária à Saúde 1
+     • Queixas de Lesões Anogenitais
+     • Raciocínio Clínico e Competência Diagnóstica
+     • Rastreamento, Check up e Prevenção Quaternária
+     • Reabilitação da Pessoa com Complicações Pós Acidente Vascular Encefálico (AVE)
+     • Reabilitação do paciente com condições pós-covid
+     • Reconhecendo a Norma Brasileira de Comercialização de Alimentos para Lactentes e Crianças de Primeira Infância, Bicos, Chupetas e Mamadeiras (NBCAL): formação para Profissionais da Rede de Atenção à Saúde
+     • Reconhecendo o sobrepeso e a obesidade no contexto da Atenção Primária à Saúde
+     • Reconhecimento do Território
+     • Rede Cegonha
+     • Rede Integrada e Cuidados Integrados
+     • Rede Nacional de Dados em Saúde: o que precisamos saber?
+     • Rede de Atenção à Saúde das Pessoas com Doenças Crônicas no Âmbito do Sistema Único de Saúde
+     • Rede de Atenção às Urgências no Âmbito do Sistema Único de Saúde
+     • Rede de Cuidado às Pessoas com Deficiência
+     • Rede de apoio às mulheres em situação de violência doméstica
+     • Rede de atenção às pessoas em situação de violência por parceiro íntimo
+     • Redes de atenção à violência por parceiro íntimo
+     • Redução da mortalidade materna I
+     • Redução da mortalidade materna II
+     • Regulação da Assistência Hospitalar
+     • Regulação das Urgências
+     • Regulação do Acesso Ambulatorial
+     • Regulação nas Redes de Atenção à Saúde
+     • Repositórios e sistemas de registro eletrônico em saúde
+     • Responsabilidade Fiscal na Gestão Pública
+     • Saúde Bucal da Gestante
+     • Saúde Indígena - Modalidade a Distância
+     • Saúde Mental
+     • Saúde Mental e Atenção Psicossocial na COVID-19
+     • Saúde Mental e o Cuidado às Doenças Crônicas não Transmissíveis (DCNT)
+     • Saúde Sexual e Reprodutiva I
+     • Saúde Sexual e Reprodutiva II
+     • Saúde Sexual e Reprodutiva e Atenção às Mulheres em Situação de Violência na Atenção Básica
+     • Saúde da Familia
+     • Saúde da Família
+     • Saúde da Família - ESF11
+     • Saúde da Família - ESF12
+     • Saúde da Família - Mais Médicos
+     • Saúde da Família - Profissionais da Atenção Básica
+     • Saúde da Família - Profissionais da Atenção Básica - Mais Médicos (PAB3)
+     • Saúde da Família - Profissionais da Atenção Básica - Mais Médicos (PAB5)
+     • Saúde da Família - Profissionais da Atenção Básica - Mais Médicos e PROVAB (PAB4)
+     • Saúde da Família - Profissionais da Atenção Básica - Mais Médicos e PROVAB (PAB6)
+     • Saúde da Família - Profissionais da Atenção Básica - PROVAB
+     • Saúde da Família - Profissionais da ESF
+     • Saúde da Família II
+     • Saúde da Mulher
+     • Saúde da Pessoa Idosa com Deficiência
+     • Saúde da Pessoa com Deficiência na Adolescência
+     • Saúde da Pessoa com Deficiência na Infância
+     • Saúde da Pessoa com Deficiência na Vida Adulta
+     • Saúde da População Negra
+     • Saúde das Populações de Fronteira
+     • Saúde das Populações do Campo, da Floresta e das Águas
+     • Saúde íntima da mulher: problemas clínicos comuns
+     • Segurança e ética no compartilhamento de dados pessoais de saúde
+     • Semiologia clínica 1
+     • Sistema de Produção
+     • Sistema de saúde brasileiro
+     • Situações Clínicas Comuns na Atenção Primária à Saúde
+     • Situações Clínicas Comuns na Atenção Primária à Saúde - Enfermagem
+     • Situações Clínicas Comuns na Atenção Primária à Saúde - Medicina
+     • Situações Clínicas Comuns na Atenção Primária à Saúde II - Enfermagem
+     • Situações Clínicas Comuns na Atenção Primária à Saúde II - Medicina
+     • Situações Odontológicas Comuns em Atenção Primária à Saúde
+     • Situações Relacionadas ao Atendimento à Demanda Espontânea na Atenção Primária à Saúde
+     • Tecnologias Digitais de Informação e Comunicação no Ensino em Saúde
+     • Tecnologias de Cuidado Integral em Saúde
+     • Telessaúde
+     • Terapia Renal Substitutiva
+     • Territorialização como instrumento do planejamento local na Atenção Básica
+     • Trabalho em Saúde
+     • Trajetória da Saúde Digital no Brasil
+     • Transmissão, vigilância, controle e prevenção da Febre Amarela
+     • Transtornos Mentais Graves e Persistentes - TMGP
+     • Tráfico de Pessoas e Migrantes Contrabandeados
+     • USO NOCIVO DE SUBSTÂNCIAS - ÁLCOOL
+     • Urgência e emergência no SUS: história e marcos legais
+     • Urgências e emergências cardiovasculares na Atenção Básica
+     • Uso Terapêutico de Tecnologias Assistivas
+     • Uso terapêutico de Tecnologias Assistivas: direitos das pessoas com deficiência e ampliação da comunicação
+     • Uso terapêutico de Tecnologias Assistivas: direitos das pessoas com deficiência e audição
+     • Uso terapêutico de Tecnologias Assistivas: direitos das pessoas com deficiência e habilidade física e motora
+     • Uso terapêutico de Tecnologias Assistivas: direitos das pessoas com deficiência e visão
+     • Vacinação contra Febre Amarela
+     • Vacinação contra o HPV
+     • Vacinação contra o Papilomavírus Humano (HPV)
+     • Vigilancia genómica aplicada a enfermedades infecciosas y virales
+     • Vigilância ESAVI: ênfase na notificação, investigação e no uso do e-SUS Notifica
+     • Vigilância Genômica aplicada às Doenças Infecciosas e Virais
+     • Vigilância Malacológica para o Controle da Esquistossomose
+     • Vigilância da Qualidade da Água para Consumo Humano - Versão 1
+     • Vigilância da Qualidade da Água para Consumo Humano - Versão 2
+     • Vigilância do Óbito Infantil, Fetal, Materno e por Causas Mal Definidas
+     • Vigilância e Prevenção das Violências e Acidentes
+     • Vigilância em Saúde do Trabalhador e Trabalhadora
+     • Vigilância em Saúde para a Eliminação da Esquistossomose
+     • Vigilância, Prevenção e Controle da Hanseníase
+     • Vigilância, Prevenção e Controle do HIV/AIDS, da Sífilis, das Hepatites Virais e de Outras Infecções Sexualmente Transmissíveis (IST)
+     • Vigilância, Prevenção e Eliminação da Tuberculose como Problema de Saúde Pública
+     • Vigilância, Prevenção, Atenção e Controle da Leishmaniose Visceral
+     • Violência por parceiro íntimo e perspectiva relacional de gênero
+     • Violência por parceiro íntimo e perspectiva relacional de gênero (2024)
+     • Violência por parceiro íntimo no contexto familiar
+     • Violência por parceiro íntimo: definições e tipologias
+     • Violência por parceiro íntimo: definições e tipologias (2024)
+     • Zika: Abordagem Clínica na Atenção Básica
+     • Zika: Abordagem clínica na atenção básica
+
+🧭 Estado: AM
+   📝 Ofertas: 5
+   📚 Cursos únicos: 2
+   💺 Vagas: 75,432
+   🏢 Instituições: 1
+   🏛️ Programas: 2
+   🎓 Cursos (únicos):
+     • Atenção à Saúde da População Ribeirinha
+     • Curso de Especialização Lato Sensu em Saúde da Família e Comunidade
+
+🧭 Estado: AP
+   📝 Ofertas: 0
+   📚 Cursos únicos: 0
+   💺 Vagas: 0
+   🏢 Instituições: 0
+   🏛️ Programas: 0
+   🎓 Cursos (únicos): nenhum
+
+🧭 Estado: BA
+   📝 Ofertas: 2
+   📚 Cursos únicos: 1
+   💺 Vagas: 3,660
+   🏢 Instituições: 1
+   🏛️ Programas: 1
+   🎓 Cursos (únicos):
+     • Especialização em Saúde da Família
+
+🧭 Estado: CE
+   📝 Ofertas: 0
+   📚 Cursos únicos: 0
+   💺 Vagas: 0
+   🏢 Instituições: 0
+   🏛️ Programas: 0
+   🎓 Cursos (únicos): nenhum
+
+🧭 Estado: DF
+   📝 Ofertas: 0
+   📚 Cursos únicos: 0
+   💺 Vagas: 0
+   🏢 Instituições: 0
+   🏛️ Programas: 0
+   🎓 Cursos (únicos): nenhum
+
+🧭 Estado: ES
+   📝 Ofertas: 35
+   📚 Cursos únicos: 7
+   💺 Vagas: 105,740
+   🏢 Instituições: 1
+   🏛️ Programas: 11
+   🎓 Cursos (únicos):
+     • Abordagem da Violência na Atenção Domiciliar
+     • Atenção à Saúde Auditiva
+     • Curso de Especialização em Saúde da Família
+     • Curso de Especialização em Saúde da Pessoa Idosa
+     • Doenças Endócrino-Metabólicas e Nutrição
+     • Judicialização da Saúde em Atenção Domiciliar
+     • Política Nacional de Saúde Integral Lésbicas, Gays, Bissexuais, Travestis e Transexuais
+
+🧭 Estado: GO
+   📝 Ofertas: 0
+   📚 Cursos únicos: 0
+   💺 Vagas: 0
+   🏢 Instituições: 0
+   🏛️ Programas: 0
+   🎓 Cursos (únicos): nenhum
+
+🧭 Estado: MA
+   📝 Ofertas: 40
+   📚 Cursos únicos: 12
+   💺 Vagas: 1,416,000
+   🏢 Instituições: 1
+   🏛️ Programas: 4
+   🎓 Cursos (únicos):
+     • Atenção Integral à Saúde da Pessoa Idosa - Módulo I
+     • Atenção Integral à Saúde da Pessoa Idosa - Módulo II
+     • Atualização do Manejo Clínico da Dengue
+     • Atualização do Manejo Clínico da Influenza
+     • Ações para Controle da Tuberculose na Atenção Básica
+     • Dengue: Casos Clínicos para Atualização do Manejo
+     • Direitos autorais para produção de recursos educacionais em EAD
+     • Hanseníase na Atenção Básica
+     • Manejo da Coinfecção Tuberculose-HIV
+     • Manejo da Coinfecção Tuberculose-HIV (TB-HIV)
+     • Organização de serviços para o atendimento de pessoas coinfectadas por TB-HIV
+     • Saúde da População Negra
+
+🧭 Estado: MG
+   📝 Ofertas: 0
+   📚 Cursos únicos: 0
+   💺 Vagas: 0
+   🏢 Instituições: 0
+   🏛️ Programas: 0
+   🎓 Cursos (únicos): nenhum
+
+🧭 Estado: MS
+   📝 Ofertas: 0
+   📚 Cursos únicos: 0
+   💺 Vagas: 0
+   🏢 Instituições: 0
+   🏛️ Programas: 0
+   🎓 Cursos (únicos): nenhum
+
+🧭 Estado: MT
+   📝 Ofertas: 0
+   📚 Cursos únicos: 0
+   💺 Vagas: 0
+   🏢 Instituições: 0
+   🏛️ Programas: 0
+   🎓 Cursos (únicos): nenhum
+
+🧭 Estado: PA
+   📝 Ofertas: 0
+   📚 Cursos únicos: 0
+   💺 Vagas: 0
+   🏢 Instituições: 0
+   🏛️ Programas: 0
+   🎓 Cursos (únicos): nenhum
+
+🧭 Estado: PB
+   📝 Ofertas: 0
+   📚 Cursos únicos: 0
+   💺 Vagas: 0
+   🏢 Instituições: 0
+   🏛️ Programas: 0
+   🎓 Cursos (únicos): nenhum
+
+🧭 Estado: PE
+   📝 Ofertas: 0
+   📚 Cursos únicos: 0
+   💺 Vagas: 0
+   🏢 Instituições: 0
+   🏛️ Programas: 0
+   🎓 Cursos (únicos): nenhum
+
+🧭 Estado: PI
+   📝 Ofertas: 0
+   📚 Cursos únicos: 0
+   💺 Vagas: 0
+   🏢 Instituições: 0
+   🏛️ Programas: 0
+   🎓 Cursos (únicos): nenhum
+
+🧭 Estado: PR
+   📝 Ofertas: 0
+   📚 Cursos únicos: 0
+   💺 Vagas: 0
+   🏢 Instituições: 0
+   🏛️ Programas: 0
+   🎓 Cursos (únicos): nenhum
+
+🧭 Estado: RJ
+   📝 Ofertas: 10
+   📚 Cursos únicos: 4
+   💺 Vagas: 60,572
+   🏢 Instituições: 1
+   🏛️ Programas: 1
+   🎓 Cursos (únicos):
+     • Aperfeiçoamento em Atenção Integral à Saúde - Doenças Negligenciadas
+     • Autocuidado em saúde e a Literacia para a promoção da saúde e a prevenção de doenças crônicas na Atenção Primária à Saúde
+     • Formação Técnica em Órteses e Próteses
+     • Formação de Tutores - Aperfeiçoamento em Atenção Integral à Saúde - Doenças Negligenciadas
+
+🧭 Estado: RN
+   📝 Ofertas: 0
+   📚 Cursos únicos: 0
+   💺 Vagas: 0
+   🏢 Instituições: 0
+   🏛️ Programas: 0
+   🎓 Cursos (únicos): nenhum
+
+🧭 Estado: RO
+   📝 Ofertas: 0
+   📚 Cursos únicos: 0
+   💺 Vagas: 0
+   🏢 Instituições: 0
+   🏛️ Programas: 0
+   🎓 Cursos (únicos): nenhum
+
+🧭 Estado: RR
+   📝 Ofertas: 0
+   📚 Cursos únicos: 0
+   💺 Vagas: 0
+   🏢 Instituições: 0
+   🏛️ Programas: 0
+   🎓 Cursos (únicos): nenhum
+
+🧭 Estado: RS
+   📝 Ofertas: 22
+   📚 Cursos únicos: 9
+   💺 Vagas: 459,960
+   🏢 Instituições: 1
+   🏛️ Programas: 6
+   🎓 Cursos (únicos):
+     • Curso de Especialização em Saúde da Família
+     • Documentos Médicos
+     • Especialização em Medicina de Família e Comunidade
+     • Especialização em Saúde da Família - PROVAB 2012
+     • Especialização em Saúde da Família - PROVAB 2013
+     • Especialização em Saúde da Família - Turma A
+     • Especialização em Saúde da Família - Turma B
+     • Vigilancia y Control de Vectores de Importancia en Salud Pública
+     • Vigilância e Controle de Vetores de Importância em Saúde Pública
+
+🧭 Estado: SC
+   📝 Ofertas: 0
+   📚 Cursos únicos: 0
+   💺 Vagas: 0
+   🏢 Instituições: 0
+   🏛️ Programas: 0
+   🎓 Cursos (únicos): nenhum
+
+🧭 Estado: SE
+   📝 Ofertas: 0
+   📚 Cursos únicos: 0
+   💺 Vagas: 0
+   🏢 Instituições: 0
+   🏛️ Programas: 0
+   🎓 Cursos (únicos): nenhum
+
+🧭 Estado: SP
+   📝 Ofertas: 0
+   📚 Cursos únicos: 0
+   💺 Vagas: 0
+   🏢 Instituições: 0
+   🏛️ Programas: 0
+   🎓 Cursos (únicos): nenhum
+
+🧭 Estado: TO
+   📝 Ofertas: 0
+   📚 Cursos únicos: 0
+   💺 Vagas: 0
+   🏢 Instituições: 0
+   🏛️ Programas: 0
+   🎓 Cursos (únicos): nenhum
+
+
+================================================================================
+📊 Sistema de Análise UNA-SUS - Relatório Gerado Automaticamente
+================================================================================

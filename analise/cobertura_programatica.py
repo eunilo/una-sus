@@ -61,12 +61,29 @@ class CoberturaProgramatica:
             "coluna_programas": coluna_programas,
             "programas_com_cobertura": 0,
             "programas_sem_cobertura": 0,
+            "cursos_sem_cobertura_total": 0,
+            "cursos_sem_cobertura": [],
             "cobertura_por_programa": {},
             "lacunas_programaticas": [],
             "concentracao_programatica": {},
             "distribuicao_geografica": {},
             "timestamp_analise": datetime.now().isoformat(),
         }
+
+        # Identificar cursos sem cobertura (programa vazio/nulo)
+        coluna_curso = "no_curso" if "no_curso" in self.dados.columns else None
+        coluna_id_curso = (
+            "co_seq_curso" if "co_seq_curso" in self.dados.columns else None
+        )
+        coluna_instituicao = "no_orgao" if "no_orgao" in self.dados.columns else None
+
+        sem_programa = self.dados[self.dados[coluna_programas].isna() | (self.dados[coluna_programas] == "")]
+        if not sem_programa.empty:
+            # Consolidar por curso para evitar duplicidade de ofertas
+            colunas_unicas = [c for c in [coluna_id_curso, coluna_curso, coluna_instituicao] if c]
+            cursos_sem = sem_programa[colunas_unicas].drop_duplicates()
+            cobertura["cursos_sem_cobertura_total"] = len(cursos_sem)
+            cobertura["cursos_sem_cobertura"] = cursos_sem.to_dict("records")
 
         # Contar programas únicos
         programas_unicos = self.dados[coluna_programas].dropna().unique()
@@ -128,8 +145,10 @@ class CoberturaProgramatica:
             # Classificar cobertura
             if cobertura_programa["quantidade_cursos"] > 0:
                 cobertura["programas_com_cobertura"] += 1
+            else:
+                cobertura["programas_sem_cobertura"] += 1
 
-                # ANÁLISE SIMPLIFICADA - FOCADA APENAS NA QUANTIDADE DE CURSOS
+            # ANÁLISE SIMPLIFICADA - FOCADA APENAS NA QUANTIDADE DE CURSOS
             # Critério único: Programas com poucos cursos (menos de 10)
             if cobertura_programa["quantidade_cursos"] < 10:
                 cobertura["lacunas_programaticas"].append(
@@ -143,8 +162,6 @@ class CoberturaProgramatica:
                         ),
                     }
                 )
-            else:
-                cobertura["programas_sem_cobertura"] += 1
 
             cobertura["cobertura_por_programa"][programa] = cobertura_programa
 
@@ -189,7 +206,7 @@ class CoberturaProgramatica:
 
         self.cobertura = cobertura
         print(
-            f"✅ Análise de cobertura concluída: {cobertura['programas_com_cobertura']} programas com cobertura"
+            f"✅ Análise de cobertura concluída: {cobertura['programas_com_cobertura']} cursos com cobertura"
         )
 
         return cobertura
@@ -211,7 +228,7 @@ class CoberturaProgramatica:
             f"Total de programas: {self.cobertura['programas_com_cobertura'] + self.cobertura['programas_sem_cobertura']}"
         )
         texto.append(
-            f"Programas com cobertura: {self.cobertura['programas_com_cobertura']}"
+            f"Cursos com cobertura: {self.cobertura['programas_com_cobertura']}"
         )
         texto.append(
             f"Programas sem cobertura: {self.cobertura['programas_sem_cobertura']}"
@@ -219,7 +236,7 @@ class CoberturaProgramatica:
         texto.append("")
 
         # Programas com mais cursos
-        texto.append("🏆 PROGRAMAS COM MAIOR COBERTURA (REGISTROS):")
+        texto.append("🏆 PROGRAMAS COM MAIOR COBERTURA (CURSOS):")
         for i, (programa, quantidade) in enumerate(
             list(
                 self.cobertura["concentracao_programatica"][

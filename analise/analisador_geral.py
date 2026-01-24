@@ -37,6 +37,7 @@ class AnalisadorGeral:
         self.database_path = None
         self.csv_path = None
         self.estatisticas = {}
+        self.base_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 
     def carregar_dados(self) -> bool:
         """
@@ -46,7 +47,7 @@ class AnalisadorGeral:
             True se os dados foram carregados com sucesso
         """
         # Procurar por arquivos de dados na raiz e na pasta data/
-        diretorios = [".", "data"]
+        diretorios = [self.base_dir, os.path.join(self.base_dir, "data")]
         arquivos_db = []
         arquivos_csv = []
 

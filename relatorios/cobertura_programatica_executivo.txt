@@ -3,27 +3,51 @@
 🏥 UNA-SUS - SISTEMA DE ANÁLISE DE PROGRAMAS DE GOVERNO
 ================================================================================
 📋 RELATÓRIO EXECUTIVO - COBERTURA PROGRAMÁTICA
-📅 Gerado em: 30/07/2025 às 10:40:08
+📅 Gerado em: 23/01/2026 às 12:07:54
 ================================================================================
 
 📈 RESUMO EXECUTIVO
 ==================================================
-✅ Programas com Cobertura: 31
-❌ Programas sem Cobertura: 17
-📊 Total de Registros: 1,657
+✅ Cursos com Cobertura: 32
+❌ Cursos sem Cobertura: 0
+📊 Total de Registros: 1,717
+
+📌 CURSOS SEM COBERTURA (SEM PROGRAMA)
+==================================================
+ 1. Abordagem Cuidados para o desenvolvimento da criança na atenção primária a saúde
+     🏢 Universidade Federal de Minas Gerais
+ 2. Abordagem familiar e manejo das fragilidades e da rede de apoio
+     🏢 Fundação Oswaldo Cruz - Brasília
+ 3. A consulta da criança e da mulher/pessoa no puerpério na primeira semana de vida na Atenção Primária à Saúde
+     🏢 Universidade Federal de Santa Catarina
+ 4. Atributos da Atenção Primária à Saúde: Conceito e Princípios Norteadores
+     🏢 Universidade Federal de Minas Gerais
+ 5. Cuidado Paliativo na Rede de Atenção do Sistema Único de Saúde
+     🏢 Universidade Federal de Minas Gerais
+ 6. Curso Básico do SEI!/MS - 4.0
+     🏢 Fundação Oswaldo Cruz - Brasília
+ 7. Dengue: Casos Clínicos para Atualização do Manejo (2024)
+     🏢 Fundação Oswaldo Cruz - Brasília
+ 8. Desenvolvimento neuropsicomotor, sinais de alerta e intervenção precoce: um guia para profissionais de saúde.
+     🏢 Universidade Federal de Santa Catarina
+ 9. Direitos Humanos da Pessoa Idosa e da Pessoa Idosa com Deficiência
+     🏢 Fundação Oswaldo Cruz - Brasília
+10. Direitos Humanos e Saúde
+     🏢 Fundação Oswaldo Cruz - Brasília
+... e mais 30 cursos
 
 🏆 TOP 10 PROGRAMAS POR CONCENTRAÇÃO
 ==================================================
- 1. UNA-SUS                                       [█████████████░░░░░░░░░░░░░░░░░] 45.9% 761
- 2. UNA-SUS, SE/UNASUS                            [███░░░░░░░░░░░░░░░░░░░░░░░░░░░] 11.6% 193
- 3. UNA-SUS, Módulos PROVAB                       [██░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 6.9% 115
- 4. UNA-SUS, Marcador Mais Medicos - PROVAB, Mais [█░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 5.6% 93
- 5. UNA-SUS, Atenção Domiciliar                   [█░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 4.7% 78
- 6. UNA-SUS, Especialização em Saúde da Família,  [█░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 4.5% 74
- 7. UNA-SUS, SAS                                  [░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 2.8% 46
- 8. UNA-SUS, SE/UNASUS, SAS                       [░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 2.2% 37
- 9. UNA-SUS, Especialização em Saúde da Família   [░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 1.5% 25
-10. UNA-SUS, SE/UNASUS, Módulos PROVAB            [░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 1.4% 23
+ 1. UNA-SUS                                            [█████████████░░░░░░░░░░░░░░░░░] 45.3% 778
+ 2. UNA-SUS, SE/UNASUS                                 [███░░░░░░░░░░░░░░░░░░░░░░░░░░░] 12.3% 212
+ 3. UNA-SUS, Módulos PROVAB                            [██░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 6.7% 115
+ 4. UNA-SUS, Marcador Mais Medicos - PROVAB, Mais Médicos [█░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 5.5% 94
+ 5. UNA-SUS, Atenção Domiciliar                        [█░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 4.5% 78
+ 6. UNA-SUS, Especialização em Saúde da Família, Marcador Mais Medicos - PROVAB, Mais Médicos [█░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 4.3% 74
+ 7. UNA-SUS, SAS                                       [░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 2.7% 47
+ 8. UNA-SUS, SE/UNASUS, SAS                            [░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 2.2% 37
+ 9. UNA-SUS, Especialização em Saúde da Família        [░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 1.5% 25
+10. UNA-SUS, Cursos COVID-19                           [░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 1.5% 25
 
 ⚠️ PRINCIPAIS LACUNAS IDENTIFICADAS
 ==================================================
@@ -43,10 +67,10 @@
      📊 Apenas 9 registros
  8. 🟡 UNA-SUS, PROVAB, Marcador Mais Medicos - PROVAB
      📊 Apenas 9 registros
- 9. 🟡 UNA-SUS, Especialização, Marcador Mais Medicos - PROVAB, PROVAB 2014
-     📊 Apenas 5 registros
-10. 🟡 UNA-SUS, Especialização, Marcador Mais Medicos - PROVAB, Mais Médicos 2014
+ 9. 🟡 UNA-SUS, Especialização, Marcador Mais Medicos - PROVAB, Mais Médicos 2014
      📊 Apenas 7 registros
+10. 🟡 UNA-SUS, Especialização, Marcador Mais Medicos - PROVAB, PROVAB 2014
+     📊 Apenas 5 registros
 
 
 ================================================================================

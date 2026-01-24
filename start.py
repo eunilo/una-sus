@@ -11,7 +11,30 @@ import os
 import shutil
 import subprocess
 import sys
+import io
 from datetime import datetime
+
+# Garantir execução a partir da raiz do projeto
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+os.chdir(BASE_DIR)
+
+# Tentar usar automaticamente o Python do venv, se existir
+def garantir_venv():
+    """Reexecuta o script usando o Python do .venv, se necessário."""
+    if sys.prefix != getattr(sys, "base_prefix", sys.prefix):
+        return
+
+    venv_python = os.path.join(BASE_DIR, ".venv", "Scripts", "python.exe")
+    if os.path.exists(venv_python):
+        os.execv(venv_python, [venv_python, *sys.argv])
+
+
+# Garantir saída compatível no Windows (evita erro de emoji/acentos)
+if os.name == "nt":
+    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
+    sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding="utf-8", errors="replace")
+
+garantir_venv()
 
 
 def limpar_tela():
@@ -66,6 +89,31 @@ def limpar_dados_coletados():
     print("✅ Limpeza concluída!")
 
 
+def limpar_relatorios():
+    """Remove todos os relatórios gerados."""
+    print("🧹 Limpando relatórios...")
+
+    pasta = "relatorios"
+    if not os.path.exists(pasta):
+        os.makedirs(pasta, exist_ok=True)
+        print("ℹ️ Pasta 'relatorios' não existia. Criada.")
+        return
+
+    removidos = 0
+    for item in os.listdir(pasta):
+        caminho = os.path.join(pasta, item)
+        try:
+            if os.path.isdir(caminho):
+                shutil.rmtree(caminho)
+            else:
+                os.remove(caminho)
+            removidos += 1
+        except Exception as e:
+            print(f"  ⚠️ Erro ao remover {item}: {e}")
+
+    print(f"✅ Relatórios limpos: {removidos} itens removidos.")
+
+
 def executar_varredura_completa():
     """Executa a varredura completa com dados limpos."""
     print("🚀 Iniciando varredura completa...")
@@ -90,9 +138,21 @@ def verificar_banco_dados():
     """Verifica o banco de dados coletado."""
     print("📊 Verificando banco de dados...")
 
-    # Verificar se existe database
+    # Verificar se existe database (raiz e data/)
     arquivos_db = [f for f in os.listdir(".") if f.endswith(".db")]
     arquivos_csv = [f for f in os.listdir(".") if f.endswith(".csv")]
+    arquivos_db_data = []
+    arquivos_csv_data = []
+    if os.path.exists("data"):
+        arquivos_db_data = [
+            os.path.join("data", f) for f in os.listdir("data") if f.endswith(".db")
+        ]
+        arquivos_csv_data = [
+            os.path.join("data", f) for f in os.listdir("data") if f.endswith(".csv")
+        ]
+
+    arquivos_db.extend(arquivos_db_data)
+    arquivos_csv.extend(arquivos_csv_data)
 
     if not arquivos_db and not arquivos_csv:
         print("❌ Nenhum banco de dados encontrado!")
@@ -176,6 +236,8 @@ def mostrar_menu():
     print("  6. 📈 Análise Completa dos Dados")
     print("  7. 📊 Estatísticas Básicas")
     print("  8. 📋 Gerar Relatórios")
+    print("  9. 🧪 Diagnóstico (erros e dependências)")
+    print(" 10. 🧹 Limpar Relatórios")
     print("  0. ❌ Sair")
     print()
 
@@ -184,7 +246,7 @@ def verificar_dependencias():
     """Verifica se todas as dependências estão instaladas."""
     print("🔧 Verificando dependências...")
 
-    dependencias = ["pandas", "requests", "bs4"]
+    dependencias = ["pandas", "requests", "bs4", "openpyxl", "lxml"]
 
     for dep in dependencias:
         try:
@@ -196,6 +258,52 @@ def verificar_dependencias():
     print()
     print("💡 Para instalar dependências faltantes:")
     print("   pip install pandas requests beautifulsoup4")
+
+
+def diagnostico_sistema():
+    """Verifica erros comuns e instala dependências faltantes."""
+    print("🧪 Diagnóstico do sistema...")
+
+    # Garantir diretórios básicos
+    for diretorio in ["data", "logs", "checkpoints"]:
+        os.makedirs(diretorio, exist_ok=True)
+
+    # Verificar dependências e instalar faltantes
+    dependencias = {
+        "pandas": "pandas",
+        "requests": "requests",
+        "bs4": "beautifulsoup4",
+        "openpyxl": "openpyxl",
+        "lxml": "lxml",
+    }
+
+    faltantes = []
+    for modulo, pacote in dependencias.items():
+        try:
+            __import__(modulo)
+            print(f"  ✅ {modulo} instalado")
+        except ImportError:
+            print(f"  ❌ {modulo} não encontrado")
+            faltantes.append(pacote)
+
+    if faltantes:
+        print("\n📦 Instalando dependências faltantes...")
+        try:
+            usando_venv = sys.prefix != getattr(sys, "base_prefix", sys.prefix)
+            comando = [sys.executable, "-m", "pip", "install"]
+            if not usando_venv:
+                comando.append("--user")
+            comando.extend(faltantes)
+            subprocess.check_call(comando)
+            print("✅ Dependências instaladas com sucesso!")
+        except subprocess.CalledProcessError as e:
+            print(f"❌ Falha ao instalar dependências: {e}")
+    else:
+        print("\n✅ Nenhuma dependência faltante.")
+
+    # Verificar banco de dados
+    print("\n📊 Verificação de dados:")
+    verificar_banco_dados()
 
 
 def executar_analise_completa():
@@ -350,7 +458,7 @@ def main():
         try:
             mostrar_menu()
 
-            opcao = input("📝 Escolha uma opção (0-8): ").strip()
+            opcao = input("📝 Escolha uma opção (0-10): ").strip()
 
             if opcao == "0":
                 print("👋 Até logo!")
@@ -394,8 +502,16 @@ def main():
                 print("\n" + "=" * 50)
                 gerar_relatorios()
                 input("\n⏸️ Pressione ENTER para continuar...")
+            elif opcao == "9":
+                print("\n" + "=" * 50)
+                diagnostico_sistema()
+                input("\n⏸️ Pressione ENTER para continuar...")
+            elif opcao == "10":
+                print("\n" + "=" * 50)
+                limpar_relatorios()
+                input("\n⏸️ Pressione ENTER para continuar...")
             else:
-                print("❌ Opção inválida! Digite um número de 0 a 8.")
+                print("❌ Opção inválida! Digite um número de 0 a 10.")
                 input("\n⏸️ Pressione ENTER para continuar...")
 
         except KeyboardInterrupt:

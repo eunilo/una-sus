@@ -118,6 +118,44 @@ class RelatoriosVisuais:
 
         return "\n".join(resultado)
 
+    def _status_campos_programas(self) -> List[str]:
+        """Gera diagnóstico de preenchimento dos campos de programas."""
+        linhas = []
+        if self.dados is None or self.dados.empty:
+            linhas.append("⚠️ Dados não disponíveis para validar campos.")
+            return linhas
+
+        campos_programas = ["programas_governo"]
+        total_registros = len(self.dados)
+
+        for campo in campos_programas:
+            if campo not in self.dados.columns:
+                linhas.append(f"❌ Campo ausente: {campo}")
+                continue
+
+            preenchidos = self.dados[campo].notna() & (self.dados[campo] != "")
+            total_preenchidos = int(preenchidos.sum())
+            total_vazios = total_registros - total_preenchidos
+            percentual = (total_preenchidos / total_registros) * 100 if total_registros else 0
+
+            linhas.append(f"✅ Campo: {campo}")
+            linhas.append(f"   • Preenchidos: {total_preenchidos:,}")
+            linhas.append(f"   • Vazios: {total_vazios:,}")
+            linhas.append(f"   • Percentual: {percentual:.1f}%")
+
+            exemplos = (
+                self.dados.loc[preenchidos, campo]
+                .value_counts()
+                .head(5)
+                .to_dict()
+            )
+            if exemplos:
+                linhas.append("   • Exemplos (top 5):")
+                for nome, qtd in exemplos.items():
+                    linhas.append(f"     - {nome}: {qtd:,}")
+
+        return linhas
+
     def gerar_relatorio_mapeamento(self, mapeamento: Dict[str, Any]) -> str:
         """
         Gera relatório visual do mapeamento de programas.
@@ -142,6 +180,12 @@ class RelatoriosVisuais:
         )
         relatorio.append(f"📚 Total de Cursos: {mapeamento.get('total_cursos', 0):,}")
         relatorio.append(f"🎓 Total de Ofertas: {mapeamento.get('total_ofertas', 0):,}")
+        relatorio.append("")
+
+        # Diagnóstico de campos de programas
+        relatorio.append("🧪 DIAGNÓSTICO DOS CAMPOS DE PROGRAMAS")
+        relatorio.append("-" * 50)
+        relatorio.extend(self._status_campos_programas())
         relatorio.append("")
 
         # Top programas por cursos
@@ -208,10 +252,10 @@ class RelatoriosVisuais:
         relatorio.append("📈 RESUMO DA COBERTURA")
         relatorio.append("-" * 40)
         relatorio.append(
-            f"✅ Programas com Cobertura: {cobertura.get('programas_com_cobertura', 0):,}"
+            f"✅ Cursos com Cobertura: {cobertura.get('programas_com_cobertura', 0):,}"
         )
         relatorio.append(
-            f"❌ Programas sem Cobertura: {cobertura.get('programas_sem_cobertura', 0):,}"
+            f"❌ Cursos sem Cobertura: {cobertura.get('programas_sem_cobertura', 0):,}"
         )
         relatorio.append(
             f"📊 Total de Registros: {cobertura.get('total_registros', 0):,}"
@@ -223,7 +267,7 @@ class RelatoriosVisuais:
             concentracao = cobertura["concentracao_programatica"]
 
             if "programas_com_mais_cursos" in concentracao:
-                relatorio.append("🏆 CONCENTRAÇÃO POR REGISTROS")
+                relatorio.append("🏆 CONCENTRAÇÃO POR PROGRAMA")
                 relatorio.append("-" * 50)
                 for i, (programa, quantidade) in enumerate(
                     list(concentracao["programas_com_mais_cursos"].items())[:10], 1
@@ -231,9 +275,8 @@ class RelatoriosVisuais:
                     barra = self.criar_barra_progresso(
                         quantidade, cobertura["total_registros"], 30
                     )
-                    relatorio.append(
-                        f"{i:2d}. {programa[:35]:<35} {barra} {quantidade:,}"
-                    )
+                    # Manter nome completo com espaçamento adequado
+                    relatorio.append(f"{i:2d}. {programa:<45} {barra} {quantidade:,}")
                 relatorio.append("")
 
         # Todos os programas com seus registros detalhados
@@ -389,6 +432,76 @@ class RelatoriosVisuais:
         relatorio.append(self.gerar_rodape())
         return "\n".join(relatorio)
 
+    def gerar_relatorio_distribuicao_completo(
+        self, distribuicao: Dict[str, Any]
+    ) -> str:
+        """
+        Gera relatório completo da distribuição geográfica com ofertas por estado.
+
+        Args:
+            distribuicao: Dados da distribuição
+
+        Returns:
+            String com relatório completo formatado
+        """
+        if not distribuicao:
+            return "❌ Nenhum dado de distribuição disponível!"
+
+        relatorio = []
+        relatorio.append(
+            self.gerar_cabecalho("Distribuição Geográfica Completa por Estado")
+        )
+
+        # Resumo geral
+        relatorio.append("🗺️ RESUMO GERAL")
+        relatorio.append("-" * 50)
+        relatorio.append(
+            f"📍 Estados com Dados: {distribuicao.get('estados_identificados', 0)}"
+        )
+        relatorio.append(
+            f"❓ Estados sem Identificação: {distribuicao.get('estados_sem_identificacao', 0)}"
+        )
+        relatorio.append(
+            f"🏆 Polos Educacionais: {len(distribuicao.get('polos_educacionais', {}))}"
+        )
+        relatorio.append(
+            f"⚠️ Desertos Educacionais: {len(distribuicao.get('desertos_educacionais', []))}"
+        )
+        relatorio.append("")
+
+        # Detalhamento por estado
+        relatorio.append("📌 OFERTAS POR ESTADO (DETALHADO)")
+        relatorio.append("-" * 80)
+
+        distribuicao_estados = distribuicao.get("distribuicao_por_estado", {})
+        for estado in sorted(distribuicao_estados.keys()):
+            dados = distribuicao_estados[estado]
+            ofertas = dados.get("ofertas", dados.get("cursos", 0))
+            cursos_unicos = dados.get("total_cursos_unicos", 0)
+            vagas = dados.get("vagas", 0)
+            instituicoes = dados.get("total_instituicoes", 0)
+            programas = dados.get("total_programas", 0)
+
+            relatorio.append(f"🧭 Estado: {estado}")
+            relatorio.append(f"   📝 Ofertas: {ofertas:,}")
+            relatorio.append(f"   📚 Cursos únicos: {cursos_unicos:,}")
+            relatorio.append(f"   💺 Vagas: {vagas:,}")
+            relatorio.append(f"   🏢 Instituições: {instituicoes:,}")
+            relatorio.append(f"   🏛️ Programas: {programas:,}")
+
+            cursos = dados.get("cursos_unicos", [])
+            if cursos:
+                relatorio.append("   🎓 Cursos (únicos):")
+                for curso in sorted(cursos):
+                    relatorio.append(f"     • {curso}")
+            else:
+                relatorio.append("   🎓 Cursos (únicos): nenhum")
+
+            relatorio.append("")
+
+        relatorio.append(self.gerar_rodape())
+        return "\n".join(relatorio)
+
     def gerar_relatorio_cobertura_executivo(self, cobertura: Dict[str, Any]) -> str:
         """
         Gera relatório executivo da cobertura programática (resumido).
@@ -411,15 +524,29 @@ class RelatoriosVisuais:
         relatorio.append("📈 RESUMO EXECUTIVO")
         relatorio.append("=" * 50)
         relatorio.append(
-            f"✅ Programas com Cobertura: {cobertura.get('programas_com_cobertura', 0):,}"
+            f"✅ Cursos com Cobertura: {cobertura.get('programas_com_cobertura', 0):,}"
         )
         relatorio.append(
-            f"❌ Programas sem Cobertura: {cobertura.get('programas_sem_cobertura', 0):,}"
+            f"❌ Cursos sem Cobertura: {cobertura.get('programas_sem_cobertura', 0):,}"
         )
         relatorio.append(
             f"📊 Total de Registros: {cobertura.get('total_registros', 0):,}"
         )
         relatorio.append("")
+
+        # Cursos sem cobertura (antes da análise completa)
+        cursos_sem = cobertura.get("cursos_sem_cobertura", [])
+        if cursos_sem:
+            relatorio.append("📌 CURSOS SEM COBERTURA (SEM PROGRAMA)")
+            relatorio.append("=" * 50)
+            for idx, registro in enumerate(cursos_sem[:10], 1):
+                curso = registro.get("no_curso", "N/A")
+                instituicao = registro.get("no_orgao", "N/A")
+                relatorio.append(f"{idx:2d}. {curso}")
+                relatorio.append(f"     🏢 {instituicao}")
+            if len(cursos_sem) > 10:
+                relatorio.append(f"... e mais {len(cursos_sem) - 10} cursos")
+            relatorio.append("")
 
         # Top 10 programas por concentração
         if "concentracao_programatica" in cobertura:
@@ -434,9 +561,8 @@ class RelatoriosVisuais:
                     barra = self.criar_barra_progresso(
                         quantidade, cobertura["total_registros"], 30
                     )
-                    relatorio.append(
-                        f"{i:2d}. {programa[:45]:<45} {barra} {quantidade:,}"
-                    )
+                    # Manter nome completo com espaçamento adequado
+                    relatorio.append(f"{i:2d}. {programa:<50} {barra} {quantidade:,}")
                 relatorio.append("")
 
         # Principais lacunas identificadas
@@ -483,22 +609,34 @@ class RelatoriosVisuais:
         relatorio.append("📈 RESUMO GERAL")
         relatorio.append("=" * 50)
         relatorio.append(
-            f"✅ Programas com Cobertura: {cobertura.get('programas_com_cobertura', 0):,}"
+            f"✅ Cursos com Cobertura: {cobertura.get('programas_com_cobertura', 0):,}"
         )
         relatorio.append(
-            f"❌ Programas sem Cobertura: {cobertura.get('programas_sem_cobertura', 0):,}"
+            f"❌ Cursos sem Cobertura: {cobertura.get('programas_sem_cobertura', 0):,}"
         )
         relatorio.append(
             f"📊 Total de Registros: {cobertura.get('total_registros', 0):,}"
         )
         relatorio.append("")
 
+        # Cursos sem cobertura (antes da análise completa)
+        cursos_sem = cobertura.get("cursos_sem_cobertura", [])
+        if cursos_sem:
+            relatorio.append("📌 CURSOS SEM COBERTURA (SEM PROGRAMA)")
+            relatorio.append("=" * 60)
+            for idx, registro in enumerate(cursos_sem, 1):
+                curso = registro.get("no_curso", "N/A")
+                instituicao = registro.get("no_orgao", "N/A")
+                relatorio.append(f"{idx:2d}. {curso}")
+                relatorio.append(f"     🏢 {instituicao}")
+            relatorio.append("")
+
         # Concentração programática completa
         if "concentracao_programatica" in cobertura:
             concentracao = cobertura["concentracao_programatica"]
 
             if "programas_com_mais_cursos" in concentracao:
-                relatorio.append("🏆 CONCENTRAÇÃO COMPLETA POR REGISTROS")
+                relatorio.append("🏆 CONCENTRAÇÃO COMPLETA POR PROGRAMA")
                 relatorio.append("=" * 50)
                 for i, (programa, quantidade) in enumerate(
                     list(concentracao["programas_com_mais_cursos"].items()), 1
@@ -506,7 +644,8 @@ class RelatoriosVisuais:
                     barra = self.criar_barra_progresso(
                         quantidade, cobertura["total_registros"], 30
                     )
-                    relatorio.append(f"{i:2d}. {programa:<50} {barra} {quantidade:,}")
+                    # Manter nome completo com espaçamento adequado
+                    relatorio.append(f"{i:2d}. {programa:<60} {barra} {quantidade:,}")
                 relatorio.append("")
 
         # Todos os programas com TODOS os registros detalhados
@@ -722,6 +861,20 @@ def main():
                     relatorio_distribuicao, "distribuicao_geografica.txt"
                 )
                 print(f"✅ Relatório de distribuição salvo: {arquivo_distribuicao}")
+
+                relatorio_distribuicao_completo = (
+                    visual.gerar_relatorio_distribuicao_completo(
+                        programas["distribuicao_geografica"]
+                    )
+                )
+                arquivo_distribuicao_completo = visual.salvar_relatorio_visual(
+                    relatorio_distribuicao_completo,
+                    "distribuicao_geografica_completo.txt",
+                )
+                print(
+                    "✅ Relatório de distribuição completo salvo: "
+                    f"{arquivo_distribuicao_completo}"
+                )
 
         # Relatório completo
         relatorio_completo_visual = visual.gerar_relatorio_completo(relatorio_completo)

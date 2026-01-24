@@ -35,6 +35,14 @@ from typing import Dict, List
 
 from bs4 import BeautifulSoup
 
+# Garantir execução a partir da raiz do projeto e usar venv, se existir
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+os.chdir(BASE_DIR)
+if sys.prefix == getattr(sys, "base_prefix", sys.prefix):
+    venv_python = os.path.join(BASE_DIR, ".venv", "Scripts", "python.exe")
+    if os.path.exists(venv_python):
+        os.execv(venv_python, [venv_python, *sys.argv])
+
 
 # Tentar importar dependências e instalar se necessário
 def instalar_dependencias():
@@ -42,7 +50,7 @@ def instalar_dependencias():
     print("🔧 Verificando e instalando dependências...")
 
     # Lista de dependências essenciais
-    dependencias = ["pandas", "requests", "beautifulsoup4"]
+    dependencias = ["pandas", "requests", "beautifulsoup4", "openpyxl"]
 
     dependencias_faltando = []
 
@@ -60,11 +68,14 @@ def instalar_dependencias():
             f"{', '.join(dependencias_faltando)}"
         )
         try:
-            # Instalar individualmente com --user para evitar problemas de permissão
+            # Instalar individualmente (sem --user quando estiver em venv)
+            usando_venv = sys.prefix != getattr(sys, "base_prefix", sys.prefix)
             for dep in dependencias_faltando:
-                subprocess.check_call(
-                    [sys.executable, "-m", "pip", "install", "--user", dep]
-                )
+                comando = [sys.executable, "-m", "pip", "install"]
+                if not usando_venv:
+                    comando.append("--user")
+                comando.append(dep)
+                subprocess.check_call(comando)
                 print(f"  ✅ {dep} instalado")
         except subprocess.CalledProcessError as e:
             print(f"❌ Erro ao instalar dependências: {e}")
@@ -189,6 +200,70 @@ class ColetorDatabaseGeral:
 
         return logger
 
+    def _request_with_retry(
+        self,
+        method,
+        url: str,
+        *,
+        max_tentativas: int = 5,
+        delay_base: int = 5,
+        fail_on_status: bool = True,
+        ok_statuses: tuple = (200,),
+        **kwargs,
+    ):
+        """
+        🔁 Executa requisições com retry e backoff simples.
+        """
+        last_response = None
+
+        for tentativa in range(1, max_tentativas + 1):
+            try:
+                response = method(url, **kwargs)
+                last_response = response
+
+                if not fail_on_status or response.status_code in ok_statuses:
+                    return response
+
+                self.logger.warning(
+                    f"⚠️ Status {response.status_code} em {url}. "
+                    f"Tentativa {tentativa}/{max_tentativas}."
+                )
+            except requests.exceptions.RequestException as e:
+                self.logger.warning(
+                    f"⚠️ Erro de rede em {url} (tentativa {tentativa}/{max_tentativas}): {e}"
+                )
+
+            if tentativa < max_tentativas:
+                time.sleep(delay_base * tentativa)
+
+        # Retornar última resposta se existir, senão lançar erro
+        if last_response is not None:
+            return last_response
+
+        raise RuntimeError(f"Falha ao conectar em {url} após {max_tentativas} tentativas")
+
+    def _post_com_retry(self, url: str, **kwargs):
+        """POST com retry para uso interno."""
+        return self._request_with_retry(
+            requests.post,
+            url,
+            fail_on_status=True,
+            ok_statuses=(200,),
+            **kwargs,
+        )
+
+    def _get_com_retry(
+        self, url: str, *, fail_on_status: bool = True, ok_statuses: tuple = (200,), **kwargs
+    ):
+        """GET com retry para uso interno."""
+        return self._request_with_retry(
+            requests.get,
+            url,
+            fail_on_status=fail_on_status,
+            ok_statuses=ok_statuses,
+            **kwargs,
+        )
+
     def coletar_dados_completos(self) -> List[Dict]:
         """
         📊 Coleta TODOS os dados disponíveis da UNA-SUS.
@@ -212,20 +287,13 @@ class ColetorDatabaseGeral:
                 self.logger.info(f"📄 Processando página {pagina + 1}")
 
                 # Fazer requisição
-                response = requests.post(
+                response = self._post_com_retry(
                     self.url_base,
                     data=payload,
                     headers=self.headers,
                     cookies=self.cookies,
                     timeout=30,
                 )
-
-                if response.status_code != 200:
-                    self.logger.warning(
-                        f"⚠️ Status {response.status_code}. Tentando novamente..."
-                    )
-                    time.sleep(30)
-                    continue
 
                 data = response.json()
                 results = data.get("results", {})
@@ -437,7 +505,7 @@ class ColetorDatabaseGeral:
 
         try:
             self.logger.info(f"🔍 Buscando ofertas do curso {id_curso}...")
-            resp = requests.get(url_curso, headers=self.headers, timeout=30)
+            resp = self._get_com_retry(url_curso, headers=self.headers, timeout=30)
 
             if resp.status_code != 200:
                 self.logger.warning(
@@ -505,7 +573,9 @@ class ColetorDatabaseGeral:
             }
 
             try:
-                resp_api = requests.get(url_api, headers=api_headers, timeout=30)
+                resp_api = self._get_com_retry(
+                    url_api, headers=api_headers, timeout=30, fail_on_status=False
+                )
                 if resp_api.status_code == 200:
                     response_data = resp_api.json()
                     self.logger.info("    ✅ Dados obtidos via API REST")
@@ -566,7 +636,7 @@ class ColetorDatabaseGeral:
 
             # Fallback: tentar extrair da página HTML
             self.logger.info("    🔄 Tentando extração da página HTML...")
-            resp = requests.get(url_oferta, headers=self.headers, timeout=30)
+            resp = self._get_com_retry(url_oferta, headers=self.headers, timeout=30)
             soup = BeautifulSoup(resp.text, "html.parser")
 
             # Buscar o div principal com os dados da oferta
@@ -659,6 +729,9 @@ class ColetorDatabaseGeral:
             "tipo_coleta": "database_geral",
         }
 
+        # Garantir diretório de checkpoints
+        os.makedirs("checkpoints", exist_ok=True)
+
         checkpoint_path = (
             f"checkpoints/coleta_database_geral_checkpoint_{timestamp}.json"
         )
@@ -676,6 +749,9 @@ class ColetorDatabaseGeral:
             return
 
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+
+        # Garantir diretório de dados
+        os.makedirs("data", exist_ok=True)
 
         # Salvar em JSON
         json_path = f"data/unasus_database_geral_{timestamp}.json"
@@ -738,6 +814,9 @@ class ColetorDatabaseGeral:
                 "excel": f"data/unasus_database_geral_{timestamp}.xlsx",
             },
         }
+
+        # Garantir diretório de dados para o relatório
+        os.makedirs("data", exist_ok=True)
 
         # Calcular estatísticas de preenchimento
         if self.dados_coletados:
