@@ -156,6 +156,9 @@ def mostrar_menu():
     6. 📈 Análise Completa dos Dados
     7. 📊 Estatísticas Básicas
     8. 📋 Gerar Relatórios
+    9. 🧪 Diagnóstico (erros e dependências)
+    10. 🧹 Limpar Relatórios
+    11. 🔎 Pesquisar no Banco de Dados
     """
 ```
 
@@ -524,10 +527,18 @@ python start.py
 6. 📈 Análise Completa dos Dados
 7. 📊 Estatísticas Básicas
 8. 📋 Gerar Relatórios
+9. 🧪 Diagnóstico (erros e dependências)
+10. 🧹 Limpar Relatórios
+11. 🔎 Pesquisar no Banco de Dados
 0. ❌ Sair
 
 Escolha uma opção:
 ```
+
+#### **C. Pesquisa Transversal com Filtros**
+- Permite buscar termos em **todas as colunas** ou em **uma coluna específica**.
+- Suporta filtros adicionais por coluna com operadores **contém** ou **exato**.
+- Exibe amostra configurável dos resultados para inspeção rápida.
 
 ### **2. Uso Programático**
 

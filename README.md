@@ -32,6 +32,7 @@ Sistema **completo e avançado** para análise de dados educacionais da platafor
 - **📋 Cobertura Programática** - Análise de lacunas e concentração
 - **🗺️ Distribuição Geográfica** - Polos e desertos educacionais
 - **📈 Relatórios Visuais** - Executivos e técnicos completos
+- **🔎 Pesquisa Transversal** - Busca por termos no banco com filtros
 - **📚 Documentação Abrangente** - Manual completo e glossário
 
 ### **📊 Dados Analisados**
@@ -146,6 +147,9 @@ python start.py
 - 📈 **Análise Completa dos Dados**
 - 📊 **Estatísticas Básicas**
 - 📋 **Gerar Relatórios**
+- 🧪 **Diagnóstico** (erros e dependências)
+- 🧹 **Limpar Relatórios**
+- 🔎 **Pesquisar no Banco de Dados** (com filtros)
 
 ### **2. Coletor Principal**
 ```bash

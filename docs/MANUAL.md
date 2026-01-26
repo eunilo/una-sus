@@ -13,6 +13,11 @@ O Sistema UNA-SUS é uma plataforma completa de **coleta, processamento e análi
 - ✅ **Suportar** metodologia Grounded Theory
 - ✅ **Preservar** integridade dos dados originais
 
+### 🔎 **Pesquisa Transversal**
+O menu interativo do sistema permite pesquisar termos no banco de dados em todas as
+colunas ou em uma coluna específica, com **filtros adicionais** (contém/exato) para
+refinar resultados e apoiar pesquisas temáticas.
+
 ### 🏗️ **Arquitetura Geral**
 ```
 🌐 UNA-SUS Website

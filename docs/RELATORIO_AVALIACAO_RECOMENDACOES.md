@@ -24,7 +24,8 @@ Este relatório apresenta uma avaliação completa da integridade do Sistema UNA
 - ✅ **Análises Especializadas**: 3 tipos de análise implementados
 - ✅ **Geração de Relatórios**: Executivos e técnicos completos
 - ✅ **Documentação**: Manual completo e glossário técnico
-- ✅ **Interface**: Menu interativo com 8 opções
+- ✅ **Interface**: Menu interativo com 11 opções
+- ✅ **Pesquisa Transversal**: Busca por termos no banco com filtros
 
 #### **B. Dados Coletados**
 - **1,657 ofertas** educacionais analisadas

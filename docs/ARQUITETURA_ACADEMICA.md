@@ -119,6 +119,7 @@ class ColetorDatabaseGeral:
 - Verificação de dependências e dados existentes
 - Limpeza e manutenção de dados
 - Orquestração de análises
+- Pesquisa transversal no banco com filtros
 
 **Funcionalidades:**
 ```python
@@ -133,6 +134,9 @@ def mostrar_menu():
     6. Análise Completa dos Dados
     7. Estatísticas Básicas
     8. Gerar Relatórios
+    9. Diagnóstico (erros e dependências)
+    10. Limpar Relatórios
+    11. Pesquisar no Banco de Dados
     """
 ```
 

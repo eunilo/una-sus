@@ -1404,6 +1404,7 @@ O sistema foi desenvolvido com foco em:
 - **Extensibilidade**: Fácil adaptação para novos descritores
 - **Reprodutibilidade**: Metodologia clara e documentada
 - **Transparência**: Logging e validação em todos os níveis
+- **Exploração Temática**: Pesquisa transversal no banco com filtros
 
 Esta arquitetura permite que o sistema seja facilmente adaptado para novos descritores e tipos de análise, mantendo a qualidade e confiabilidade dos resultados.
 

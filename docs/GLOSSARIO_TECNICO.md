@@ -534,5 +534,28 @@
 
 ---
 
+### **🔎 Pesquisa no Banco de Dados**
+**Definição**: Busca transversal de termos nos dados coletados, em todas as colunas ou em uma coluna específica.
+
+**Características**:
+- Pesquisa case-insensitive
+- Suporte a coluna específica ou pesquisa global
+- Retorno com amostra configurável
+
+**Contexto no Sistema**: Opção do menu para ampliar pesquisas e temas de formação.
+
+---
+
+### **🧩 Filtros de Pesquisa**
+**Definição**: Critérios adicionais aplicados à pesquisa transversal para refinar resultados.
+
+**Operadores**:
+- **contém**: localiza termos parciais
+- **exato**: corresponde ao valor completo
+
+**Contexto no Sistema**: Complementa a pesquisa no banco com filtros por coluna.
+
+---
+
 *Glossário Técnico do Sistema UNA-SUS - Versão 1.0* 📚
 *Atualizado conforme evolução do sistema* 

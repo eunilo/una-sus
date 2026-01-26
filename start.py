@@ -238,6 +238,7 @@ def mostrar_menu():
     print("  8. 📋 Gerar Relatórios")
     print("  9. 🧪 Diagnóstico (erros e dependências)")
     print(" 10. 🧹 Limpar Relatórios")
+    print(" 11. 🔎 Pesquisar no Banco de Dados")
     print("  0. ❌ Sair")
     print()
 
@@ -452,13 +453,115 @@ def gerar_relatorios():
         print(f"❌ Erro inesperado: {e}")
 
 
+def pesquisar_termos_banco():
+    """Pesquisa termos no banco de dados (todas as colunas ou coluna específica)."""
+    print("🔎 Pesquisa no banco de dados...")
+
+    try:
+        from analise.analisador_geral import AnalisadorGeral
+
+        analisador = AnalisadorGeral()
+        if not analisador.carregar_dados():
+            print("❌ Não foi possível carregar os dados!")
+            print("💡 Execute primeiro a varredura completa")
+            return
+
+        termo = input("🔍 Termo de pesquisa: ").strip()
+        if not termo:
+            print("⚠️ Termo vazio. Pesquisa cancelada.")
+            return
+
+        print("\n📋 Colunas disponíveis:")
+        print(", ".join(analisador.dados.columns))
+        coluna = input("🧾 Coluna específica (ENTER = todas): ").strip()
+
+        dados = analisador.dados
+        if coluna:
+            if coluna not in dados.columns:
+                print("❌ Coluna não encontrada.")
+                return
+            serie = dados[coluna].astype(str)
+            mascara = serie.str.contains(termo, case=False, na=False)
+        else:
+            dados_str = dados.astype(str)
+            mascara = dados_str.apply(
+                lambda col: col.str.contains(termo, case=False, na=False)
+            ).any(axis=1)
+
+        # Filtros adicionais
+        while True:
+            aplicar = input("🧩 Deseja aplicar filtros adicionais? (s/n): ").strip().lower()
+            if aplicar not in {"s", "n", ""}:
+                print("⚠️ Responda com 's' ou 'n'.")
+                continue
+            if aplicar in {"n", ""}:
+                break
+
+            coluna_filtro = input("🧾 Coluna do filtro: ").strip()
+            if coluna_filtro not in dados.columns:
+                print("❌ Coluna não encontrada.")
+                continue
+
+            operador = input("🔧 Operador (contém/exato): ").strip().lower()
+            if operador not in {"contém", "exato", "contem"}:
+                print("❌ Operador inválido. Use 'contém' ou 'exato'.")
+                continue
+
+            valor = input("✍️ Valor do filtro: ").strip()
+            if not valor:
+                print("⚠️ Valor vazio. Filtro ignorado.")
+                continue
+
+            serie_filtro = dados[coluna_filtro].astype(str)
+            if operador in {"contém", "contem"}:
+                mascara = mascara & serie_filtro.str.contains(valor, case=False, na=False)
+            else:
+                mascara = mascara & (
+                    serie_filtro.str.casefold() == valor.casefold()
+                )
+
+        resultados = dados[mascara]
+        total = len(resultados)
+        print(f"\n✅ Resultados encontrados: {total:,}")
+
+        if total == 0:
+            return
+
+        try:
+            limite = input("🔢 Quantos resultados exibir? (padrão 10): ").strip()
+            limite = int(limite) if limite else 10
+        except ValueError:
+            limite = 10
+
+        colunas_prioritarias = [
+            "no_curso",
+            "no_orgao",
+            "no_modalidade",
+            "status",
+            "programas_governo",
+        ]
+        colunas_exibir = [c for c in colunas_prioritarias if c in dados.columns]
+        if not colunas_exibir:
+            colunas_exibir = list(dados.columns[:5])
+
+        print("\n📌 Amostra dos resultados:")
+        for idx, (_, linha) in enumerate(resultados.head(limite).iterrows(), 1):
+            print(f"{idx:2d}. " + " | ".join(str(linha[c]) for c in colunas_exibir))
+
+    except ImportError as e:
+        print(f"❌ Erro de importação: {e}")
+        print("💡 Verifique se o módulo de análise está disponível")
+    except Exception as e:
+        print(f"❌ Erro inesperado: {e}")
+
+
 def main():
     """Função principal com menu interativo."""
     while True:
         try:
             mostrar_menu()
 
-            opcao = input("📝 Escolha uma opção (0-10): ").strip()
+            opcao = input("📝 Escolha uma opção (0-11): ").strip()
 
             if opcao == "0":
                 print("👋 Até logo!")
@@ -510,8 +613,12 @@ def main():
                 print("\n" + "=" * 50)
                 limpar_relatorios()
                 input("\n⏸️ Pressione ENTER para continuar...")
+            elif opcao == "11":
+                print("\n" + "=" * 50)
+                pesquisar_termos_banco()
+                input("\n⏸️ Pressione ENTER para continuar...")
             else:
-                print("❌ Opção inválida! Digite um número de 0 a 10.")
+                print("❌ Opção inválida! Digite um número de 0 a 11.")
                 input("\n⏸️ Pressione ENTER para continuar...")
 
         except KeyboardInterrupt:

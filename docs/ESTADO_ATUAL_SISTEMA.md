@@ -59,11 +59,12 @@ una-sus/
 - ✅ **Checkpointing** robusto
 
 #### **📊 start.py (Menu Interativo)**
-- ✅ **8 Opções** de execução
+- ✅ **11 Opções** de execução
 - ✅ **Verificação** de dependências
 - ✅ **Limpeza** de dados
 - ✅ **Análise Completa**
 - ✅ **Geração** de relatórios
+- ✅ **Pesquisa Transversal** no banco com filtros
 
 #### **📂 analise/ (Sistema Modular)**
 - ✅ **7 Módulos** implementados
@@ -323,7 +324,7 @@ O Sistema UNA-SUS está **100% operacional** com todas as funcionalidades da FAS
 - **Análises Avançadas**: 3 análises especializadas implementadas
 - **Relatórios Profissionais**: Executivos e técnicos completos
 - **Documentação Abrangente**: Manual completo e glossário técnico
-- **Interface Amigável**: Menu interativo com 8 opções
+- **Interface Amigável**: Menu interativo com 11 opções
 
 ### **📊 Impacto das Análises**
 As análises implementadas revelaram:
