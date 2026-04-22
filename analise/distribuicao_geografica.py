@@ -7,11 +7,138 @@ Distribuição Geográfica - Sistema de Análise UNA-SUS
 Módulo para análise de distribuição geográfica de programas.
 """
 
-import re
 from datetime import datetime
 from typing import Any, Dict, List
 
 import pandas as pd
+
+INST_ESTADO = {
+    # Fundações
+    "Fundação Oswaldo Cruz - Brasília": "DF",
+    "Fundação Oswaldo Cruz - Mato Grosso do Sul": "MS",
+    "FIOCRUZ Pernambuco - Instituto Aggeu Magalhães": "PE",
+    "FIOCRUZ RJ - ICICT": "RJ",
+    "Secretaria Executiva da Universidade Aberta do Sistema Único de Saúde": "ND",
+    # Universidades Federais
+    "Universidade Federal de São Paulo": "SP",
+    "Universidade Federal de Minas Gerais": "MG",
+    "Universidade do Estado do Rio de Janeiro": "RJ",
+    "Universidade Federal de Pelotas": "RS",
+    "Universidade Federal de Pernambuco": "PE",
+    "Universidade Federal do Maranhão": "MA",
+    "Universidade Federal de Santa Catarina": "SC",
+    "Universidade Federal de Ciências da Saúde de Porto Alegre": "RS",
+    "Universidade Federal do Ceará": "CE",
+    "Universidade Federal da Bahia": "BA",
+    "Universidade Federal do Rio Grande do Norte": "RN",
+    "Universidade Federal do Rio Grande do Sul": "RS",
+    "Universidade Federal do Pará": "PA",
+    "Universidade Federal de Goiás": "GO",
+    "Universidade Federal do Piauí": "PI",
+    "Universidade Federal de Alagoas": "AL",
+    "Universidade Federal do Amazonas": "AM",
+    "Universidade Federal do Mato Grosso do Sul": "MS",
+    "Universidade de Brasília": "DF",
+    "Universidade Federal do Paraná": "PR",
+    "Universidade Federal do Estado do Rio de Janeiro": "RJ",
+    "Universidade Federal do Rio de Janeiro - Instituto de Estudos em Saúde Coletiva": "RJ",
+    "Universidade Federal de Ouro Preto": "MG",
+    # Secretarias e Consórcios
+    "Secretaria de Estado da Saúde - BA": "BA",
+    "Consórcio Intermunicipal de Saúde da Baixada Fluminense": "RJ",
+}
+
+MAPA_ESTADO_GEO = {
+    "Mato Grosso do Sul": "MS",
+    "Brasília": "DF",
+    "Ceará": "CE",
+    "Pernambuco": "PE",
+    "Bahia": "BA",
+    "Minas Gerais": "MG",
+    "Rio de Janeiro": "RJ",
+    "Piauí": "PI",
+    "Rondônia": "RO",
+    "Paraná": "PR",
+    "Rio Grande do Sul": "RS",
+    "Rio Grande do Norte": "RN",
+    "Goiás": "GO",
+    "Tocantins": "TO",
+    "Espírito Santo": "ES",
+    "Maranhão": "MA",
+    "Pará": "PA",
+    "Paraíba": "PB",
+    "Roraima": "RR",
+    "Amapá": "AP",
+    "Acre": "AC",
+    "Alagoas": "AL",
+    "Sergipe": "SE",
+    "Mato Grosso": "MT",
+    "Santa Catarina": "SC",
+    "São Paulo": "SP",
+    "Amazonas": "AM",
+    "Porto Alegre": "RS",
+    "Pelotas": "RS",
+}
+
+NOMES_ESTADO = {
+    "AC": "Acre",
+    "AL": "Alagoas",
+    "AP": "Amapá",
+    "AM": "Amazonas",
+    "BA": "Bahia",
+    "CE": "Ceará",
+    "DF": "Distrito Federal",
+    "ES": "Espírito Santo",
+    "GO": "Goiás",
+    "MA": "Maranhão",
+    "MT": "Mato Grosso",
+    "MS": "Mato Grosso do Sul",
+    "MG": "Minas Gerais",
+    "PA": "Pará",
+    "PB": "Paraíba",
+    "PR": "Paraná",
+    "PE": "Pernambuco",
+    "PI": "Piauí",
+    "RJ": "Rio de Janeiro",
+    "RN": "Rio Grande do Norte",
+    "RS": "Rio Grande do Sul",
+    "RO": "Rondônia",
+    "RR": "Roraima",
+    "SC": "Santa Catarina",
+    "SP": "São Paulo",
+    "SE": "Sergipe",
+    "TO": "Tocantins",
+}
+
+REGIAO_ESTADO = {
+    "AC": "NORTE",
+    "AP": "NORTE",
+    "AM": "NORTE",
+    "PA": "NORTE",
+    "RO": "NORTE",
+    "RR": "NORTE",
+    "TO": "NORTE",
+    "AL": "NORDESTE",
+    "BA": "NORDESTE",
+    "CE": "NORDESTE",
+    "MA": "NORDESTE",
+    "PB": "NORDESTE",
+    "PE": "NORDESTE",
+    "PI": "NORDESTE",
+    "RN": "NORDESTE",
+    "SE": "NORDESTE",
+    "DF": "CENTRO-OESTE",
+    "GO": "CENTRO-OESTE",
+    "MT": "CENTRO-OESTE",
+    "MS": "CENTRO-OESTE",
+    "ES": "SUDESTE",
+    "MG": "SUDESTE",
+    "RJ": "SUDESTE",
+    "SP": "SUDESTE",
+    "PR": "SUL",
+    "RS": "SUL",
+    "SC": "SUL",
+}
 
 
 class DistribuicaoGeografica:
@@ -33,58 +160,37 @@ class DistribuicaoGeografica:
         """Carrega dados para análise."""
         self.dados = dados
 
-    def extrair_estado(self, texto: str) -> str:
+    def extrair_estado(self, nome_inst: str) -> str:
         """
-        Extrai estado de um texto.
+        Extrai a UF do estado com base no nome completo da instituição (no_orgao).
+        Metodologia: sede real da universidade, não proxy por sg_orgao.
 
         Args:
-            texto: Texto contendo informações de localização
+            nome_inst: Nome completo da instituição
 
         Returns:
-            Sigla do estado ou "Não identificado"
+            Sigla do estado ou "ND" (Não Determinado)
         """
-        if pd.isna(texto) or texto == "":
-            return "Não identificado"
+        if pd.isna(nome_inst) or str(nome_inst).strip() == "" or str(nome_inst) == "nan":
+            return "ND"
 
-        texto = str(texto).upper()
+        nome = str(nome_inst).strip()
+        if nome in INST_ESTADO:
+            return INST_ESTADO[nome]
 
-        # Mapeamento de estados
-        estados = {
-            "AC": ["ACRE", "AC"],
-            "AL": ["ALAGOAS", "AL"],
-            "AP": ["AMAPA", "AP"],
-            "AM": ["AMAZONAS", "AM"],
-            "BA": ["BAHIA", "BA"],
-            "CE": ["CEARA", "CE"],
-            "DF": ["DISTRITO FEDERAL", "DF", "BRASILIA"],
-            "ES": ["ESPIRITO SANTO", "ES"],
-            "GO": ["GOIAS", "GO"],
-            "MA": ["MARANHAO", "MA"],
-            "MT": ["MATO GROSSO", "MT"],
-            "MS": ["MATO GROSSO DO SUL", "MS"],
-            "MG": ["MINAS GERAIS", "MG"],
-            "PA": ["PARA", "PA"],
-            "PB": ["PARAIBA", "PB"],
-            "PR": ["PARANA", "PR"],
-            "PE": ["PERNAMBUCO", "PE"],
-            "PI": ["PIAUI", "PI"],
-            "RJ": ["RIO DE JANEIRO", "RJ"],
-            "RN": ["RIO GRANDE DO NORTE", "RN"],
-            "RS": ["RIO GRANDE DO SUL", "RS"],
-            "RO": ["RONDONIA", "RO"],
-            "RR": ["RORAIMA", "RR"],
-            "SC": ["SANTA CATARINA", "SC"],
-            "SP": ["SAO PAULO", "SP"],
-            "SE": ["SERGIPE", "SE"],
-            "TO": ["TOCANTINS", "TO"],
-        }
+        nome_lower = nome.lower()
+        for inst, uf in INST_ESTADO.items():
+            if inst.lower() in nome_lower:
+                return uf
 
-        for sigla, variacoes in estados.items():
-            for variacao in variacoes:
-                if variacao in texto:
-                    return sigla
+        for geo, uf in MAPA_ESTADO_GEO.items():
+            if geo.lower() in nome_lower:
+                return uf
 
-        return "Não identificado"
+        if "oswaldo cruz" in nome_lower or "fiocruz" in nome_lower:
+            return "RJ"
+
+        return "ND"
 
     def analisar_distribuicao(self) -> Dict[str, Any]:
         """
@@ -125,13 +231,9 @@ class DistribuicaoGeografica:
         }
 
         # Mapeamento de regiões
-        regioes = {
-            "NORTE": ["AC", "AP", "AM", "PA", "RO", "RR", "TO"],
-            "NORDESTE": ["AL", "BA", "CE", "MA", "PB", "PE", "PI", "RN", "SE"],
-            "CENTRO-OESTE": ["DF", "GO", "MT", "MS"],
-            "SUDESTE": ["ES", "MG", "RJ", "SP"],
-            "SUL": ["PR", "RS", "SC"],
-        }
+        regioes = {"NORTE": [], "NORDESTE": [], "CENTRO-OESTE": [], "SUDESTE": [], "SUL": []}
+        for estado, regiao in REGIAO_ESTADO.items():
+            regioes[regiao].append(estado)
 
         # Contar programas únicos
         programas_unicos = self.dados[coluna_programas].dropna().unique()
@@ -165,6 +267,7 @@ class DistribuicaoGeografica:
             "SP",
             "SE",
             "TO",
+            "ND",
         ]:
             distribuicao["distribuicao_por_estado"][estado] = {
                 "cursos": 0,
@@ -191,9 +294,12 @@ class DistribuicaoGeografica:
             programa = registro.get(coluna_programas, "")
 
             # Extrair estado da instituição
-            estado = "Não identificado"
+            estado = "ND"
             if "no_orgao" in registro:
                 estado = self.extrair_estado(registro["no_orgao"])
+
+            if estado == "ND":
+                distribuicao["estados_sem_identificacao"] += 1
 
             # Contar por estado
             if estado in distribuicao["distribuicao_por_estado"]:
@@ -253,9 +359,6 @@ class DistribuicaoGeografica:
                                     "vagas"
                                 ] += vagas
                         break
-            else:
-                distribuicao["estados_sem_identificacao"] += 1
-
         # Converter sets para listas para serialização
         for estado in distribuicao["distribuicao_por_estado"]:
             distribuicao["distribuicao_por_estado"][estado]["instituicoes"] = list(
@@ -323,8 +426,8 @@ class DistribuicaoGeografica:
         # Estatísticas gerais
         estados_com_dados = sum(
             1
-            for dados in distribuicao["distribuicao_por_estado"].values()
-            if dados["cursos"] > 0
+            for estado, dados in distribuicao["distribuicao_por_estado"].items()
+            if estado != "ND" and dados["cursos"] > 0
         )
         distribuicao["estados_identificados"] = estados_com_dados
 
